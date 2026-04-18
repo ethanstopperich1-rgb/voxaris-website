@@ -1,5 +1,6 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npx puppeteer browsers install chrome && pnpm run build:full",
+  "installCommand": "pnpm install --config.confirmModulesPurge=false --config.strict-peer-dependencies=false",
   "outputDirectory": "dist",
   "framework": "vite",
   "cleanUrls": true,
