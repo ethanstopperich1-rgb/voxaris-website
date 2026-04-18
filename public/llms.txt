@@ -1,0 +1,51 @@
+# Voxaris
+
+> Voxaris builds AI-optimized websites, runs AEO campaigns that get businesses cited by ChatGPT and Perplexity, and delivers personalized AI video outreach. Based in Orlando, FL, serving Florida businesses and marketing agencies.
+
+## Company
+
+- **Name:** Voxaris
+- **Tagline:** Personalizing Your Outreach
+- **Location:** Orlando, Florida, USA
+- **Focus:** AI marketing infrastructure for local businesses + agencies
+- **Home:** https://voxaris.io
+
+## Products
+
+### AEO Services — Answer Engine Optimization
+- URL: https://voxaris.io/products/aeo
+- Get your business cited by ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews
+- LocalBusiness + FAQPage schema markup, entity optimization, llms.txt setup
+- Monthly citation tracking across 5 AI platforms
+- Starts with a **free AI Visibility Audit** at https://audit.voxaris.io (48-hour delivery)
+
+### AI-Ready Website Builds
+- URL: https://voxaris.io/products/websites
+- Schema-complete, FAQ-structured websites built for AI citation
+- **Live in 72 hours, $1,997 flat**
+- Full JSON-LD schema architecture, question-phrased content, GBP optimization
+
+### Talking Postcard
+- URL: https://voxaris.io/products/talking-postcard
+- AI-personalized video delivered as a physical postcard
+- Each piece plays a unique video message addressed to the recipient (name, business, city, hook)
+- Campaigns from 500 to 50,000 pieces
+- Physical postcard + QR code → video landing page
+
+## Who It's For
+
+- Local service businesses in Florida that need to show up in AI answers
+- Marketing agencies that want to resell AEO to their clients
+- Car dealerships, home services, multi-location businesses
+
+## Resources
+
+- [Free AI Visibility Audit](https://audit.voxaris.io) — 48h delivery, no commitment
+- [Book a demo](https://voxaris.io/book-demo) — 20-min product walkthrough
+- [Pricing](https://voxaris.io/pricing)
+- [How It Works](https://voxaris.io/how-it-works)
+
+## Contact
+
+- Web: https://voxaris.io
+- Demo booking: https://voxaris.io/book-demo
