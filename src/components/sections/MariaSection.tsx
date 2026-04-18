@@ -1,90 +1,81 @@
 import { motion } from "framer-motion";
-import { Headphones } from "lucide-react";
+
+const capabilities = [
+  "Answers inbound calls 24/7",
+  "Calls new leads within seconds of form submission",
+  "Qualifies prospects with custom logic",
+  "Books appointments in real time",
+  "Confirms appointments via SMS",
+  "Follows up until conversion",
+  "Pushes all data to your CRM",
+];
+
+const stats = [
+  { stat: "< 1s", label: "Answer latency", sub: "Every inbound call" },
+  { stat: "24/7", label: "No off days", sub: "No sick days, no lunch breaks" },
+  { stat: "100%", label: "Call answered", sub: "Zero missed, zero voicemail" },
+  { stat: "2 min", label: "Lead to booked", sub: "Average time to appointment" },
+];
 
 export default function MariaSection() {
   return (
-    <section className="section-padding bg-secondary/30">
+    <section className="section-padding bg-secondary/30 border-t border-[hsl(var(--border))]">
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="mb-16 max-w-[50ch]"
+        >
+          <p className="eyebrow mb-4">Meet Maria</p>
+          <h2 className="text-heading font-semibold text-foreground mb-4">
+            Your always-available AI sales representative
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Maria is the voice of Voxaris — a professional, calm, naturally-sounding AI agent trained to handle real sales conversations with real prospects.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          {/* Left — capability list */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-              Meet Maria
-            </span>
-            <h2 className="text-3xl lg:text-heading font-semibold text-foreground mb-6">
-              Your always-available AI sales representative
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Maria is the voice of Voxaris — a professional, calm, and naturally-sounding AI agent trained to handle real sales conversations with real prospects.
-            </p>
-            <div className="space-y-4">
-              {[
-                "Answers inbound calls 24/7",
-                "Calls new leads within seconds of form submission",
-                "Qualifies prospects with custom logic",
-                "Books appointments in real time",
-                "Confirms appointments via SMS",
-                "Follows up until conversion",
-                "Pushes all data to your CRM"
-              ].map((capability) => (
-                <div key={capability} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg className="w-3 h-3 text-primary-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-foreground">{capability}</span>
+            <p className="eyebrow-muted mb-5">What Maria does</p>
+            <div className="space-y-1">
+              {capabilities.map((capability, i) => (
+                <div
+                  key={capability}
+                  className={`border-l-2 pl-4 py-2 ${
+                    i === 0 ? "border-[hsl(var(--accent))]" : "border-[hsl(var(--border))]"
+                  }`}
+                >
+                  <span className="text-[15px] text-foreground">{capability}</span>
                 </div>
               ))}
             </div>
           </motion.div>
 
-          {/* Visual */}
+          {/* Right — stat grid */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <div className="aspect-square max-w-md mx-auto relative">
-              {/* Background glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary to-accent rounded-full blur-3xl opacity-60" />
-              
-              {/* Main circle */}
-              <div className="relative w-full h-full rounded-full bg-card border border-border flex items-center justify-center shadow-elegant">
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center mx-auto mb-6">
-                    <Headphones className="h-10 w-10 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-foreground mb-2">Maria</h3>
-                  <p className="text-muted-foreground text-sm">AI Sales Agent</p>
-                  
-                  {/* Sound wave animation */}
-                  <div className="flex items-center justify-center gap-1 mt-6">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <motion.div
-                        key={i}
-                        className="w-1 bg-primary rounded-full"
-                        animate={{
-                          height: [12, 24, 12],
-                        }}
-                        transition={{
-                          duration: 0.8,
-                          repeat: Infinity,
-                          delay: i * 0.1,
-                          ease: "easeInOut"
-                        }}
-                      />
-                    ))}
-                  </div>
+            <p className="eyebrow-muted mb-5">By the numbers</p>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-8">
+              {stats.map((item) => (
+                <div key={item.label} className="border-t border-[hsl(var(--border))] pt-5">
+                  <div className="stat-number text-3xl font-medium mb-1">{item.stat}</div>
+                  <div className="text-sm font-medium text-foreground mb-0.5">{item.label}</div>
+                  <div className="text-xs text-muted-foreground">{item.sub}</div>
                 </div>
-              </div>
+              ))}
             </div>
           </motion.div>
         </div>

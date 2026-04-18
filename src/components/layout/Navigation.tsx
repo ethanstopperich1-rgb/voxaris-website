@@ -2,84 +2,88 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import voxarisMark from "@/assets/voxaris-mark.png";
+import voxarisLogo from "@/assets/logo.png";
 
-const navLinks = [
+type NavChild = { name: string; href: string; desc?: string };
+type NavLink = { name: string; href?: string; children?: NavChild[] };
+
+const navLinks: NavLink[] = [
   { name: "How It Works", href: "/how-it-works" },
   {
-    name: "Solutions",
-    href: "/solutions",
+    name: "Products & Solutions",
     children: [
-      { name: "Marketing Agencies", href: "/solutions/agencies" },
-      { name: "Car Dealerships", href: "/solutions/dealerships" },
+      { name: "AEO Services", href: "/products/aeo", desc: "Get cited by ChatGPT & Perplexity" },
+      { name: "AI Website Builds", href: "/products/websites", desc: "AEO-ready sites in 72 hours" },
+      { name: "Talking Postcard", href: "/products/talking-postcard", desc: "AI video outreach at scale" },
+      { name: "Marketing Agencies", href: "/solutions/agencies", desc: "White-label + resell infrastructure" },
+      { name: "Car Dealerships", href: "/solutions/dealerships", desc: "Lead response + appointment booking" },
     ],
   },
-  { name: "Why Voxaris", href: "/why-voxaris" },
   { name: "Pricing", href: "/pricing" },
 ];
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const location = useLocation();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Elegant glass effect */}
-      <div className="absolute inset-0 bg-background/90 backdrop-blur-2xl" />
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-xl" />
+      <div className="absolute inset-x-0 bottom-0 h-px bg-[hsl(var(--border))]" />
+
       <nav className="container-wide relative">
         <div className="flex items-center justify-between h-[72px]">
-          {/* Brand - Logo Mark + Wordmark */}
-          <Link to="/" className="flex items-center gap-2.5 text-foreground">
+          {/* Brand */}
+          <Link to="/" className="flex items-center text-foreground" aria-label="Voxaris AI">
             <img
-              src={voxarisMark}
-              alt="Voxaris"
-              className="h-7 w-7 object-contain opacity-95 drop-shadow-[0_12px_26px_rgba(0,0,0,0.35)]"
+              src={voxarisLogo}
+              alt="Voxaris AI — Personalizing Your Outreach"
+              className="h-8 lg:h-9 w-auto object-contain"
             />
-            <span className="flex items-baseline gap-0">
-              <span className="font-semibold text-[13px] tracking-[0.28em] uppercase">VOXARIS</span>
-              <sup className="text-[9px] opacity-60 -translate-y-1 ml-0.5">TM</sup>
-            </span>
           </Link>
 
-          {/* Desktop Navigation - Centered */}
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <div key={link.name} className="relative">
                 {link.children ? (
                   <div
                     className="relative"
-                    onMouseEnter={() => setSolutionsOpen(true)}
-                    onMouseLeave={() => setSolutionsOpen(false)}
+                    onMouseEnter={() => setOpenMenu(link.name)}
+                    onMouseLeave={() => setOpenMenu(null)}
                   >
-                    <button className="flex items-center gap-1.5 px-4 py-2 text-[13px] font-medium text-muted-foreground hover:text-foreground transition-all duration-200 rounded-lg hover:bg-secondary/50">
+                    <button className="flex items-center gap-1.5 px-4 py-2 text-[13px] text-muted-foreground hover:text-foreground transition-colors duration-200">
                       {link.name}
-                      <ChevronDown 
-                        className="h-3.5 w-3.5 transition-transform duration-200" 
-                        style={{ transform: solutionsOpen ? 'rotate(180deg)' : 'rotate(0)' }} 
+                      <ChevronDown
+                        className="h-3.5 w-3.5 transition-transform duration-200"
+                        style={{ transform: openMenu === link.name ? "rotate(180deg)" : "rotate(0)" }}
                       />
                     </button>
                     <AnimatePresence>
-                      {solutionsOpen && (
+                      {openMenu === link.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: 8, scale: 0.96 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                          initial={{ opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 8 }}
                           transition={{ duration: 0.15, ease: "easeOut" }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
+                          className="absolute top-full left-0 pt-3"
                         >
-                          <div className="bg-card/95 backdrop-blur-xl rounded-xl border border-border/80 shadow-xl p-1.5 min-w-[220px]">
+                          <div className="bg-card/95 backdrop-blur-xl border border-[hsl(var(--border))] rounded-[6px] p-2 min-w-[320px]">
                             {link.children.map((child) => (
                               <Link
                                 key={child.name}
                                 to={child.href}
-                                className="flex items-center gap-3 px-4 py-3 text-[13px] text-muted-foreground hover:text-foreground hover:bg-secondary/60 rounded-lg transition-all duration-150"
+                                className="block px-4 py-3 rounded-[4px] hover:bg-secondary/60 transition-colors duration-150 group"
                               >
-                                <div className="w-1.5 h-1.5 rounded-full bg-border" />
-                                {child.name}
+                                <div className="text-[13px] font-medium text-foreground group-hover:text-[hsl(var(--accent))] transition-colors">
+                                  {child.name}
+                                </div>
+                                {child.desc && (
+                                  <div className="text-[12px] text-muted-foreground mt-0.5">
+                                    {child.desc}
+                                  </div>
+                                )}
                               </Link>
                             ))}
                           </div>
@@ -89,11 +93,11 @@ export default function Navigation() {
                   </div>
                 ) : (
                   <Link
-                    to={link.href}
-                    className={`px-4 py-2 text-[13px] font-medium transition-all duration-200 rounded-lg ${
+                    to={link.href!}
+                    className={`px-4 py-2 text-[13px] transition-colors duration-200 ${
                       location.pathname === link.href
-                        ? "text-foreground bg-secondary/50"
-                        : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                        ? "text-foreground"
+                        : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
                     {link.name}
@@ -104,30 +108,47 @@ export default function Navigation() {
           </div>
 
           {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link to="/demo">
-              <Button variant="ghost" size="sm" className="text-[13px] font-medium h-9 px-4">
-                Try Demo
-              </Button>
-            </Link>
+          <div className="hidden lg:flex items-center gap-2">
+            <a href="https://audit.voxaris.io" target="_blank" rel="noopener noreferrer">
+              <button
+                style={{
+                  color: "hsl(72 100% 64%)",
+                  fontSize: 13,
+                  fontWeight: 500,
+                  height: 36,
+                  padding: "0 16px",
+                  border: "1px solid hsl(72 100% 64% / 0.25)",
+                  borderRadius: 6,
+                  background: "transparent",
+                  cursor: "pointer",
+                  transition: "background-color 150ms, border-color 150ms",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "hsl(72 100% 64% / 0.08)";
+                  e.currentTarget.style.borderColor = "hsl(72 100% 64% / 0.45)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.borderColor = "hsl(72 100% 64% / 0.25)";
+                }}
+              >
+                Free AI Audit
+              </button>
+            </a>
             <Link to="/book-demo">
-              <Button variant="hero" size="sm" className="text-[13px] font-medium h-9 px-5 shadow-md">
+              <button className="bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] px-5 h-9 rounded-[6px] font-medium text-[13px] hover:brightness-110 transition-all duration-200">
                 Book a Demo
-              </Button>
+              </button>
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-secondary/50 transition-colors"
+            className="lg:hidden p-2 hover:bg-secondary/60 rounded-[4px] transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
-            {mobileOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </nav>
@@ -140,22 +161,20 @@ export default function Navigation() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-border"
+            className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-[hsl(var(--border))]"
           >
-            <div className="container-wide py-6 space-y-4">
+            <div className="container-wide py-6 space-y-5">
               {navLinks.map((link) => (
                 <div key={link.name}>
                   {link.children ? (
                     <div className="space-y-2">
-                      <p className="text-[13px] font-medium text-foreground">
-                        {link.name}
-                      </p>
-                      <div className="pl-4 space-y-2">
+                      <p className="eyebrow-muted mb-2">{link.name}</p>
+                      <div className="pl-0 space-y-2">
                         {link.children.map((child) => (
                           <Link
                             key={child.name}
                             to={child.href}
-                            className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors"
+                            className="block text-[14px] text-muted-foreground hover:text-foreground transition-colors"
                             onClick={() => setMobileOpen(false)}
                           >
                             {child.name}
@@ -165,8 +184,8 @@ export default function Navigation() {
                     </div>
                   ) : (
                     <Link
-                      to={link.href}
-                      className="block text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors"
+                      to={link.href!}
+                      className="block text-[14px] font-medium text-foreground hover:text-[hsl(var(--accent))] transition-colors"
                       onClick={() => setMobileOpen(false)}
                     >
                       {link.name}
@@ -174,16 +193,21 @@ export default function Navigation() {
                   )}
                 </div>
               ))}
-              <div className="pt-4 space-y-3">
-                <Link to="/demo" onClick={() => setMobileOpen(false)}>
-                  <Button variant="outline" className="w-full text-[13px]">
-                    Try Demo
-                  </Button>
-                </Link>
+              <div className="pt-4 space-y-3 border-t border-[hsl(var(--border))]">
+                <a
+                  href="https://audit.voxaris.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  <button className="w-full border border-[hsl(var(--accent))/30] text-[hsl(var(--accent))] text-[13px] font-medium px-4 h-10 rounded-[6px]">
+                    Free AI Audit →
+                  </button>
+                </a>
                 <Link to="/book-demo" onClick={() => setMobileOpen(false)}>
-                  <Button variant="hero" className="w-full text-[13px]">
+                  <button className="w-full bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] text-[13px] font-medium px-4 h-10 rounded-[6px]">
                     Book a Demo
-                  </Button>
+                  </button>
                 </Link>
               </div>
             </div>

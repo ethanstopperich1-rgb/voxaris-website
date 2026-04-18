@@ -1,93 +1,141 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Megaphone, Car } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
-const audiences = [
+type Product = {
+  tag: string;
+  title: string;
+  description: string;
+  features: string[];
+  cta: string;
+  href: string;
+  external?: boolean;
+};
+
+const products: Product[] = [
   {
-    icon: Megaphone,
-    title: "Marketing Agencies",
-    description: "Running Meta, Google, or outbound campaigns? Voxaris gives you higher conversion rates for your clients — and a new revenue stream for your agency.",
+    tag: "VOICE",
+    title: "AI Voice Agent",
+    description:
+      "Maria answers every inbound call instantly, qualifies prospects with custom logic, books appointments in real time, and pushes everything to your CRM.",
     features: [
-      "White-label and semi-white-label options",
-      "Deploy AI sales systems at scale",
-      "Real attribution across campaigns",
-      "Resell infrastructure, not just services"
+      "Inbound call handling 24/7",
+      "Outbound lead follow-up",
+      "Appointment booking + SMS confirmation",
+      "CRM sync after every call",
     ],
-    cta: "Solutions for Agencies",
-    href: "/solutions/agencies"
+    cta: "See Voice Agent",
+    href: "/products/voice-agent",
   },
   {
-    icon: Car,
-    title: "Car Dealerships",
-    description: "New or used, single rooftop or dealer group — Voxaris puts more appointments on your board and more buyers in your showroom.",
+    tag: "VIDEO",
+    title: "AI Video Agent",
+    description:
+      "Send personalized AI video messages at scale — talking postcards, follow-up sequences, and outreach campaigns that actually get watched.",
     features: [
-      "Instant response to every lead",
-      "Missed-call recovery",
-      "Appointment confirmation and reminders",
-      "Inbound qualification and booking"
+      "Personalized video per recipient",
+      "Talking Postcard physical + digital",
+      "Outreach campaign automation",
+      "Real-time engagement tracking",
     ],
-    cta: "Solutions for Dealerships",
-    href: "/solutions/dealerships"
-  }
+    cta: "See Video Agent",
+    href: "/products/video-agent",
+  },
+  {
+    tag: "STAFFING",
+    title: "Staffing Agent",
+    description:
+      "AI-powered video interviews that screen candidates before your team gets involved. Consistent questions, recorded answers, instant summaries.",
+    features: [
+      "Automated video interview invites",
+      "Structured question delivery",
+      "AI summary of each candidate",
+      "Integrates with your ATS or CRM",
+    ],
+    cta: "See Staffing Agent",
+    href: "/products/staffing-agent",
+  },
+  {
+    tag: "AEO",
+    title: "AEO Services",
+    description:
+      "Answer Engine Optimization — we make your business visible in ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews. Starts with a free audit.",
+    features: [
+      "AI Visibility Audit (free)",
+      "Schema markup + entity optimization",
+      "llms.txt + AI crawler configuration",
+      "Monthly citation tracking",
+    ],
+    cta: "Get Free Audit",
+    href: "https://audit.voxaris.io",
+    external: true,
+  },
 ];
 
 export default function AudienceSection() {
   return (
-    <section className="section-padding">
+    <section className="section-padding border-t border-[hsl(var(--border))]">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 max-w-[55ch]"
         >
-          <h2 className="text-3xl lg:text-heading font-semibold text-foreground mb-4">
-            Built for operators who need results
+          <p className="eyebrow mb-4">Who It's For</p>
+          <h2 className="text-heading font-semibold text-foreground mb-4">
+            Built for Florida businesses that can't afford to be invisible
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Voxaris is designed for businesses and agencies that can't afford to lose leads — and want infrastructure that scales.
+          <p className="text-lg text-muted-foreground">
+            Whether you're a local service business that needs to show up in ChatGPT, or an agency that wants to offer AEO to your clients — Voxaris is built for you.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {audiences.map((audience, index) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {products.map((product, index) => (
             <motion.div
-              key={audience.title}
+              key={product.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-card rounded-3xl border border-border p-8 lg:p-10 hover:shadow-elegant transition-shadow duration-300"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="border border-[hsl(var(--border))] rounded-[8px] p-8 hover:border-[hsl(var(--accent))/30] transition-colors duration-200 bg-card flex flex-col"
             >
-              <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center mb-6">
-                <audience.icon className="h-7 w-7 text-foreground" />
-              </div>
-              
-              <h3 className="text-2xl font-semibold text-foreground mb-3">
-                {audience.title}
-              </h3>
-              
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                {audience.description}
+              <span className="eyebrow mb-4 block">{product.tag}</span>
+              <h3 className="text-xl font-semibold text-foreground mb-3">{product.title}</h3>
+              <p className="text-muted-foreground text-[15px] mb-6 leading-relaxed">
+                {product.description}
               </p>
-              
-              <ul className="space-y-3 mb-8">
-                {audience.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <div className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
 
-              <Link to={audience.href}>
-                <Button variant="outline" className="group">
-                  {audience.cta}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
+              <div className="space-y-1 mb-8 flex-1">
+                {product.features.map((f) => (
+                  <div
+                    key={f}
+                    className="border-l-2 border-[hsl(var(--border))] pl-3 py-1"
+                  >
+                    <span className="text-sm text-muted-foreground">{f}</span>
+                  </div>
+                ))}
+              </div>
+
+              {product.external ? (
+                <a
+                  href={product.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[13px] font-medium text-[hsl(var(--accent))] hover:opacity-80 transition"
+                >
+                  {product.cta} <ArrowRight className="h-3.5 w-3.5" />
+                </a>
+              ) : (
+                <Link
+                  to={product.href}
+                  className="inline-flex items-center gap-2 text-[13px] font-medium text-foreground hover:text-[hsl(var(--accent))] transition"
+                >
+                  {product.cta} <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>

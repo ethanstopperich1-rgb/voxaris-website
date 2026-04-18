@@ -1,67 +1,42 @@
 import { motion } from "framer-motion";
-import { Shield, Server, RefreshCw, Lock } from "lucide-react";
 
-const trustPoints = [
-  {
-    icon: Shield,
-    title: "Enterprise reliability",
-    description: "99.9% uptime SLA with redundant systems and real-time monitoring."
-  },
-  {
-    icon: Server,
-    title: "Scalable infrastructure",
-    description: "Handle thousands of concurrent calls across multiple locations or clients."
-  },
-  {
-    icon: RefreshCw,
-    title: "Consistent performance",
-    description: "Same quality on call 1 as on call 10,000. No training gaps, no off days."
-  },
-  {
-    icon: Lock,
-    title: "Secure by design",
-    description: "SOC 2 compliant infrastructure with encrypted data at rest and in transit."
-  }
+const stats = [
+  { stat: "< 1s", label: "Answer latency", sub: "Every inbound call" },
+  { stat: "5", label: "AI platforms", sub: "Monitored per AEO client" },
+  { stat: "48h", label: "AEO audit delivery", sub: "From submission to inbox" },
+  { stat: "4", label: "Products deployed", sub: "Voice · Video · Staffing · AEO" },
 ];
 
 export default function TrustSection() {
   return (
-    <section className="section-padding">
+    <section className="section-padding border-t border-[hsl(var(--border))]">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 max-w-[55ch]"
         >
-          <h2 className="text-3xl lg:text-heading font-semibold text-foreground mb-4">
-            Infrastructure you can trust
+          <p className="eyebrow mb-4">By the numbers</p>
+          <h2 className="text-heading font-semibold text-foreground">
+            Infrastructure you can measure
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Voxaris is built for serious operators who need systems that work — every time, at any scale.
-          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {trustPoints.map((item, index) => (
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[hsl(var(--border))] rounded-[6px] overflow-hidden">
+          {stats.map((item, index) => (
             <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 20 }}
+              key={item.label}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center"
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className="bg-background px-8 py-10"
             >
-              <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center mx-auto mb-4">
-                <item.icon className="h-7 w-7 text-foreground" />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                {item.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {item.description}
-              </p>
+              <div className="stat-number text-4xl font-medium mb-2">{item.stat}</div>
+              <div className="text-sm font-medium text-foreground mb-1">{item.label}</div>
+              <div className="eyebrow-muted text-[10px]">{item.sub}</div>
             </motion.div>
           ))}
         </div>

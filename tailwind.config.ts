@@ -79,13 +79,15 @@ export default {
         "3xl": "1.5rem",
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['"Bricolage Grotesque"', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       fontSize: {
-        'display': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display-sm': ['3.5rem', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
-        'heading': ['2.5rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
-        'subheading': ['1.5rem', { lineHeight: '1.4', letterSpacing: '-0.01em' }],
+        'display': ['4.5rem', { lineHeight: '1.04', letterSpacing: '-0.03em', fontWeight: '600' }],
+        'display-sm': ['3.5rem', { lineHeight: '1.06', letterSpacing: '-0.03em', fontWeight: '600' }],
+        'heading': ['2.75rem', { lineHeight: '1.1', letterSpacing: '-0.025em', fontWeight: '600' }],
+        'subheading': ['1.5rem', { lineHeight: '1.3', letterSpacing: '-0.01em', fontWeight: '500' }],
+        'mono-label': ['0.6875rem', { lineHeight: '1', letterSpacing: '0.1em', fontWeight: '500' }],
       },
       boxShadow: {
         'elegant': 'var(--shadow-elegant)',

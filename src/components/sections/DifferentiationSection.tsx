@@ -1,72 +1,169 @@
 import { motion } from "framer-motion";
-import { Target, Wrench, Zap, Scale, Mic } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const differentiators = [
+const products = [
   {
-    icon: Target,
-    title: "Outcome-driven, not tool-driven",
-    description: "We don't sell AI minutes or dashboard access. We deliver booked appointments and clean pipelines."
+    tag: "AEO",
+    title: "Answer Engine Optimization",
+    description:
+      "ChatGPT, Perplexity, and Gemini now answer your customers' questions without sending them to Google. We optimize your business to appear in those answers.",
+    bullets: [
+      "AI Visibility Audit (free, 48h delivery)",
+      "LocalBusiness + FAQPage schema markup",
+      "Entity optimization + llms.txt",
+      "Monthly citation tracking across 5 platforms",
+    ],
+    cta: "Get Free Audit",
+    href: "https://audit.voxaris.io",
+    external: true,
   },
   {
-    icon: Wrench,
-    title: "Designed, installed, and managed",
-    description: "Not another DIY tool. Voxaris is configured for your business and maintained by our team."
+    tag: "WEBSITES",
+    title: "AI-Ready Website Builds",
+    description:
+      "A website built from day one to score 85+ on an AEO audit — schema-complete, FAQ-structured, and optimized for AI citation before the first visitor arrives.",
+    bullets: [
+      "Live in 72 hours, $1,997 flat",
+      "Full JSON-LD schema architecture",
+      "Question-phrased content for AI direct answers",
+      "GBP optimization included",
+    ],
+    cta: "See an Example",
+    href: "/book-demo",
+    external: false,
   },
   {
-    icon: Zap,
-    title: "Standardized workflows that convert",
-    description: "Proven processes refined across hundreds of implementations, not guesswork."
+    tag: "VIDEO",
+    title: "Talking Postcard",
+    description:
+      "Personalized AI video delivered as a physical postcard. Each piece plays a unique video message addressed to the recipient — name, business, city, specific hook.",
+    bullets: [
+      "AI-generated personalized video per recipient",
+      "Physical postcard + QR → video landing page",
+      "Campaigns from 500 to 50,000 pieces",
+      "Full campaign management included",
+    ],
+    cta: "See How It Works",
+    href: "/book-demo",
+    external: false,
   },
-  {
-    icon: Scale,
-    title: "Built for scale",
-    description: "Deploy across multiple clients, locations, or rooftops with consistent quality."
-  },
-  {
-    icon: Mic,
-    title: "Real voice AI, not scripts",
-    description: "Maria handles natural conversations, not robotic decision trees."
-  }
 ];
 
 export default function DifferentiationSection() {
   return (
-    <section className="section-padding bg-primary text-primary-foreground">
+    <section className="section-padding bg-[hsl(var(--secondary))] text-foreground border-y border-[hsl(var(--border))]">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-3xl lg:text-heading font-semibold mb-4">
-            Why Voxaris is different
+          <p
+            style={{
+              fontFamily: "'JetBrains Mono', 'Space Mono', monospace",
+              fontSize: 10,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: "hsl(72 100% 64%)",
+              marginBottom: 16,
+            }}
+          >
+            The Platform
+          </p>
+          <h2 className="text-3xl lg:text-heading font-semibold mb-4 max-w-[22ch]">
+            Three products. One goal: more customers finding you.
           </h2>
-          <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto">
-            Most platforms sell tools. Voxaris delivers outcomes.
+          <p className="text-lg text-muted-foreground max-w-[55ch]">
+            AEO gets you cited. The website captures the visit. The Talking Postcard starts the conversation. They work together — or standalone.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {differentiators.map((item, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[hsl(var(--border))] rounded-[6px] overflow-hidden">
+          {products.map((product, index) => (
             <motion.div
-              key={item.title}
+              key={product.tag}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`${index === 4 ? 'lg:col-start-2' : ''}`}
+              transition={{ duration: 0.5, delay: index * 0.12 }}
+              className="bg-[hsl(var(--card))] p-8 lg:p-10 flex flex-col"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary-foreground/10 flex items-center justify-center mb-4">
-                <item.icon className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">
-                {item.title}
-              </h3>
-              <p className="text-primary-foreground/70 text-sm leading-relaxed">
-                {item.description}
+              <p
+                style={{
+                  fontFamily: "'JetBrains Mono', 'Space Mono', monospace",
+                  fontSize: 10,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "hsl(72 100% 64%)",
+                  marginBottom: 20,
+                }}
+              >
+                {product.tag}
               </p>
+
+              <h3 className="text-xl font-semibold mb-4 leading-snug">{product.title}</h3>
+
+              <p className="text-muted-foreground text-[15px] mb-8 leading-relaxed flex-grow">
+                {product.description}
+              </p>
+
+              <ul className="space-y-3 mb-10">
+                {product.bullets.map((b) => (
+                  <li
+                    key={b}
+                    style={{
+                      borderLeft: "2px solid hsl(72 100% 64% / 0.25)",
+                      paddingLeft: 12,
+                      paddingTop: 2,
+                      paddingBottom: 2,
+                    }}
+                  >
+                    <span className="text-sm text-muted-foreground">{b}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {product.external ? (
+                <a
+                  href={product.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 6,
+                    fontSize: 13,
+                    fontWeight: 500,
+                    color: "hsl(72 100% 64%)",
+                    textDecoration: "none",
+                    transition: "opacity 150ms",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+                  onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+                >
+                  {product.cta} →
+                </a>
+              ) : (
+                <Link
+                  to={product.href}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 6,
+                    fontSize: 13,
+                    fontWeight: 500,
+                    color: "hsl(var(--foreground))",
+                    textDecoration: "none",
+                    transition: "opacity 150ms",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.6")}
+                  onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+                >
+                  {product.cta} →
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>
