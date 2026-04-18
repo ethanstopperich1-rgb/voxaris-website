@@ -10,16 +10,15 @@ type NavLink = { name: string; href?: string; children?: NavChild[] };
 const navLinks: NavLink[] = [
   { name: "How It Works", href: "/how-it-works" },
   {
-    name: "Products & Solutions",
+    name: "Products",
     children: [
-      { name: "AEO Services", href: "/products/aeo", desc: "Get cited by ChatGPT & Perplexity" },
-      { name: "AI Website Builds", href: "/products/websites", desc: "AEO-ready sites in 72 hours" },
+      { name: "AEO Services", href: "/products/aeo", desc: "Get cited by ChatGPT, Perplexity & Claude" },
       { name: "Talking Postcard", href: "/products/talking-postcard", desc: "AI video outreach at scale" },
-      { name: "Marketing Agencies", href: "/solutions/agencies", desc: "White-label + resell infrastructure" },
-      { name: "Car Dealerships", href: "/solutions/dealerships", desc: "Lead response + appointment booking" },
+      { name: "AI Website Builds", href: "/products/websites", desc: "AEO-ready sites built in 72 hours" },
+      { name: "Staffing Agent", href: "/products/staffing", desc: "AI video screening before your team gets involved" },
     ],
   },
-  { name: "Pricing", href: "/pricing" },
+  { name: "Book a Demo", href: "/book-demo" },
 ];
 
 export default function Navigation() {
@@ -39,7 +38,7 @@ export default function Navigation() {
             <img
               src={voxarisLogo}
               alt="Voxaris AI — Personalizing Your Outreach"
-              className="h-8 lg:h-9 w-auto object-contain"
+              className="h-12 lg:h-14 w-auto object-contain"
             />
           </Link>
 

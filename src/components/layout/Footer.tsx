@@ -5,18 +5,13 @@ import voxarisLogo from "@/assets/logo.png";
 const footerLinks = {
   products: [
     { name: "AEO Services", href: "/products/aeo" },
-    { name: "AI Website Builds", href: "/products/websites" },
     { name: "Talking Postcard", href: "/products/talking-postcard" },
-    { name: "AI Voice Agent", href: "/products/voice-agent" },
-  ],
-  solutions: [
-    { name: "Marketing Agencies", href: "/solutions/agencies" },
-    { name: "Car Dealerships", href: "/solutions/dealerships" },
+    { name: "AI Website Builds", href: "/products/websites" },
+    { name: "Staffing Agent", href: "/products/staffing" },
   ],
   company: [
     { name: "How It Works", href: "/how-it-works" },
     { name: "Why Voxaris", href: "/why-voxaris" },
-    { name: "Pricing", href: "/pricing" },
     { name: "Book a Demo", href: "/book-demo" },
   ],
 };
@@ -49,27 +44,11 @@ export default function Footer() {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 lg:gap-16">
+          <div className="grid grid-cols-2 gap-10 lg:gap-16">
             <div>
               <h4 className="eyebrow-muted mb-5">Products</h4>
               <ul className="space-y-3.5">
                 {footerLinks.products.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.href}
-                      className="text-[14px] text-muted-foreground hover:text-foreground transition-colors duration-200"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="eyebrow-muted mb-5">Solutions</h4>
-              <ul className="space-y-3.5">
-                {footerLinks.solutions.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}

@@ -1,107 +1,133 @@
-import { motion } from "framer-motion";
-import Layout from "@/components/layout/Layout";
-import { Phone, Globe, PhoneOutgoing, CheckSquare, Calendar, Database, Bell, RefreshCw, ArrowRight } from "lucide-react";
+import { motion, Transition } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Search, Code, FileText, BarChart2, ArrowRight } from "lucide-react";
+import Layout from "@/components/layout/Layout";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] } as Transition,
+  }),
+};
 
 const steps = [
   {
-    icon: Phone,
-    title: "Inbound Call Handling",
-    description: "When a lead calls your business, Voxaris answers instantly — 24/7, 365 days a year. No hold times, no voicemail, no missed opportunities."
+    number: "01",
+    icon: Search,
+    heading: "AI Visibility Audit",
+    title: "We audit your AI visibility first.",
+    body: "Before we touch a single thing, we run your business through every major AI engine. ChatGPT, Perplexity, Claude, and Google AI. We document exactly what they say about you — or don't. You get a full report showing your current AI citation score, where competitors are winning, and the exact gaps we'll fix.",
+    tag: "Free — delivered in 24 hours",
   },
   {
-    icon: Globe,
-    title: "Web Form Response",
-    description: "The moment a prospect submits a form, Maria calls them back within seconds. Speed-to-lead is the strongest predictor of conversion."
+    number: "02",
+    icon: Code,
+    heading: "Schema & Technical Foundation",
+    title: "We fix how AI reads your site.",
+    body: "AI engines don't rank pages — they extract structured facts. We implement JSON-LD schema markup (Organization, LocalBusiness, Service, FAQPage), fix your meta layer, build a clean sitemap, and configure your robots.txt to explicitly invite Claude-SearchBot, GPTBot, and PerplexityBot to index your content. Most businesses have zero schema. This alone moves the needle.",
+    tag: "Completed in week 1",
   },
   {
-    icon: PhoneOutgoing,
-    title: "AI Outbound Calling",
-    description: "For leads that don't answer immediately, Maria makes follow-up calls at optimal times until contact is made."
+    number: "03",
+    icon: FileText,
+    heading: "AEO Content Engine",
+    title: "We create content AI wants to cite.",
+    body: "AI engines pull answers from pages that are written to be extracted — not just indexed. We build FAQ sections, answer-format blog posts, and structured comparison content targeting the exact questions your customers are asking AI right now. Every piece is written in the inverted pyramid format that AI citation systems prefer.",
+    tag: "Ongoing — weekly content",
   },
   {
-    icon: CheckSquare,
-    title: "Intelligent Qualification",
-    description: "Using your custom criteria, Maria qualifies each prospect — asking the right questions, scoring intent, and filtering out non-fits."
+    number: "04",
+    icon: BarChart2,
+    heading: "Citation Building & Monitoring",
+    title: "We track every citation, every week.",
+    body: "We run weekly AI citation checks across all four major engines and send you a report showing exactly where your business is being mentioned, in what context, and how your score is trending. As citations grow, we identify new citation opportunities and expand your content footprint. You always know where you stand.",
+    tag: "Weekly reporting",
   },
-  {
-    icon: Calendar,
-    title: "Appointment Booking",
-    description: "Qualified leads are booked directly into your calendar system in real time. No back-and-forth, no scheduling friction."
-  },
-  {
-    icon: Database,
-    title: "CRM Integration",
-    description: "Every call is logged, summarized, and pushed to your CRM with clean, structured data — no manual entry required."
-  },
-  {
-    icon: Bell,
-    title: "Confirmation & Reminders",
-    description: "Appointments are confirmed via SMS and email. Reminders are sent automatically to minimize no-shows."
-  },
-  {
-    icon: RefreshCw,
-    title: "Persistent Follow-up",
-    description: "Leads that don't book on the first call enter automated follow-up sequences until they convert or explicitly decline."
-  }
+];
+
+const timeline = [
+  { range: "Week 1–2", title: "Technical foundation complete", sub: "Schema, robots.txt, sitemap, meta layer" },
+  { range: "Week 3–6", title: "First citations appear", sub: "AI engines begin pulling your business into answers" },
+  { range: "Month 3+", title: "Consistent AI presence", sub: "Appearing in 4+ engines across your core service queries" },
 ];
 
 export default function HowItWorks() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding bg-secondary/30">
-        <div className="container-wide">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
-            <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-              How It Works
-            </span>
-            <h1 className="text-4xl lg:text-display-sm font-semibold text-foreground mb-6">
-              One system. Complete lead-to-appointment automation.
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Voxaris handles every step from first contact to confirmed appointment — automatically, consistently, and professionally.
-            </p>
-          </motion.div>
+      <section className="relative overflow-hidden bg-background border-b border-[hsl(var(--border))]">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 50% at 10% 60%, hsl(72 100% 64% / 0.03) 0%, transparent 70%)",
+          }}
+        />
+        <div className="container-wide relative">
+          <div className="pt-32 pb-20 lg:pt-40 lg:pb-28 max-w-3xl">
+            <motion.div initial="hidden" animate="visible" custom={0} variants={fadeUp} className="mb-7">
+              <p className="eyebrow">How It Works</p>
+            </motion.div>
+
+            <motion.h1
+              initial="hidden"
+              animate="visible"
+              custom={0.1}
+              variants={fadeUp}
+              className="text-[2.5rem] sm:text-5xl lg:text-6xl xl:text-[4rem] font-semibold tracking-[-0.03em] text-foreground mb-7 leading-[1.05]"
+            >
+              From invisible to cited —<br />
+              <span className="text-muted-foreground">in weeks, not months.</span>
+            </motion.h1>
+
+            <motion.p
+              initial="hidden"
+              animate="visible"
+              custom={0.2}
+              variants={fadeUp}
+              className="text-lg lg:text-xl text-muted-foreground max-w-[54ch] leading-relaxed"
+            >
+              Voxaris runs a four-part system that gets your business found, recognized, and recommended by AI search engines across ChatGPT, Perplexity, Claude, and Google AI Overviews.
+            </motion.p>
+          </div>
         </div>
       </section>
 
       {/* Steps */}
-      <section className="section-padding">
+      <section className="section-padding border-b border-[hsl(var(--border))]">
         <div className="container-wide">
-          <div className="space-y-8">
+          <div className="space-y-20 lg:space-y-28">
             {steps.map((step, index) => (
               <motion.div
-                key={step.title}
-                initial={{ opacity: 0, y: 20 }}
+                key={step.number}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="flex gap-6 lg:gap-8 items-start"
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                className="grid lg:grid-cols-[200px_1fr] gap-8 lg:gap-16 items-start"
               >
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center">
-                    <step.icon className="h-6 w-6" />
+                <div className="flex lg:flex-col items-center lg:items-start gap-5">
+                  <span className="font-mono-display text-[hsl(var(--accent))] text-[13px] tracking-[0.12em]">
+                    {step.number}
+                  </span>
+                  <div className="w-12 h-12 border border-[hsl(var(--border))] rounded-[6px] flex items-center justify-center">
+                    <step.icon className="h-5 w-5 text-[hsl(var(--accent))]" strokeWidth={1.5} />
                   </div>
                 </div>
-                <div className="flex-1 pb-8 border-b border-border last:border-0">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-sm text-muted-foreground font-medium">
-                      Step {index + 1}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
+
+                <div className="max-w-[60ch]">
+                  <p className="eyebrow-muted mb-3">{step.heading}</p>
+                  <h3 className="text-2xl lg:text-3xl font-semibold text-foreground mb-5 leading-[1.2] tracking-[-0.02em]">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed max-w-2xl">
-                    {step.description}
+                  <p className="text-[15px] lg:text-[16px] text-muted-foreground leading-relaxed mb-5">
+                    {step.body}
                   </p>
+                  <span className="inline-block border border-[hsl(var(--accent))/25] text-[hsl(var(--accent))] text-[12px] font-medium px-3 py-1.5 rounded-[6px]">
+                    {step.tag}
+                  </span>
                 </div>
               </motion.div>
             ))}
@@ -109,25 +135,88 @@ export default function HowItWorks() {
         </div>
       </section>
 
+      {/* Timeline */}
+      <section className="section-padding border-b border-[hsl(var(--border))]">
+        <div className="container-wide">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="mb-14 max-w-[55ch]"
+          >
+            <p className="eyebrow mb-4">What to expect</p>
+            <h2 className="text-heading font-semibold text-foreground">
+              A realistic timeline, measured in weeks — not years.
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[hsl(var(--border))] rounded-[6px] overflow-hidden">
+            {timeline.map((item, index) => (
+              <motion.div
+                key={item.range}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="bg-[hsl(var(--card))] px-8 py-10"
+              >
+                <div className="stat-number text-2xl font-medium mb-3">{item.range}</div>
+                <div className="text-[17px] font-semibold text-foreground mb-2">{item.title}</div>
+                <div className="text-[14px] text-muted-foreground leading-relaxed">{item.sub}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container-wide text-center">
-          <h2 className="text-3xl lg:text-heading font-semibold mb-4">
-            Ready to automate your lead-to-appointment process?
-          </h2>
-          <p className="text-lg text-primary-foreground/70 mb-8 max-w-xl mx-auto">
-            See how Voxaris can transform your operations with a personalized demo.
-          </p>
-          <Link to="/book-demo">
-            <Button 
-              variant="secondary" 
-              size="xl" 
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-            >
-              Book a Demo
-              <ArrowRight className="h-5 w-5" />
-            </Button>
-          </Link>
+      <section className="section-padding">
+        <div className="container-wide">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="max-w-[55ch]"
+          >
+            <p className="eyebrow mb-4">Next step</p>
+            <h2 className="text-heading font-semibold text-foreground mb-4">
+              Start with a free audit.
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              We'll show you exactly where you stand before you spend a dollar. Free AI visibility report, delivered in 24 hours.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a href="https://audit.voxaris.io" target="_blank" rel="noopener noreferrer">
+                <button
+                  style={{
+                    background: "hsl(72 100% 64%)",
+                    color: "#000",
+                    padding: "14px 28px",
+                    fontSize: 15,
+                    fontWeight: 600,
+                    borderRadius: 6,
+                    border: "none",
+                    cursor: "pointer",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    transition: "filter 150ms",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.filter = "brightness(1.1)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.filter = "brightness(1)")}
+                >
+                  Get Free AI Audit <ArrowRight className="h-4 w-4" />
+                </button>
+              </a>
+              <Link to="/book-demo">
+                <button className="border border-[hsl(var(--border))] text-foreground px-6 py-3 text-[15px] font-medium rounded-[6px] hover:border-[hsl(var(--accent))/40] transition-all duration-200">
+                  Book a Demo
+                </button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </Layout>

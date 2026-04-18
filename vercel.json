@@ -1,10 +1,12 @@
 {
-  "buildCommand": "npx puppeteer browsers install chrome && npm run build:full",
+  "buildCommand": "npm run build:full",
   "outputDirectory": "dist",
   "framework": "vite",
-  "cleanUrls": true,
   "trailingSlash": false,
   "routes": [
+    { "src": "/products/staffing-agent", "status": 308, "headers": { "Location": "/products/staffing" } },
+    { "src": "/pricing", "status": 308, "headers": { "Location": "/book-demo" } },
+    { "src": "/solutions/.*", "status": 308, "headers": { "Location": "/" } },
     { "handle": "filesystem" },
     { "src": "/.*", "dest": "/index.html" }
   ]

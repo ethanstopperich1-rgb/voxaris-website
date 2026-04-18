@@ -14,61 +14,61 @@ type Product = {
 
 const products: Product[] = [
   {
-    tag: "VOICE",
-    title: "AI Voice Agent",
-    description:
-      "Maria answers every inbound call instantly, qualifies prospects with custom logic, books appointments in real time, and pushes everything to your CRM.",
-    features: [
-      "Inbound call handling 24/7",
-      "Outbound lead follow-up",
-      "Appointment booking + SMS confirmation",
-      "CRM sync after every call",
-    ],
-    cta: "See Voice Agent",
-    href: "/products/voice-agent",
-  },
-  {
-    tag: "VIDEO",
-    title: "AI Video Agent",
-    description:
-      "Send personalized AI video messages at scale — talking postcards, follow-up sequences, and outreach campaigns that actually get watched.",
-    features: [
-      "Personalized video per recipient",
-      "Talking Postcard physical + digital",
-      "Outreach campaign automation",
-      "Real-time engagement tracking",
-    ],
-    cta: "See Video Agent",
-    href: "/products/video-agent",
-  },
-  {
-    tag: "STAFFING",
-    title: "Staffing Agent",
-    description:
-      "AI-powered video interviews that screen candidates before your team gets involved. Consistent questions, recorded answers, instant summaries.",
-    features: [
-      "Automated video interview invites",
-      "Structured question delivery",
-      "AI summary of each candidate",
-      "Integrates with your ATS or CRM",
-    ],
-    cta: "See Staffing Agent",
-    href: "/products/staffing-agent",
-  },
-  {
     tag: "AEO",
     title: "AEO Services",
     description:
       "Answer Engine Optimization — we make your business visible in ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews. Starts with a free audit.",
     features: [
-      "AI Visibility Audit (free)",
-      "Schema markup + entity optimization",
-      "llms.txt + AI crawler configuration",
-      "Monthly citation tracking",
+      "AI Visibility Audit (free, 24h delivery)",
+      "Schema + robots.txt + sitemap optimization",
+      "AEO content engine (FAQ + answer format)",
+      "Weekly citation monitoring across 4 engines",
     ],
     cta: "Get Free Audit",
     href: "https://audit.voxaris.io",
     external: true,
+  },
+  {
+    tag: "VIDEO",
+    title: "Talking Postcard",
+    description:
+      "Personalized AI video outreach at scale — delivered physically with a QR code or digitally. Every recipient sees a video made just for them.",
+    features: [
+      "Personalized AI video per recipient",
+      "Physical postcard + QR, or digital delivery",
+      "Outreach campaign automation",
+      "Real-time engagement tracking",
+    ],
+    cta: "See Talking Postcard",
+    href: "/products/talking-postcard",
+  },
+  {
+    tag: "WEBSITES",
+    title: "AI Website Builds",
+    description:
+      "AEO-ready websites built in 72 hours. Schema-complete, FAQ-structured, fast. Designed to be cited by AI before the first visitor arrives.",
+    features: [
+      "Live in 72 hours",
+      "Full JSON-LD schema architecture",
+      "Question-phrased content for AI extraction",
+      "Core Web Vitals optimized",
+    ],
+    cta: "See AI Website Builds",
+    href: "/products/websites",
+  },
+  {
+    tag: "STAFFING",
+    title: "Staffing Agent",
+    description:
+      "AI video interviews that screen every applicant before your team sees a resume. Consistent questions, recorded answers, one-page summaries.",
+    features: [
+      "Automated video interview invites",
+      "Structured question delivery",
+      "Recorded answers + AI summaries",
+      "Scales from 5 to 500 interviews",
+    ],
+    cta: "See Staffing Agent",
+    href: "/products/staffing",
   },
 ];
 

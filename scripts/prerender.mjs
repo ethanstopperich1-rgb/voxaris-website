@@ -1,14 +1,19 @@
 /**
  * Post-build prerenderer.
- * Serves dist/ on a local port, drives puppeteer through every route,
- * saves the rendered HTML as dist/<route>/index.html so every URL ships
- * full content to crawlers that don't execute JS.
+ * Serves dist/ on a local port, drives a headless Chromium through every
+ * route, saves the rendered HTML as dist/<route>/index.html so every URL
+ * ships full content to crawlers that don't execute JavaScript.
+ *
+ * Uses @sparticuz/chromium (bundled Chrome + all shared libs) in CI
+ * environments like Vercel, falling back to any locally-installed Chrome
+ * during development.
  */
 import { createServer } from "node:http";
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
+import chromium from "@sparticuz/chromium";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, "..", "dist");
@@ -17,18 +22,13 @@ const PORT = 4173;
 const ROUTES = [
   "/",
   "/how-it-works",
-  "/pricing",
   "/why-voxaris",
   "/book-demo",
   "/demo",
   "/products/aeo",
-  "/products/websites",
   "/products/talking-postcard",
-  "/products/voice-agent",
-  "/products/video-agent",
-  "/products/staffing-agent",
-  "/solutions/agencies",
-  "/solutions/dealerships",
+  "/products/websites",
+  "/products/staffing",
   "/privacy",
   "/terms",
 ];
@@ -58,7 +58,6 @@ function startServer() {
       if (urlPath === "/") urlPath = "/index.html";
       let filePath = join(DIST, urlPath);
 
-      // SPA fallback: if the requested path isn't a real file, serve index.html
       if (!existsSync(filePath) || !extname(filePath)) {
         filePath = join(DIST, "index.html");
       }
@@ -68,7 +67,7 @@ function startServer() {
         const mime = MIME[extname(filePath)] || "application/octet-stream";
         res.writeHead(200, { "Content-Type": mime });
         res.end(body);
-      } catch (err) {
+      } catch {
         res.writeHead(404);
         res.end("Not found");
       }
@@ -77,19 +76,46 @@ function startServer() {
   });
 }
 
+async function resolveLaunchOptions() {
+  // Prefer a locally-installed Chrome for fast dev loops; fall back to the
+  // bundled Chromium for CI (Vercel) where system Chrome is not available
+  // and the OS lacks the shared libs a stock puppeteer download expects.
+  const localCandidates = [
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "/Applications/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "/usr/bin/google-chrome",
+    "/usr/bin/chromium",
+  ];
+
+  for (const p of localCandidates) {
+    if (existsSync(p)) {
+      return {
+        executablePath: p,
+        args: ["--no-sandbox", "--disable-setuid-sandbox"],
+        headless: "new",
+      };
+    }
+  }
+
+  return {
+    executablePath: await chromium.executablePath(),
+    args: chromium.args,
+    headless: chromium.headless,
+  };
+}
+
 async function prerender() {
   if (!existsSync(join(DIST, "index.html"))) {
-    console.error(`[prerender] dist/index.html missing — run vite build first.`);
+    console.error("[prerender] dist/index.html missing — run vite build first.");
     process.exit(1);
   }
 
   const server = await startServer();
   console.log(`[prerender] dev server up on http://localhost:${PORT}`);
 
-  const browser = await puppeteer.launch({
-    headless: "new",
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  });
+  const launchOptions = await resolveLaunchOptions();
+  console.log(`[prerender] chromium: ${launchOptions.executablePath}`);
+  const browser = await puppeteer.launch(launchOptions);
 
   const results = [];
 
@@ -97,24 +123,17 @@ async function prerender() {
     for (const route of ROUTES) {
       const page = await browser.newPage();
       const url = `http://localhost:${PORT}${route}`;
-
       try {
         await page.goto(url, { waitUntil: "networkidle0", timeout: 30000 });
-        // Give framer-motion + any deferred effects a tick to settle
         await page.evaluate(() => new Promise((r) => setTimeout(r, 300)));
-
-        // Stamp the prerendered flag so the runtime knows to hydrate
         await page.evaluate(() => {
           document.documentElement.dataset.prerendered = "true";
         });
 
         const html = await page.content();
-
-        // Write as dist/<route>/index.html (or dist/index.html for "/")
         const outDir = route === "/" ? DIST : join(DIST, route);
         mkdirSync(outDir, { recursive: true });
         writeFileSync(join(outDir, "index.html"), html, "utf8");
-
         results.push({ route, size: html.length, ok: true });
       } catch (err) {
         results.push({ route, ok: false, error: err.message });
