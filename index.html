@@ -6,14 +6,15 @@
     <meta name="theme-color" content="#0E0C0B" />
 
     <title>Voxaris | AI Marketing Infrastructure for Florida Businesses</title>
-    <meta name="description" content="Voxaris makes Florida businesses visible to AI. AEO services, AI-ready website builds in 72 hours, and AI video outreach (Talking Postcard) — built for local businesses and agencies." />
+    <meta name="description" content="Voxaris makes Florida businesses visible to AI. AEO services that get you cited by ChatGPT, Perplexity, and Claude; AI-ready website builds in 72 hours; AI-personalized video outreach (Talking Postcard). Based in Orlando, FL." />
     <meta name="author" content="Voxaris" />
+    <meta name="keywords" content="Answer Engine Optimization, AEO, AI SEO, ChatGPT SEO, Perplexity optimization, Claude search optimization, Google AI Overviews, AI visibility, AI citation, Orlando AEO, Florida AI marketing, AI website build, schema markup, llms.txt, Talking Postcard" />
     <link rel="canonical" href="https://voxaris.io/" />
 
     <!-- Open Graph -->
     <meta property="og:site_name" content="Voxaris" />
     <meta property="og:title" content="Voxaris | Get your business found by AI, not just Google" />
-    <meta property="og:description" content="AEO services, AI-ready websites in 72h, and AI video outreach. Start with a free AI Visibility Audit." />
+    <meta property="og:description" content="AEO services, AI-ready websites in 72h, and AI video outreach. Start with a free AI Visibility Audit — delivered in 24 hours." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://voxaris.io/" />
     <meta property="og:image" content="https://voxaris.io/voxaris-og-image.png" />
@@ -26,28 +27,129 @@
     <meta name="twitter:description" content="AEO services, AI-ready websites in 72h, and AI video outreach." />
     <meta name="twitter:image" content="https://voxaris.io/voxaris-og-image.png" />
 
-    <!-- Organization schema -->
+    <!-- Organization + LocalBusiness (Professional Service) schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": ["Organization", "ProfessionalService", "LocalBusiness"],
+      "@id": "https://voxaris.io/#organization",
       "name": "Voxaris",
-      "alternateName": "Voxaris AI",
+      "legalName": "Voxaris",
+      "alternateName": ["Voxaris AI", "Voxaris Marketing"],
       "url": "https://voxaris.io",
-      "logo": "https://voxaris.io/voxaris-og-image.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://voxaris.io/voxaris-og-image.png",
+        "width": 1200,
+        "height": 630
+      },
+      "image": "https://voxaris.io/voxaris-og-image.png",
       "slogan": "Personalizing Your Outreach",
-      "description": "Voxaris builds AI-optimized websites, runs AEO campaigns that get businesses cited by ChatGPT and Perplexity, and delivers AI-personalized video outreach for Florida businesses and agencies.",
+      "description": "Voxaris is an AI marketing infrastructure company based in Orlando, Florida. We run Answer Engine Optimization (AEO) campaigns that get businesses cited by ChatGPT, Perplexity, Claude, Google AI Overviews, and Gemini. We also build AEO-ready websites in 72 hours and run Talking Postcard campaigns — AI-personalized video outreach delivered as physical postcards.",
+      "foundingDate": "2025",
+      "founder": {
+        "@type": "Person",
+        "name": "Ethan Stopperich",
+        "jobTitle": "Founder",
+        "worksFor": { "@id": "https://voxaris.io/#organization" }
+      },
+      "areaServed": [
+        { "@type": "State", "name": "Florida" },
+        { "@type": "City", "name": "Orlando" },
+        { "@type": "City", "name": "Tampa" },
+        { "@type": "City", "name": "Miami" },
+        { "@type": "City", "name": "Jacksonville" },
+        { "@type": "Country", "name": "United States" }
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Orlando",
         "addressRegion": "FL",
+        "postalCode": "32801",
         "addressCountry": "US"
       },
-      "sameAs": []
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.5383,
+        "longitude": -81.3792
+      },
+      "priceRange": "$$",
+      "knowsAbout": [
+        "Answer Engine Optimization",
+        "AEO",
+        "AI search optimization",
+        "ChatGPT citation strategy",
+        "Perplexity ranking",
+        "Claude web search optimization",
+        "Google AI Overviews",
+        "JSON-LD schema markup",
+        "Schema.org structured data",
+        "llms.txt configuration",
+        "Entity optimization",
+        "AI-ready website development",
+        "Direct mail AI video marketing",
+        "Tavus AI video generation",
+        "Local SEO"
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AEO Services" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI-Ready Website Builds" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Talking Postcard Campaigns" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Staffing Agent" } }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Voxaris Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Visibility Audit",
+              "description": "Free citation report across ChatGPT, Perplexity, Claude, and Google AI. Delivered in 24 hours.",
+              "url": "https://audit.voxaris.io"
+            },
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI-Ready Website Build",
+              "description": "AEO-optimized website delivered in 72 hours. Schema-complete, FAQ-structured, Core Web Vitals tuned.",
+              "url": "https://voxaris.io/products/websites"
+            },
+            "price": "1997",
+            "priceCurrency": "USD"
+          }
+        ]
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "url": "https://voxaris.io/book-demo",
+          "areaServed": "US",
+          "availableLanguage": ["en"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "url": "https://voxaris.io/book-demo",
+          "areaServed": "US",
+          "availableLanguage": ["en"]
+        }
+      ],
+      "sameAs": [
+        "https://twitter.com/voxaris",
+        "https://x.com/voxaris",
+        "https://www.linkedin.com/company/voxaris"
+      ]
     }
     </script>
 
-    <!-- Service catalog schema -->
+    <!-- Service catalog -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -58,45 +160,152 @@
           "@type": "Service",
           "position": 1,
           "name": "AEO Services",
-          "description": "Answer Engine Optimization. We optimize your business to be cited by ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews. Starts with a free AI Visibility Audit delivered in 48 hours.",
-          "provider": { "@type": "Organization", "name": "Voxaris" },
+          "description": "Answer Engine Optimization. We optimize your business to be cited by ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews. Starts with a free AI Visibility Audit delivered in 24 hours.",
+          "provider": { "@id": "https://voxaris.io/#organization" },
           "url": "https://voxaris.io/products/aeo",
-          "serviceType": "Answer Engine Optimization"
+          "serviceType": "Answer Engine Optimization",
+          "areaServed": { "@type": "State", "name": "Florida" }
         },
         {
           "@type": "Service",
           "position": 2,
           "name": "AI-Ready Website Builds",
           "description": "AI-optimized websites for local businesses, live in 72 hours. $1,997 flat. Schema-complete, FAQ-structured, and optimized for AI citation before the first visitor arrives.",
-          "provider": { "@type": "Organization", "name": "Voxaris" },
+          "provider": { "@id": "https://voxaris.io/#organization" },
           "url": "https://voxaris.io/products/websites",
           "offers": {
             "@type": "Offer",
             "price": "1997",
-            "priceCurrency": "USD"
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
           },
-          "serviceType": "Website Development"
+          "serviceType": "Website Development",
+          "areaServed": { "@type": "Country", "name": "US" }
         },
         {
           "@type": "Service",
           "position": 3,
           "name": "Talking Postcard",
           "description": "AI-personalized video delivered as a physical postcard. Each piece plays a unique video message addressed to the recipient — name, business, city, specific hook. Campaigns from 500 to 50,000 pieces.",
-          "provider": { "@type": "Organization", "name": "Voxaris" },
+          "provider": { "@id": "https://voxaris.io/#organization" },
           "url": "https://voxaris.io/products/talking-postcard",
-          "serviceType": "Direct Mail Marketing"
+          "serviceType": "Direct Mail Marketing",
+          "areaServed": { "@type": "Country", "name": "US" }
+        },
+        {
+          "@type": "Service",
+          "position": 4,
+          "name": "Staffing Agent",
+          "description": "AI video interviews that screen candidates before your team sees a resume. Consistent questions, recorded answers, one-page summaries.",
+          "provider": { "@id": "https://voxaris.io/#organization" },
+          "url": "https://voxaris.io/products/staffing",
+          "serviceType": "Recruitment Technology"
         }
       ]
     }
     </script>
 
-    <!-- WebSite schema with Sitelinks search -->
+    <!-- WebSite -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://voxaris.io/#website",
       "name": "Voxaris",
-      "url": "https://voxaris.io"
+      "url": "https://voxaris.io",
+      "publisher": { "@id": "https://voxaris.io/#organization" },
+      "inLanguage": "en-US"
+    }
+    </script>
+
+    <!-- FAQPage — directly addresses AEO citation signals -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Answer Engine Optimization (AEO)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Answer Engine Optimization (AEO) is the practice of structuring your website and online presence so AI search engines — ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews — cite your business directly in their answers. Unlike traditional SEO which optimizes for ranked link lists, AEO optimizes for direct citation inside AI-generated answers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is AEO different from SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO optimizes for Google's ranked list of blue links; AEO optimizes for being cited inside AI answers where users never see a link list. SEO rewards keyword density and backlinks; AEO rewards structured data (JSON-LD), FAQ content, entity clarity, and explicit llms.txt and schema signals that AI engines extract."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which AI engines does Voxaris optimize for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We optimize for ChatGPT (OpenAI), Perplexity, Claude (Anthropic), Gemini (Google), and Google AI Overviews. We track citation signals across all five engines weekly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does AEO take to show results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Technical foundation (schema, robots.txt, sitemap, meta layer) is completed in week 1. First citations in AI engines typically appear between weeks 3 and 6. Consistent presence across 4+ engines for your core service queries builds by month 3."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the AI Visibility Audit and what does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The AI Visibility Audit is Voxaris's free diagnostic report. We run your business through ChatGPT, Perplexity, Claude, and Google AI and document exactly what they say about you — or don't. The audit is free, requires no credit card, and is delivered in 24 hours at audit.voxaris.io."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can Voxaris build an AEO-ready website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "72 hours. Our AI Website Builds are delivered in 72 hours for a flat $1,997, including full JSON-LD schema architecture, FAQ-structured content, question-phrased copy, Google Business Profile optimization, and Core Web Vitals tuning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Talking Postcard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Talking Postcard is a physical mailer with a QR code that opens a personalized AI video message for the recipient. Each video is uniquely generated using Tavus AI with the recipient's name, business, and context. Campaigns range from 500 to 50,000 pieces with full campaign management included."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Voxaris based and who do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Voxaris is based in Orlando, Florida and primarily serves local service businesses and marketing agencies across Florida — Orlando, Tampa, Miami, Jacksonville — and nationwide for AI visibility work."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- BreadcrumbList — site structure -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://voxaris.io/" },
+        { "@type": "ListItem", "position": 2, "name": "How It Works", "item": "https://voxaris.io/how-it-works" },
+        { "@type": "ListItem", "position": 3, "name": "AEO Services", "item": "https://voxaris.io/products/aeo" },
+        { "@type": "ListItem", "position": 4, "name": "Talking Postcard", "item": "https://voxaris.io/products/talking-postcard" },
+        { "@type": "ListItem", "position": 5, "name": "AI Website Builds", "item": "https://voxaris.io/products/websites" },
+        { "@type": "ListItem", "position": 6, "name": "Staffing Agent", "item": "https://voxaris.io/products/staffing" },
+        { "@type": "ListItem", "position": 7, "name": "Book a Demo", "item": "https://voxaris.io/book-demo" }
+      ]
     }
     </script>
   </head>
@@ -108,9 +317,10 @@
       <p>Voxaris builds AI-optimized websites, runs AEO campaigns that get businesses cited by ChatGPT and Perplexity, and delivers personalized video outreach that turns cold contacts into booked calls.</p>
       <h2>Three products. One team.</h2>
       <ul>
-        <li><strong>AEO Services</strong> — Answer Engine Optimization. Get cited by ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews. <a href="https://audit.voxaris.io">Free AI Visibility Audit</a> delivered in 48 hours.</li>
-        <li><strong>AI-Ready Website Builds</strong> — Schema-complete, FAQ-structured websites live in 72 hours, $1,997 flat. Built from day one to score 85+ on an AEO audit.</li>
+        <li><strong>AEO Services</strong> — Answer Engine Optimization. Get cited by ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews. <a href="https://audit.voxaris.io">Free AI Visibility Audit</a> delivered in 24 hours.</li>
+        <li><strong>AI-Ready Website Builds</strong> — Schema-complete, FAQ-structured websites live in 72 hours, $1,997 flat.</li>
         <li><strong>Talking Postcard</strong> — AI-personalized video delivered as a physical postcard. Campaigns from 500 to 50,000 pieces.</li>
+        <li><strong>Staffing Agent</strong> — AI video interviews that screen candidates before your team sees a resume.</li>
       </ul>
       <p>Based in Orlando, Florida. <a href="/book-demo">Book a demo</a> or <a href="https://audit.voxaris.io">get a free AI audit</a>.</p>
     </noscript>
