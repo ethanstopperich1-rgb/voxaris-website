@@ -83,12 +83,14 @@ Voxaris dashboard.
 
 ## Verified Results
 
-- Dorothy Dean Designs (Orlando, FL): AI visibility score
-  improved from 59 to 80+ within 30 days of implementation
+- The Kitchen and Bath Store of Orlando (Orlando, FL): AI-optimized
+  website rebuild by Voxaris's founder generated over six figures
+  in revenue in its first year live
 - Voxaris.io (self): Technical SEO 100/100, full 19-point
-  AEO checklist implemented
-- Average client improvement: 15–25 points within first
-  30 days of retainer
+  AEO checklist implemented, IndexNow auto-pinging Bing/Yandex/Naver
+  on every deploy
+- Average client improvement: 15–25 points on AI Visibility Score
+  within first 30 days of retainer
 
 ## Who it's for
 

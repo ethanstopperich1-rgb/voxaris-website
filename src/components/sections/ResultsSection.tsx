@@ -30,14 +30,13 @@ const stats: Stat[] = [
   },
 ];
 
-const caseStudy = {
-  client: "Dorothy Dean Designs",
+const founderProof = {
+  business: "The Kitchen and Bath Store of Orlando",
   location: "Orlando, FL",
-  before: 59,
-  after: 84,
-  timeframe: "30 days",
-  quote:
-    "Voxaris took our AI visibility from invisible to top-3 cited in our category. We started getting calls from people who said ChatGPT recommended us.",
+  metric: "6 figures",
+  metricLabel: "in first-year revenue",
+  detail:
+    "Voxaris's founder rebuilt The Kitchen and Bath Store of Orlando into an AI-optimized website that drove over six figures in revenue in its first year live — the same playbook now shipped to every Voxaris client.",
 };
 
 export default function ResultsSection() {
@@ -78,7 +77,7 @@ export default function ResultsSection() {
           ))}
         </div>
 
-        {/* Featured case study */}
+        {/* Founder track record */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,25 +86,21 @@ export default function ResultsSection() {
           className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-8 lg:p-10"
         >
           <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-12 items-center">
-            <div className="flex items-baseline gap-4">
-              <div className="text-5xl lg:text-6xl font-semibold tracking-[-0.03em] text-muted-foreground tabular-nums line-through decoration-[hsl(var(--muted-foreground))/40] decoration-2">
-                {caseStudy.before}
+            <div className="flex flex-col">
+              <div className="text-6xl lg:text-7xl font-semibold tracking-[-0.03em] text-foreground leading-none mb-2">
+                {founderProof.metric}
               </div>
-              <div className="text-muted-foreground text-2xl">→</div>
-              <div className="text-6xl lg:text-7xl font-semibold tracking-[-0.03em] text-foreground tabular-nums">
-                {caseStudy.after}
-              </div>
-              <div className="text-sm text-muted-foreground self-end mb-2">/100</div>
+              <div className="text-sm text-muted-foreground">{founderProof.metricLabel}</div>
             </div>
             <div>
-              <p className="eyebrow-muted mb-3">Case study · {caseStudy.timeframe}</p>
-              <p className="text-lg lg:text-xl text-foreground leading-relaxed mb-4 max-w-[55ch]">
-                "{caseStudy.quote}"
+              <p className="eyebrow-muted mb-3">Founder track record</p>
+              <p className="text-lg lg:text-xl text-foreground leading-relaxed mb-4 max-w-[58ch]">
+                {founderProof.detail}
               </p>
               <p className="text-sm text-muted-foreground">
-                <span className="text-foreground font-medium">{caseStudy.client}</span>
+                <span className="text-foreground font-medium">{founderProof.business}</span>
                 {" · "}
-                {caseStudy.location}
+                {founderProof.location}
               </p>
             </div>
           </div>

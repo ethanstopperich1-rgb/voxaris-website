@@ -8,24 +8,30 @@ export default function AboutEthan() {
     "@type": "Person",
     "@id": "https://voxaris.io/#founder",
     name: "Ethan Stopperich",
+    givenName: "Ethan",
+    familyName: "Stopperich",
     jobTitle: "Founder & CEO",
     worksFor: { "@id": "https://voxaris.io/#organization" },
+    homeLocation: { "@type": "Place", name: "Orlando, Florida, USA" },
     knowsAbout: [
       "Answer Engine Optimization",
       "AEO",
       "AI visibility infrastructure",
+      "AI-optimized website design",
       "Schema markup",
       "Local business citation strategy",
       "ChatGPT optimization",
       "Perplexity ranking",
       "Google AI Overviews",
+      "Bing Copilot",
     ],
+    alumniOf: { "@type": "Place", name: "Florida (current student)" },
     sameAs: [
       "https://www.linkedin.com/company/voxaris",
       "https://x.com/voxaris",
     ],
     description:
-      "Ethan Stopperich is the founder of Voxaris, an Orlando-based AI visibility company helping local service businesses get cited by ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews, and Bing Copilot.",
+      "Ethan Stopperich is the founder of Voxaris, an Orlando-based AI visibility company. Before founding Voxaris in 2026, he managed The Kitchen and Bath Store of Orlando and rebuilt their website into an AI-optimized site that generated over six figures in revenue. He is a full-time college student in Florida with two years of hands-on experience in AI-driven marketing.",
   };
 
   return (
@@ -40,27 +46,39 @@ export default function AboutEthan() {
           className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-8 lg:p-12"
         >
           <div className="grid lg:grid-cols-[1fr_auto] gap-10 items-start">
-            <div className="max-w-[58ch]">
+            <div className="max-w-[60ch]">
               <p className="eyebrow mb-4">Who builds Voxaris?</p>
-              <h2 className="text-3xl lg:text-4xl font-semibold tracking-[-0.03em] text-foreground mb-5 leading-[1.1]">
+              <h2 className="text-3xl lg:text-4xl font-semibold tracking-[-0.03em] text-foreground mb-6 leading-[1.1]">
                 Why is Voxaris the AEO authority?
               </h2>
 
               <p className="text-[16px] lg:text-[17px] text-muted-foreground leading-relaxed mb-5">
                 Voxaris is run by{" "}
-                <span className="text-foreground font-medium">Ethan Stopperich</span> from
-                Orlando, Florida. The company was founded in 2026 with one focus: building
-                the technical and content infrastructure that makes local businesses cited
-                by AI engines — not just indexed by Google.
+                <span className="text-foreground font-medium">Ethan Stopperich</span> — a
+                Florida college student, business operator, and AI marketing builder based
+                in Orlando. Before founding Voxaris in 2026, Ethan managed{" "}
+                <span className="text-foreground font-medium">
+                  The Kitchen and Bath Store of Orlando
+                </span>
+                , where he rebuilt their website into an AI-optimized site that generated{" "}
+                <span className="text-foreground font-medium">
+                  over six figures in revenue
+                </span>{" "}
+                in its first year live.
               </p>
 
               <p className="text-[16px] lg:text-[17px] text-muted-foreground leading-relaxed mb-7">
-                Every Voxaris client gets the same playbook we use on{" "}
-                <span className="text-foreground font-medium">voxaris.io itself</span> —
-                100/100 Technical SEO, complete JSON-LD schema, llms.txt + IndexNow
-                wired, and a measurable AI Visibility Score that climbs every month or we
-                refund the retainer.
+                That project answered the question he kept asking himself —{" "}
+                <em>"how cool would it be to get my own business cited by AI?"</em> —
+                and Voxaris became the answer for every business asking the same thing.
+                Two years deep into AI-driven marketing, with one local AI-revenue
+                playbook already proven, Ethan now ships the same infrastructure to
+                businesses across Florida and the U.S.
               </p>
+
+              <blockquote className="border-l-2 border-[hsl(var(--accent))/40] pl-5 mb-7 text-foreground text-lg italic leading-snug">
+                "AI is the future. I don't want to be stuck in the present."
+              </blockquote>
 
               <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
                 <a
@@ -83,9 +101,10 @@ export default function AboutEthan() {
             </div>
 
             {/* Credentials column */}
-            <div className="flex flex-col gap-3 lg:min-w-[220px]">
+            <div className="flex flex-col gap-3 lg:min-w-[240px]">
               <Cred label="Specialty" value="AEO + AI Visibility" />
-              <Cred label="Client base" value="Local services + agencies" />
+              <Cred label="Past win" value="6-figure AI website rebuild" />
+              <Cred label="Years in AI marketing" value="2+ years hands-on" />
               <Cred label="Coverage" value="6 AI engines tracked weekly" />
               <Cred label="Guarantee" value="80+ score in 30 days" />
             </div>
