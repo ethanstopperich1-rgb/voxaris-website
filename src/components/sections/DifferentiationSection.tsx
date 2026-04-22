@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 const products = [
   {
@@ -80,7 +81,7 @@ export default function DifferentiationSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[hsl(var(--border))] rounded-[6px] overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {products.map((product, index) => (
             <motion.div
               key={product.tag}
@@ -88,7 +89,7 @@ export default function DifferentiationSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.12 }}
-              className="bg-[hsl(var(--card))] p-8 lg:p-10 flex flex-col"
+              className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-8 lg:p-10 flex flex-col transition-colors duration-200 hover:border-white/20 hover:bg-white/[0.05]"
             >
               <p
                 style={{
@@ -164,6 +165,13 @@ export default function DifferentiationSection() {
                   {product.cta} →
                 </Link>
               )}
+              <BorderBeam
+                size={220}
+                duration={11}
+                delay={index * 1.6}
+                colorFrom="hsl(28 8% 72%)"
+                colorTo="hsl(28 8% 72% / 0)"
+              />
             </motion.div>
           ))}
         </div>
