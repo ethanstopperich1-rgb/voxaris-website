@@ -63,11 +63,11 @@ export default function OffersSection() {
           transition={{ duration: 0.6 }}
           className="mb-14 max-w-2xl"
         >
-          <p className="eyebrow mb-4">How we work</p>
+          <p className="eyebrow mb-4">How does Voxaris work?</p>
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-[-0.03em] text-foreground leading-[1.05]">
-            Three ways in.
+            Which Voxaris tier
             <br />
-            <span className="text-muted-foreground">Pick the one that fits.</span>
+            <span className="text-muted-foreground">fits your business?</span>
           </h2>
         </motion.div>
 

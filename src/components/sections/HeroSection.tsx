@@ -58,8 +58,8 @@ export default function HeroSection() {
             variants={fadeUp}
             className="text-[2.75rem] sm:text-5xl lg:text-6xl xl:text-[4.25rem] font-semibold tracking-[-0.03em] text-foreground mb-7 leading-[1.05]"
           >
-            Find out if AI<br />
-            <span className="text-muted-foreground">can see your business.</span>
+            Can AI see<br />
+            <span className="text-muted-foreground">your business?</span>
           </motion.h1>
 
           {/* Subheadline */}
