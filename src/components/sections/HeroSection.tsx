@@ -83,7 +83,7 @@ export default function HeroSection() {
             variants={fadeUp}
             className="flex flex-col sm:flex-row sm:items-center gap-4"
           >
-            <a href="https://audit.voxaris.io" target="_blank" rel="noopener noreferrer">
+            <a href="https://buy.stripe.com/fZu6oG3UR2F52jx1g3Wk0F" target="_blank" rel="noopener noreferrer">
               <button
                 style={{
                   background: "hsl(28 8% 72%)",

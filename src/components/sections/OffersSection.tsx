@@ -26,7 +26,7 @@ const offers: Offer[] = [
     price: "$99",
     period: "one-time",
     cta: "Run my audit",
-    ctaHref: "https://audit.voxaris.io",
+    ctaHref: "https://buy.stripe.com/fZu6oG3UR2F52jx1g3Wk0F",
     ctaExternal: true,
     badge: "Start here",
   },
