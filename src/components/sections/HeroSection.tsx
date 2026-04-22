@@ -1,5 +1,4 @@
 import { motion, Transition } from "framer-motion";
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const fadeUp = {
@@ -14,7 +13,6 @@ const fadeUp = {
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden">
-      {/* Single subtle radial — not an orb, just ambient warmth */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -24,7 +22,7 @@ export default function HeroSection() {
       />
 
       <div className="container-wide relative">
-        <div className="pt-8 pb-16 lg:pt-16 lg:pb-24 max-w-3xl">
+        <div className="pt-12 pb-20 lg:pt-20 lg:pb-28 max-w-3xl">
           {/* Eyebrow */}
           <motion.div initial="hidden" animate="visible" custom={0} variants={fadeUp} className="mb-7">
             <span
@@ -48,7 +46,7 @@ export default function HeroSection() {
                   display: "inline-block",
                 }}
               />
-              AI Marketing · Orlando, Florida
+              AI Visibility · Orlando, Florida
             </span>
           </motion.div>
 
@@ -58,10 +56,10 @@ export default function HeroSection() {
             animate="visible"
             custom={0.1}
             variants={fadeUp}
-            className="text-[2.75rem] sm:text-5xl lg:text-6xl xl:text-[4rem] font-semibold tracking-[-0.03em] text-foreground mb-7 leading-[1.05]"
+            className="text-[2.75rem] sm:text-5xl lg:text-6xl xl:text-[4.25rem] font-semibold tracking-[-0.03em] text-foreground mb-7 leading-[1.05]"
           >
-            Get your business found<br />
-            <span className="text-muted-foreground">by AI — not just Google.</span>
+            Find out if AI<br />
+            <span className="text-muted-foreground">can see your business.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -70,98 +68,46 @@ export default function HeroSection() {
             animate="visible"
             custom={0.2}
             variants={fadeUp}
-            className="text-lg lg:text-xl text-muted-foreground max-w-[52ch] mb-12 leading-relaxed font-normal"
+            className="text-lg lg:text-xl text-muted-foreground max-w-[52ch] mb-10 leading-relaxed font-normal"
           >
-            Voxaris builds AI-optimized websites, runs AEO campaigns that get you cited by ChatGPT and Perplexity, and delivers personalized video outreach that turns cold contacts into booked calls.
+            We score your business across ChatGPT, Perplexity, Claude, Gemini, and Google AI
+            Overviews. You get a 19-point report, prioritized fixes, and the exact gaps your
+            competitors are exploiting — delivered in 24 hours.
           </motion.p>
 
-          {/* CTAs */}
+          {/* Single primary CTA — $99 audit */}
           <motion.div
             initial="hidden"
             animate="visible"
             custom={0.3}
             variants={fadeUp}
-            className="flex flex-col sm:flex-row gap-3 mb-20"
+            className="flex flex-col sm:flex-row sm:items-center gap-4"
           >
             <a href="https://audit.voxaris.io" target="_blank" rel="noopener noreferrer">
               <button
                 style={{
                   background: "hsl(28 8% 72%)",
                   color: "#000",
-                  padding: "14px 28px",
-                  fontSize: 15,
+                  padding: "16px 32px",
+                  fontSize: 16,
                   fontWeight: 600,
-                  borderRadius: 6,
+                  borderRadius: 8,
                   border: "none",
                   cursor: "pointer",
                   display: "inline-flex",
                   alignItems: "center",
-                  gap: 8,
+                  gap: 10,
                   transition: "filter 150ms",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.filter = "brightness(1.1)")}
+                onMouseEnter={(e) => (e.currentTarget.style.filter = "brightness(1.08)")}
                 onMouseLeave={(e) => (e.currentTarget.style.filter = "brightness(1)")}
               >
-                See Your AI Visibility Score <ArrowRight className="h-4 w-4" />
+                Run My AI Audit — $99 <ArrowRight className="h-4 w-4" />
               </button>
             </a>
-            <Link to="/book-demo">
-              <button
-                style={{
-                  background: "transparent",
-                  color: "hsl(var(--foreground))",
-                  padding: "14px 28px",
-                  fontSize: 15,
-                  fontWeight: 500,
-                  borderRadius: 6,
-                  border: "1px solid hsl(var(--border))",
-                  cursor: "pointer",
-                  transition: "border-color 150ms",
-                }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.borderColor = "hsl(28 8% 72% / 0.4)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.borderColor = "hsl(var(--border))")
-                }
-              >
-                Book a Demo
-              </button>
-            </Link>
-          </motion.div>
-
-          {/* Three product pills */}
-          <motion.div initial="hidden" animate="visible" custom={0.5} variants={fadeUp}>
-            <p
-              style={{
-                fontFamily: "'JetBrains Mono', 'Space Mono', monospace",
-                fontSize: 10,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                color: "hsl(var(--muted-foreground))",
-                marginBottom: 14,
-                opacity: 0.6,
-              }}
-            >
-              Three products. One team.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {["AEO Services", "AI Website Builds", "Talking Postcard"].map((label) => (
-                <span
-                  key={label}
-                  style={{
-                    padding: "8px 14px",
-                    border: "1px solid hsl(var(--border))",
-                    borderRadius: 6,
-                    fontSize: 13,
-                    color: "hsl(var(--muted-foreground))",
-                    background: "transparent",
-                  }}
-                >
-                  {label}
-                </span>
-              ))}
-            </div>
+            <span className="text-sm text-muted-foreground">
+              24-hour delivery · 19-point report · No subscription
+            </span>
           </motion.div>
         </div>
       </div>

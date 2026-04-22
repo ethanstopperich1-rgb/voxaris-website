@@ -1,26 +1,20 @@
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
-import ProblemSection from "@/components/sections/ProblemSection";
-import DifferentiationSection from "@/components/sections/DifferentiationSection";
-import AudienceSection from "@/components/sections/AudienceSection";
-import TrustSection from "@/components/sections/TrustSection";
+import OffersSection from "@/components/sections/OffersSection";
 import CTASection from "@/components/sections/CTASection";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 const Index = () => {
   usePageMeta({
-    title: "Voxaris | AI Marketing Infrastructure for Florida Businesses",
+    title: "Voxaris | Find Out If AI Can See Your Business",
     description:
-      "Voxaris makes Florida businesses visible to AI. AEO, 72-hour AI-ready websites, and Talking Postcard video outreach. Orlando, FL.",
+      "We score your business across ChatGPT, Perplexity, Claude, Gemini, and Google AI. 19-point report in 24 hours. $99 audit, $297/mo retainer, $2,500 rebuild.",
     canonical: "https://voxaris.io/",
   });
   return (
     <Layout>
       <HeroSection />
-      <ProblemSection />
-      <DifferentiationSection />
-      <AudienceSection />
-      <TrustSection />
+      <OffersSection />
       <CTASection />
     </Layout>
   );
