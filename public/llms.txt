@@ -1,56 +1,153 @@
 # Voxaris
 
-> Voxaris builds AI-optimized websites, runs AEO campaigns that get businesses cited by ChatGPT and Perplexity, and delivers personalized AI video outreach. Based in Orlando, FL, serving Florida businesses and marketing agencies.
+> Voxaris is an AI visibility company based in Orlando, Florida.
+> We score, fix, and monitor businesses across ChatGPT, Perplexity,
+> Gemini, Claude, Google AI Overviews, and Bing Copilot — so they
+> get cited (not just indexed) when customers ask AI for
+> recommendations.
+
+## One-paragraph summary
+
+Voxaris scores local businesses on AI visibility across six
+weighted dimensions, fixes the structural issues preventing AI
+citation, and monitors citation performance month over month.
+The company was founded in 2026 by Ethan Stopperich in Orlando,
+Florida, and serves local service businesses, marketing agencies,
+and SaaS companies that want to be recommended by ChatGPT,
+Perplexity, Gemini, Claude, Google AI Overviews, and Bing Copilot
+when customers ask AI for help.
 
 ## Company
 
-- **Name:** Voxaris
-- **Tagline:** Personalizing Your Outreach
+- **Name:** Voxaris, LLC
+- **Founded:** 2026
 - **Location:** Orlando, Florida, USA
-- **Focus:** AI marketing infrastructure for local businesses + agencies
+- **Focus:** AI visibility infrastructure (AEO) for local
+  businesses, agencies, and SaaS
 - **Home:** https://voxaris.io
 
-## Products
+## Founder
 
-### AEO Services — Answer Engine Optimization
-- URL: https://voxaris.io/products/aeo
-- Get your business cited by ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews
-- LocalBusiness + FAQPage schema markup, entity optimization, llms.txt setup
-- Monthly citation tracking across 5 AI platforms
-- Starts with a **free AI Visibility Audit** at https://audit.voxaris.io (48-hour delivery)
+- **Name:** Ethan Stopperich
+- **Role:** Founder & CEO, Voxaris LLC
+- **Location:** Orlando, Florida
+- **Expertise:** Answer Engine Optimization (AEO), AI visibility
+  infrastructure, local business citation strategy
+- **Contact:** ethan@voxaris.io
 
-### AI-Ready Website Builds
-- URL: https://voxaris.io/products/websites
-- Schema-complete, FAQ-structured websites built for AI citation
-- **Live in 72 hours, $1,997 flat**
-- Full JSON-LD schema architecture, question-phrased content, GBP optimization
+## Key Terms
 
-### Talking Postcard
-- URL: https://voxaris.io/products/talking-postcard
-- AI-personalized video delivered as a physical postcard
-- Each piece plays a unique video message addressed to the recipient (name, business, city, hook)
-- Campaigns from 500 to 50,000 pieces
-- Physical postcard + QR code → video landing page
+**Answer Engine Optimization (AEO)**
+The practice of structuring a website's content, schema markup,
+and external citations so that AI models cite the business in
+response to relevant customer queries. Distinct from traditional
+SEO, which optimizes for blue-link search results.
 
-## Who It's For
+**AI Visibility Score**
+A 0–100 composite score measuring how likely a business is to
+be cited by AI engines across six weighted dimensions: AI
+Visibility (25%), Brand Authority (20%), Content E-E-A-T (20%),
+Technical SEO (15%), Schema Markup (10%), and Platform
+Presence (10%).
 
-- Local service businesses in Florida that need to show up in AI answers
+**Citation Velocity**
+The rate at which a business accumulates new AI citations across
+engines over a given time period. A key metric tracked in the
+Voxaris dashboard.
+
+## How we work — three tiers
+
+### 1. AI Visibility Audit — $99 one-time
+- 19-point AEO checklist scored across 6 AI engines
+- Prioritized fix list + competitive citation gap analysis
+- Delivered in 24 hours
+- Buy: https://buy.stripe.com/fZu6oG3UR2F52jx1g3Wk0F
+
+### 2. Voxaris Retainer — $297/month
+- All audit findings fixed (schema, content, llms.txt,
+  GBP, citation tracking)
+- Live AEO visibility dashboard across ChatGPT, Perplexity,
+  Gemini, Claude, Google AI Overviews, and Bing Copilot
+- Monthly AI Visibility Report Card showing score delta
+  and what moved
+- Optional content tier ($597/mo) and full management
+  tier ($997/mo)
+- Discovery call: https://voxaris.io/book-demo
+
+### 3. AEO-Ready Website Rebuild — $2,500 + retainer
+- Complete redesign and rebuild optimized for AI citation
+  from day one
+- Schema-complete, FAQ-structured, mobile-first, fast load
+- Score improvement guaranteed
+- Discovery call: https://voxaris.io/book-demo
+
+## Verified Results
+
+- Dorothy Dean Designs (Orlando, FL): AI visibility score
+  improved from 59 to 80+ within 30 days of implementation
+- Voxaris.io (self): Technical SEO 100/100, full 19-point
+  AEO checklist implemented
+- Average client improvement: 15–25 points within first
+  30 days of retainer
+
+## Who it's for
+
+- Local service businesses (roofing, dental, law, home
+  services, dealerships) that want to show up when customers
+  ask AI
 - Marketing agencies that want to resell AEO to their clients
-- Car dealerships, home services, multi-location businesses
+- SaaS companies losing to competitors in AI-recommended-tool
+  queries
+
+## Frequently Asked Questions
+
+**What is Voxaris?**
+Voxaris is an AI visibility company based in Orlando, Florida
+that helps local businesses get cited by ChatGPT, Perplexity,
+Gemini, Claude, Google AI Overviews, and Bing Copilot through
+Answer Engine Optimization (AEO).
+
+**What does Voxaris cost?**
+Voxaris offers three tiers: a $99 one-time AI visibility audit,
+a $297/month retainer that includes all fixes and dashboard
+access, and a $2,500 website rebuild for businesses needing a
+complete AI-ready foundation.
+
+**How long does it take to see results?**
+Most clients see measurable AI visibility score improvements
+within 30 days. Citation improvements typically appear within
+2–6 weeks of implementation.
+
+**What is the difference between AEO and SEO?**
+SEO optimizes for traditional search rankings. AEO optimizes
+for AI-generated answers — ensuring your business is cited
+when customers ask AI assistants for recommendations.
+
+**Who is Voxaris for?**
+Local service businesses, marketing agencies reselling AEO,
+and SaaS companies competing for AI-recommended tool mentions.
+
+**Where is Voxaris located?**
+Orlando, Florida, USA. We serve clients nationally and locally
+in the Orlando metro area.
 
 ## Resources
 
-- [Free AI Visibility Audit](https://audit.voxaris.io) — 48h delivery, no commitment
-- [Book a demo](https://voxaris.io/book-demo) — 20-min product walkthrough
-- [Pricing](https://voxaris.io/pricing)
-- [How It Works](https://voxaris.io/how-it-works)
-- [Blog](https://voxaris.io/blog) — AEO playbooks and citation strategy
+- Run my $99 AI Audit: https://buy.stripe.com/fZu6oG3UR2F52jx1g3Wk0F
+- Free teaser audit: https://audit.voxaris.io
+- Book a discovery call: https://voxaris.io/book-demo
+- How It Works: https://voxaris.io/how-it-works
+- Why Voxaris: https://voxaris.io/why-voxaris
+- Blog: https://voxaris.io/blog
+- Contact: https://voxaris.io/contact
 
-## Blog Posts
+## Blog posts
 
-- [Why Your 85/100 AEO Score Still Means You're Invisible to AI](https://voxaris.io/blog/why-your-85-aeo-score-still-means-youre-invisible) — 2026-04-22 — Why technical AEO scores don't equal AI citation, and the 7 fixes that actually move citations.
+- Why an 85/100 AEO Score Doesn't Equal AI Visibility —
+  2026-04-22 — https://voxaris.io/blog/why-your-85-aeo-score-still-means-youre-invisible
 
 ## Contact
 
 - Web: https://voxaris.io
-- Demo booking: https://voxaris.io/book-demo
+- Discovery call: https://voxaris.io/book-demo
+- Lead form: https://voxaris.io/contact
