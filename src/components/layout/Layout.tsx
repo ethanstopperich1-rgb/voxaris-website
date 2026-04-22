@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Navigation from "./Navigation";
+import AppBackground from "./AppBackground";
 import { Footer } from "@/components/blocks/footer-section";
 
 interface LayoutProps {
@@ -8,9 +9,10 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="relative min-h-screen flex flex-col">
+      <AppBackground />
       <Navigation />
-      <main className="flex-1 pt-20">{children}</main>
+      <main className="relative flex-1 pt-24 lg:pt-28">{children}</main>
       <Footer />
     </div>
   );

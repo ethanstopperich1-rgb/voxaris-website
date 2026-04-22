@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 const problems = [
   {
@@ -35,7 +36,7 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section className="section-padding bg-secondary/30 border-t border-[hsl(var(--border))]">
+    <section className="section-padding border-t border-[hsl(var(--border))]">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +54,7 @@ export default function ProblemSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {problems.map((problem, index) => (
             <motion.div
               key={problem.title}
@@ -61,13 +62,20 @@ export default function ProblemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
-              className="border-t border-[hsl(var(--border))] pt-6"
+              className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-6 transition-colors duration-200 hover:border-white/20 hover:bg-white/[0.05]"
             >
               <p className="eyebrow-muted mb-3">{problem.category}</p>
               <h3 className="text-lg font-semibold text-foreground mb-2">{problem.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-[48ch]">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {problem.description}
               </p>
+              <BorderBeam
+                size={180}
+                duration={10}
+                delay={index * 1.4}
+                colorFrom="hsl(28 8% 72%)"
+                colorTo="hsl(28 8% 72% / 0)"
+              />
             </motion.div>
           ))}
         </div>

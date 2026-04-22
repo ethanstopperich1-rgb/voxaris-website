@@ -51,7 +51,7 @@ const products = [
 
 export default function DifferentiationSection() {
   return (
-    <section className="section-padding bg-[hsl(var(--secondary))] text-foreground border-y border-[hsl(var(--border))]">
+    <section className="section-padding text-foreground border-y border-[hsl(var(--border))]">
       <div className="container-wide">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export default function DifferentiationSection() {
               fontSize: 10,
               letterSpacing: "0.12em",
               textTransform: "uppercase",
-              color: "hsl(72 100% 64%)",
+              color: "hsl(28 8% 72%)",
               marginBottom: 16,
             }}
           >
@@ -96,7 +96,7 @@ export default function DifferentiationSection() {
                   fontSize: 10,
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",
-                  color: "hsl(72 100% 64%)",
+                  color: "hsl(28 8% 72%)",
                   marginBottom: 20,
                 }}
               >
@@ -114,7 +114,7 @@ export default function DifferentiationSection() {
                   <li
                     key={b}
                     style={{
-                      borderLeft: "2px solid hsl(72 100% 64% / 0.25)",
+                      borderLeft: "2px solid hsl(28 8% 72% / 0.25)",
                       paddingLeft: 12,
                       paddingTop: 2,
                       paddingBottom: 2,
@@ -136,7 +136,7 @@ export default function DifferentiationSection() {
                     gap: 6,
                     fontSize: 13,
                     fontWeight: 500,
-                    color: "hsl(72 100% 64%)",
+                    color: "hsl(28 8% 72%)",
                     textDecoration: "none",
                     transition: "opacity 150ms",
                   }}

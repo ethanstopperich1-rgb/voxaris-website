@@ -64,12 +64,12 @@ export default function HowItWorks() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-background border-b border-[hsl(var(--border))]">
+      <section className="relative overflow-hidden border-b border-[hsl(var(--border))]">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse 80% 50% at 10% 60%, hsl(72 100% 64% / 0.03) 0%, transparent 70%)",
+              "radial-gradient(ellipse 80% 50% at 10% 60%, hsl(28 8% 72% / 0.03) 0%, transparent 70%)",
           }}
         />
         <div className="container-wide relative">
@@ -198,7 +198,7 @@ export default function HowItWorks() {
               <a href="https://audit.voxaris.io" target="_blank" rel="noopener noreferrer">
                 <button
                   style={{
-                    background: "hsl(72 100% 64%)",
+                    background: "hsl(28 8% 72%)",
                     color: "#000",
                     padding: "14px 28px",
                     fontSize: 15,

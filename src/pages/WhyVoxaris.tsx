@@ -48,7 +48,7 @@ export default function WhyVoxaris() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding bg-secondary/30">
+      <section className="section-padding">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

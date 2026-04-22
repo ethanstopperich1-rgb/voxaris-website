@@ -13,13 +13,13 @@ const fadeUp = {
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-background">
+    <section className="relative overflow-hidden">
       {/* Single subtle radial — not an orb, just ambient warmth */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 80% 50% at 10% 60%, hsl(72 100% 64% / 0.03) 0%, transparent 70%)",
+            "radial-gradient(ellipse 80% 50% at 10% 60%, hsl(28 8% 72% / 0.03) 0%, transparent 70%)",
         }}
       />
 
@@ -33,7 +33,7 @@ export default function HeroSection() {
                 fontSize: 11,
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                color: "hsl(72 100% 64%)",
+                color: "hsl(28 8% 72%)",
                 display: "flex",
                 alignItems: "center",
                 gap: 8,
@@ -44,7 +44,7 @@ export default function HeroSection() {
                   width: 6,
                   height: 6,
                   borderRadius: 2,
-                  background: "hsl(72 100% 64%)",
+                  background: "hsl(28 8% 72%)",
                   display: "inline-block",
                 }}
               />
@@ -86,7 +86,7 @@ export default function HeroSection() {
             <a href="https://audit.voxaris.io" target="_blank" rel="noopener noreferrer">
               <button
                 style={{
-                  background: "hsl(72 100% 64%)",
+                  background: "hsl(28 8% 72%)",
                   color: "#000",
                   padding: "14px 28px",
                   fontSize: 15,
@@ -119,7 +119,7 @@ export default function HeroSection() {
                   transition: "border-color 150ms",
                 }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.borderColor = "hsl(72 100% 64% / 0.4)")
+                  (e.currentTarget.style.borderColor = "hsl(28 8% 72% / 0.4)")
                 }
                 onMouseLeave={(e) =>
                   (e.currentTarget.style.borderColor = "hsl(var(--border))")
