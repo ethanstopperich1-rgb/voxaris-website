@@ -22,6 +22,8 @@ interface LeadPayload {
   message?: string;
   source?: string;
   consentSms?: boolean;
+  attribution?: Record<string, string>;
+  referrer?: string;
   // Honeypot — must be empty for the request to be accepted
   company_url?: string;
 }
@@ -68,6 +70,8 @@ export default async function handler(req: Request) {
   const message = (payload.message ?? "").trim();
   const source = (payload.source ?? "voxaris.io").trim();
   const consentSms = Boolean(payload.consentSms);
+  const attribution = payload.attribution ?? {};
+  const referrer = (payload.referrer ?? "").slice(0, 500);
 
   const errors: string[] = [];
   if (name.length < 2) errors.push("Name is required");
@@ -120,6 +124,21 @@ export default async function handler(req: Request) {
     });
   }
 
+  // Attribution block — only show if we captured anything
+  const attrPairs = Object.entries(attribution).filter(([, v]) => v && String(v).trim().length > 0);
+  if (attrPairs.length || referrer) {
+    const attrText = attrPairs
+      .map(([k, v]) => `\`${k}=${String(v).slice(0, 80)}\``)
+      .join("  ");
+    blocks.push({
+      type: "section",
+      text: {
+        type: "mrkdwn",
+        text: `*Attribution*\n${attrText || "_no UTM_"}${referrer ? `\n*Referrer:* ${referrer.slice(0, 200)}` : ""}`,
+      },
+    });
+  }
+
   blocks.push({
     type: "context",
     elements: [
@@ -160,6 +179,8 @@ export default async function handler(req: Request) {
       website: website || null,
       consentSms,
       source,
+      attribution,
+      referrer: referrer || null,
       ip,
       userAgent,
     }),

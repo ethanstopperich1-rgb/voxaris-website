@@ -1,5 +1,53 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Loader2, ArrowRight, CheckCircle2 } from "lucide-react";
+
+const UTM_KEYS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_content",
+  "utm_term",
+  "gclid",
+  "fbclid",
+  "ttclid",
+  "msclkid",
+] as const;
+
+type AttributionData = Partial<Record<(typeof UTM_KEYS)[number], string>>;
+
+function readAttribution(): AttributionData {
+  if (typeof window === "undefined") return {};
+  const out: AttributionData = {};
+  // 1. Live URL params (highest priority — current visit)
+  const params = new URLSearchParams(window.location.search);
+  for (const k of UTM_KEYS) {
+    const v = params.get(k);
+    if (v) out[k] = v;
+  }
+  // 2. Fall back to first-touch values stashed in localStorage on first ad-click visit
+  try {
+    const stored = JSON.parse(localStorage.getItem("vx_attr") ?? "{}") as AttributionData;
+    for (const k of UTM_KEYS) {
+      if (!out[k] && stored[k]) out[k] = stored[k];
+    }
+  } catch {
+    // ignore
+  }
+  // 3. Persist this visit's params for next-page-load capture
+  if (Object.keys(out).length > 0) {
+    try {
+      localStorage.setItem("vx_attr", JSON.stringify(out));
+    } catch {
+      // ignore quota / private mode
+    }
+  }
+  return out;
+}
+
+function readReferrer(): string {
+  if (typeof document === "undefined") return "";
+  return document.referrer ?? "";
+}
 
 interface LeadFormProps {
   /** Where this form is mounted — sent to Slack so we know context */
@@ -30,6 +78,13 @@ export default function LeadForm({
   const [companyUrl, setCompanyUrl] = useState(""); // honeypot
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<string[]>([]);
+  const [attribution, setAttribution] = useState<AttributionData>({});
+  const [referrer, setReferrer] = useState<string>("");
+
+  useEffect(() => {
+    setAttribution(readAttribution());
+    setReferrer(readReferrer());
+  }, []);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -54,6 +109,8 @@ export default function LeadForm({
           consentSms,
           source,
           company_url: companyUrl,
+          attribution,
+          referrer,
         }),
       });
       if (!res.ok) {
@@ -70,6 +127,30 @@ export default function LeadForm({
   }
 
   if (status === "success") {
+    // Fire conversion pixels for paid-ads attribution. Each is no-op if pixel
+    // hasn't been loaded yet — safe to call always.
+    if (typeof window !== "undefined") {
+      try {
+        // Google Analytics 4 lead event
+        // @ts-expect-error gtag injected by GA snippet
+        if (typeof window.gtag === "function") {
+          // @ts-expect-error gtag global
+          window.gtag("event", "generate_lead", {
+            currency: "USD",
+            value: 25,
+            source,
+          });
+        }
+        // Meta Pixel — fires only if fbq has been initialized
+        // @ts-expect-error fbq injected by Meta Pixel snippet
+        if (typeof window.fbq === "function") {
+          // @ts-expect-error fbq global
+          window.fbq("track", "Lead", { source });
+        }
+      } catch {
+        // never break UX on a tracking failure
+      }
+    }
     return (
       <div className="rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm p-8 text-center">
         <CheckCircle2 className="h-10 w-10 text-[hsl(var(--accent))] mx-auto mb-4" />
