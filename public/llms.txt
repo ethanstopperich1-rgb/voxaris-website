@@ -44,6 +44,11 @@
 - [Book a demo](https://voxaris.io/book-demo) — 20-min product walkthrough
 - [Pricing](https://voxaris.io/pricing)
 - [How It Works](https://voxaris.io/how-it-works)
+- [Blog](https://voxaris.io/blog) — AEO playbooks and citation strategy
+
+## Blog Posts
+
+- [Why Your 85/100 AEO Score Still Means You're Invisible to AI](https://voxaris.io/blog/why-your-85-aeo-score-still-means-youre-invisible) — 2026-04-22 — Why technical AEO scores don't equal AI citation, and the 7 fixes that actually move citations.
 
 ## Contact
 

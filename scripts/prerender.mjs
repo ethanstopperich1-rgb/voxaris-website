@@ -9,7 +9,7 @@
  * during development.
  */
 import { createServer } from "node:http";
-import { readFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { readFileSync, existsSync, mkdirSync, writeFileSync, readdirSync } from "node:fs";
 import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import puppeteer from "puppeteer-core";
@@ -17,7 +17,19 @@ import chromium from "@sparticuz/chromium";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, "..", "dist");
+const BLOG_DIR = resolve(__dirname, "..", "content", "blog");
 const PORT = 4173;
+
+const BLOG_SLUGS = existsSync(BLOG_DIR)
+  ? readdirSync(BLOG_DIR)
+      .filter((f) => f.endsWith(".md"))
+      .map((f) => {
+        // Prefer the slug field from frontmatter; fallback to filename
+        const raw = readFileSync(join(BLOG_DIR, f), "utf8");
+        const m = raw.match(/^slug:\s*"?([^"\n]+)"?/m);
+        return m ? m[1].trim() : f.replace(/\.md$/, "");
+      })
+  : [];
 
 const ROUTES = [
   "/",
@@ -29,6 +41,8 @@ const ROUTES = [
   "/products/talking-postcard",
   "/products/websites",
   "/products/staffing",
+  "/blog",
+  ...BLOG_SLUGS.map((slug) => `/blog/${slug}`),
   "/privacy",
   "/terms",
 ];

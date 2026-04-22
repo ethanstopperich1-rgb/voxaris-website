@@ -41,6 +41,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://voxaris.io/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://voxaris.io/blog/why-your-85-aeo-score-still-means-youre-invisible</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://voxaris.io/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

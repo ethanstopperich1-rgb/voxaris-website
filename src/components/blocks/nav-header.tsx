@@ -7,7 +7,7 @@ import { Link, useLocation } from "react-router-dom";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "How It Works", href: "/how-it-works" },
-  { label: "Why Voxaris", href: "/why-voxaris" },
+  { label: "Blog", href: "/blog" },
   { label: "AEO", href: "/products/aeo" },
   { label: "Book a Demo", href: "/book-demo" },
 ];

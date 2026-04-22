@@ -17,6 +17,8 @@ import TalkingPostcard from "./pages/products/TalkingPostcard";
 import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import { GlassFilter } from "./components/ui/liquid-glass";
 
 const queryClient = new QueryClient();
@@ -44,6 +46,8 @@ const App = () => (
           <Route path="/products/staffing-agent" element={<Navigate to="/products/staffing" replace />} />
           <Route path="/products/voice-agent" element={<VoiceAgent />} />
           <Route path="/products/video-agent" element={<VideoAgent />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
