@@ -48,7 +48,7 @@ const footerLinks: FooterSection[] = [
 	{
 		label: 'Social',
 		links: [
-			{ title: 'LinkedIn', href: 'https://www.linkedin.com/company/voxaris', icon: LinkedinIcon },
+			{ title: 'LinkedIn', href: 'https://www.linkedin.com/company/voxaris-ai-solutions', icon: LinkedinIcon },
 			{ title: 'X', href: 'https://x.com/voxaris', icon: TwitterIcon },
 		],
 	},

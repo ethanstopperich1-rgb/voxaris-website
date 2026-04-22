@@ -55,7 +55,7 @@ export default function BlogPost() {
       jobTitle: post.authorRole ?? "Founder",
       worksFor: { "@id": "https://voxaris.io/#organization" },
       sameAs: [
-        "https://www.linkedin.com/company/voxaris",
+        "https://www.linkedin.com/company/voxaris-ai-solutions",
         "https://x.com/voxaris",
       ],
     },

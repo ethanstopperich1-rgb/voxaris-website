@@ -27,7 +27,7 @@ export default function AboutEthan() {
     ],
     alumniOf: { "@type": "Place", name: "Florida (current student)" },
     sameAs: [
-      "https://www.linkedin.com/company/voxaris",
+      "https://www.linkedin.com/company/voxaris-ai-solutions",
       "https://x.com/voxaris",
     ],
     description:
@@ -82,7 +82,7 @@ export default function AboutEthan() {
 
               <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
                 <a
-                  href="https://www.linkedin.com/company/voxaris"
+                  href="https://www.linkedin.com/company/voxaris-ai-solutions"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 hover:text-foreground transition-colors"

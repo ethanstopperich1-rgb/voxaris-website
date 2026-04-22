@@ -217,6 +217,6 @@ We query every major AI engine with your top commercial keywords, document where
 
 **Written by Ethan Stopperich, Founder of Voxaris AI.** Voxaris is an Orlando-based AI marketing infrastructure company. We run AEO campaigns for local service businesses and SaaS companies, and we publish citation data weekly across ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews.
 
-Connect on [LinkedIn](https://www.linkedin.com/company/voxaris) · [X](https://x.com/voxaris) · [voxaris.io](https://voxaris.io)
+Connect on [LinkedIn](https://www.linkedin.com/company/voxaris-ai-solutions) · [X](https://x.com/voxaris) · [voxaris.io](https://voxaris.io)
 
 *Last updated: April 22, 2026*
