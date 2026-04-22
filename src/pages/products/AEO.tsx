@@ -1,6 +1,13 @@
 import ProductPage from "./ProductPage";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function AEO() {
+  usePageMeta({
+    title: "AEO Services | Voxaris",
+    description:
+      "Answer Engine Optimization from Voxaris. Get cited by ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews. Free audit in 24 hours.",
+    canonical: "https://voxaris.io/products/aeo",
+  });
   return (
     <ProductPage
       eyebrow="AEO Services"

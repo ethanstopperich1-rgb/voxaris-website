@@ -2,6 +2,7 @@ import { motion, Transition } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Search, Code, FileText, BarChart2, ArrowRight } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -54,6 +55,12 @@ const timeline = [
 ];
 
 export default function HowItWorks() {
+  usePageMeta({
+    title: "How It Works | Voxaris AEO Process",
+    description:
+      "How Voxaris runs Answer Engine Optimization: audit, schema build, llms.txt, FAQ content, and weekly AI citation tracking.",
+    canonical: "https://voxaris.io/how-it-works",
+  });
   return (
     <Layout>
       {/* Hero */}

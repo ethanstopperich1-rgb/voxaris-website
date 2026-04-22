@@ -83,7 +83,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-[hsl(var(--border))]">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-[13px] text-muted-foreground">
-              © {new Date().getFullYear()} Voxaris. All rights reserved.
+              © {new Date().getFullYear()} Voxaris, LLC. All rights reserved. · Last updated{" "}
+              <time dateTime="2026-04-21">April 21, 2026</time>
             </p>
             <div className="flex items-center gap-8">
               <Link

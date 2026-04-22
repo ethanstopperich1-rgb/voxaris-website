@@ -1,6 +1,13 @@
 import Layout from "@/components/layout/Layout";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function Terms() {
+  usePageMeta({
+    title: "Terms of Service | Voxaris",
+    description:
+      "Voxaris terms of service for voxaris.io, audit.voxaris.io, and Voxaris AI products including AEO, websites, and Talking Postcard.",
+    canonical: "https://voxaris.io/terms",
+  });
   return (
     <Layout>
       <section className="pt-32 pb-24 lg:pt-40 lg:pb-32">

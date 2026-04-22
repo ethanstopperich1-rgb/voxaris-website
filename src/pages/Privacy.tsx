@@ -1,6 +1,13 @@
 import Layout from "@/components/layout/Layout";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function Privacy() {
+  usePageMeta({
+    title: "Privacy Policy | Voxaris",
+    description:
+      "Voxaris privacy policy. How we collect, use, and protect visitor and customer data across voxaris.io and audit.voxaris.io.",
+    canonical: "https://voxaris.io/privacy",
+  });
   return (
     <Layout>
       <section className="pt-32 pb-24 lg:pt-40 lg:pb-32">

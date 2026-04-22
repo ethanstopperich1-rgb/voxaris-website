@@ -1,6 +1,13 @@
 import ProductPage from "./ProductPage";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function Websites() {
+  usePageMeta({
+    title: "AI-Ready Website Builds | Voxaris",
+    description:
+      "AEO-ready websites from Voxaris. Schema-complete, FAQ-structured, Core Web Vitals tuned. Live in 72 hours. $1,997 flat.",
+    canonical: "https://voxaris.io/products/websites",
+  });
   return (
     <ProductPage
       eyebrow="AI Website Builds"

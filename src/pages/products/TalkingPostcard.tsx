@@ -1,6 +1,13 @@
 import ProductPage from "./ProductPage";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function TalkingPostcard() {
+  usePageMeta({
+    title: "Talking Postcard | Voxaris",
+    description:
+      "AI-personalized video delivered as a physical postcard. Name, business, city — unique to each recipient. Campaigns from 500 to 50,000 pieces.",
+    canonical: "https://voxaris.io/products/talking-postcard",
+  });
   return (
     <ProductPage
       eyebrow="Talking Postcard"

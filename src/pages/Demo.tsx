@@ -6,8 +6,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Phone, Sparkles } from "lucide-react";
 import { toast } from "sonner";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function Demo() {
+  usePageMeta({
+    title: "Live Demo | Voxaris",
+    description:
+      "See Voxaris in action — live demo of AEO citations, AI website builds, and Talking Postcard video outreach.",
+    canonical: "https://voxaris.io/demo",
+  });
   const [formData, setFormData] = useState({
     name: "",
     phone: "",

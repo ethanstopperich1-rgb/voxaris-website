@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Calendar } from "@/components/ui/calendar";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const CALENDLY_URL = "https://calendly.com/ethan-voxaris/30min";
 
@@ -25,6 +26,12 @@ function buildCalendlyUrl(date: Date | undefined) {
 }
 
 export default function BookDemo() {
+  usePageMeta({
+    title: "Book a Demo | Voxaris",
+    description:
+      "Book a free 20-minute call with Voxaris. Walk through your AI visibility audit and a plan to get cited by ChatGPT and Perplexity.",
+    canonical: "https://voxaris.io/book-demo",
+  });
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
 
   // Calendly script needs to be present for .calendly-inline-widget to hydrate.

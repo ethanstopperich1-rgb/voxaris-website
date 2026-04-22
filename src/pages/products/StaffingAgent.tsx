@@ -1,6 +1,13 @@
 import ProductPage from "./ProductPage";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function StaffingAgent() {
+  usePageMeta({
+    title: "Staffing Agent | Voxaris",
+    description:
+      "AI video interviews that screen candidates before your team sees a resume. Consistent questions, recorded answers, one-page summaries.",
+    canonical: "https://voxaris.io/products/staffing",
+  });
   return (
     <ProductPage
       eyebrow="Staffing Agent"

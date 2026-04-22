@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { Target, Layers, TrendingUp, Users, Zap, BarChart3, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -38,6 +39,12 @@ const reasons = [
 ];
 
 export default function WhyVoxaris() {
+  usePageMeta({
+    title: "Why Voxaris | Orlando-based AEO Team",
+    description:
+      "Why Voxaris: Orlando-based AEO team that gets you cited by ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews.",
+    canonical: "https://voxaris.io/why-voxaris",
+  });
   return (
     <Layout>
       {/* Hero */}
