@@ -23,6 +23,8 @@ function parseFrontmatter(raw: string): { data: Record<string, string>; content:
 
 export interface PostFrontmatter {
   title: string;
+  /** Optional shorter SEO title (≤70 chars incl. " | Voxaris" suffix). Falls back to title. */
+  metaTitle?: string;
   slug: string;
   description: string;
   date: string;

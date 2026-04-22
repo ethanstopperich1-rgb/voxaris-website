@@ -28,7 +28,9 @@ export default function BlogPost() {
     : "https://voxaris.io/voxaris-og-image.png";
 
   usePageMeta({
-    title: `${post.title} | Voxaris AI`,
+    title: post.metaTitle
+      ? `${post.metaTitle} | Voxaris`
+      : `${post.title} | Voxaris`,
     description: post.description,
     canonical: url,
     ogImage,

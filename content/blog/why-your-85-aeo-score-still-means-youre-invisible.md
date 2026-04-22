@@ -1,5 +1,6 @@
 ---
 title: "Why Your 85/100 AEO Score Still Means You're Invisible to AI (And How to Fix It)"
+metaTitle: "Why an 85/100 AEO Score Doesn't Equal AI Visibility"
 slug: "why-your-85-aeo-score-still-means-youre-invisible"
 description: "Most AEO tools score the technical foundation, not whether AI actually cites you. Here's why an 85/100 still hides you — and the 7 fixes that move citations."
 date: "2026-04-22"
