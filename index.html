@@ -292,79 +292,12 @@
     }
     </script>
 
-    <!-- FAQPage — directly addresses AEO citation signals -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Answer Engine Optimization (AEO)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Answer Engine Optimization (AEO) is the practice of structuring your website and online presence so AI search engines — ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews — cite your business directly in their answers. Unlike traditional SEO which optimizes for ranked link lists, AEO optimizes for direct citation inside AI-generated answers."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is AEO different from SEO?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "SEO optimizes for Google's ranked list of blue links; AEO optimizes for being cited inside AI answers where users never see a link list. SEO rewards keyword density and backlinks; AEO rewards structured data (JSON-LD), FAQ content, entity clarity, and explicit llms.txt and schema signals that AI engines extract."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which AI engines does Voxaris optimize for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We optimize for ChatGPT (OpenAI), Perplexity, Claude (Anthropic), Gemini (Google), and Google AI Overviews. We track citation signals across all five engines weekly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does AEO take to show results?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Technical foundation (schema, robots.txt, sitemap, meta layer) is completed in week 1. First citations in AI engines typically appear between weeks 3 and 6. Consistent presence across 4+ engines for your core service queries builds by month 3."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the AI Visibility Audit and what does it cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The AI Visibility Audit is Voxaris's free diagnostic report. We run your business through ChatGPT, Perplexity, Claude, and Google AI and document exactly what they say about you — or don't. The audit is free, requires no credit card, and is delivered in 24 hours at audit.voxaris.io."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How fast can Voxaris build an AEO-ready website?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "72 hours. Our AI Website Builds are delivered in 72 hours for a flat $1,997, including full JSON-LD schema architecture, FAQ-structured content, question-phrased copy, Google Business Profile optimization, and Core Web Vitals tuning."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a Talking Postcard?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A Talking Postcard is a physical mailer with a QR code that opens a personalized AI video message for the recipient. Each video is uniquely generated using Tavus AI with the recipient's name, business, and context. Campaigns range from 500 to 50,000 pieces with full campaign management included."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where is Voxaris based and who do you serve?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Voxaris is based in Orlando, Florida and primarily serves local service businesses and marketing agencies across Florida — Orlando, Tampa, Miami, Jacksonville — and nationwide for AI visibility work."
-          }
-        }
-      ]
-    }
-    </script>
+    <!-- FAQPage JSON-LD is now emitted dynamically per page:
+         - HomepageFAQ component on /
+         - BlogPost component on /blog/:slug
+         The hardcoded block was removed to prevent duplicate-FAQPage
+         schema warnings in Google Search Console. -->
+
 
     <!-- BreadcrumbList — site structure -->
     <script type="application/ld+json">
