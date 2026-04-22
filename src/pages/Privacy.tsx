@@ -19,7 +19,7 @@ export default function Privacy() {
             </h1>
 
             <p className="text-muted-foreground text-[15px] mb-10">
-              Last updated: April 2026
+              Last updated: <time dateTime="2026-04-22">April 22, 2026</time>
             </p>
 
             <div className="space-y-10 text-[15px] text-muted-foreground leading-relaxed">
@@ -56,9 +56,25 @@ export default function Privacy() {
               </section>
 
               <section>
-                <h2 className="text-xl font-semibold text-foreground mb-3">Sharing</h2>
+                <h2 className="text-xl font-semibold text-foreground mb-3">Sharing of information</h2>
+                <p className="mb-3">
+                  <strong className="text-foreground">We do not sell, rent, or share personal information — including mobile phone numbers — with third parties or affiliates for marketing or promotional purposes.</strong>
+                </p>
                 <p>
-                  We do not sell your personal information. We share information only with service providers who help us operate the business (hosting, email, CRM, scheduling, analytics) under confidentiality terms, and where required by law.
+                  We share information only with service providers who help us operate the business (hosting, transactional email, CRM, scheduling, analytics, SMS delivery via Twilio) under confidentiality terms and only to the extent necessary to provide the service you requested. We may also disclose information where required by law or to protect our rights.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-semibold text-foreground mb-3">SMS / text messaging</h2>
+                <p className="mb-3">
+                  We send transactional SMS messages only to users who voluntarily submit their mobile phone number through our website forms (including <a href="https://audit.voxaris.io" className="text-[hsl(var(--accent))] hover:opacity-80">audit.voxaris.io</a>) or via Facebook Lead Ads. By submitting the form, you explicitly consent to receive 1–4 low-volume follow-up SMS messages related to your free AI Visibility Audit, including a link to your report and scheduling reminders.
+                </p>
+                <p className="mb-3">
+                  No SMS messages are sent without this explicit form submission. <strong className="text-foreground">Phone numbers collected for SMS purposes are never shared with third parties or used for third-party marketing.</strong>
+                </p>
+                <p>
+                  Reply <strong className="text-foreground">STOP</strong> to any message to opt out at any time. Reply <strong className="text-foreground">HELP</strong> for support. Standard message and data rates may apply. Message frequency varies but does not exceed 4 messages per audit request.
                 </p>
               </section>
 

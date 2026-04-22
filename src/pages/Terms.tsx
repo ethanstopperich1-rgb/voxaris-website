@@ -19,7 +19,7 @@ export default function Terms() {
             </h1>
 
             <p className="text-muted-foreground text-[15px] mb-10">
-              Last updated: April 2026
+              Last updated: <time dateTime="2026-04-22">April 22, 2026</time>
             </p>
 
             <div className="space-y-10 text-[15px] text-muted-foreground leading-relaxed">
@@ -64,6 +64,37 @@ export default function Terms() {
                 <h2 className="text-xl font-semibold text-foreground mb-3">Acceptable use</h2>
                 <p>
                   You agree not to use Voxaris services to send unlawful, deceptive, or harassing communications; to violate CAN-SPAM, TCPA, GDPR, or any comparable law; to impersonate any person; or to distribute malware or other harmful code.
+                </p>
+              </section>
+
+              <section id="sms-terms">
+                <h2 className="text-xl font-semibold text-foreground mb-3">SMS messaging program terms</h2>
+                <p className="mb-3">
+                  <strong className="text-foreground">Program name:</strong> Voxaris AI Visibility Audit Notifications.
+                </p>
+                <p className="mb-3">
+                  <strong className="text-foreground">Program description:</strong> Voxaris sends transactional SMS notifications to users who request a free AI Visibility Audit at <a href="https://audit.voxaris.io" className="text-[hsl(var(--accent))] hover:opacity-80">audit.voxaris.io</a> or via Facebook Lead Ads. Messages include audit confirmation, a link to the completed report, and scheduling reminders for any follow-up call you book.
+                </p>
+                <p className="mb-3">
+                  <strong className="text-foreground">How to opt in:</strong> Opt-in occurs only when you voluntarily complete and submit our audit request form (providing name, email, phone number, and website) and check the SMS consent box. By submitting the form, you explicitly consent to receive 1–4 follow-up SMS messages related to your free AI Visibility Audit. No SMS messages are sent without this explicit form submission.
+                </p>
+                <p className="mb-3">
+                  <strong className="text-foreground">Message frequency:</strong> Up to 4 messages per audit request. We do not send recurring marketing or promotional broadcasts.
+                </p>
+                <p className="mb-3">
+                  <strong className="text-foreground">Message and data rates:</strong> Standard message and data rates from your wireless carrier may apply. Voxaris does not charge a fee for the messages.
+                </p>
+                <p className="mb-3">
+                  <strong className="text-foreground">How to opt out:</strong> Reply <strong className="text-foreground">STOP</strong> to any message at any time to be immediately unsubscribed from all further SMS communications.
+                </p>
+                <p className="mb-3">
+                  <strong className="text-foreground">How to get help:</strong> Reply <strong className="text-foreground">HELP</strong> to any message for support information, or contact us using the form below. You can also email <a href="mailto:support@voxaris.io" className="text-[hsl(var(--accent))] hover:opacity-80">support@voxaris.io</a>.
+                </p>
+                <p className="mb-3">
+                  <strong className="text-foreground">Carriers:</strong> Carriers (including AT&amp;T, Verizon, T-Mobile, and others) are not liable for delayed or undelivered messages.
+                </p>
+                <p>
+                  <strong className="text-foreground">Privacy:</strong> Phone numbers collected for SMS purposes are never shared with third parties or used for third-party marketing. See our <a href="/privacy" className="text-[hsl(var(--accent))] hover:opacity-80">Privacy Policy</a> for full details on how we handle your information.
                 </p>
               </section>
 

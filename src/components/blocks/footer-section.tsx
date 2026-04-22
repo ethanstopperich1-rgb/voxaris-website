@@ -32,6 +32,7 @@ const footerLinks: FooterSection[] = [
 			{ title: 'How It Works', href: '/how-it-works' },
 			{ title: 'Why Voxaris', href: '/why-voxaris' },
 			{ title: 'Blog', href: '/blog' },
+			{ title: 'Contact', href: '/contact' },
 			{ title: 'Book a Demo', href: '/book-demo' },
 		],
 	},

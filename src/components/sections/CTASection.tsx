@@ -1,20 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-
-type ContactItem = {
-  tag: string;
-  title: string;
-  action: string;
-  href: string;
-  internal: boolean;
-};
-
-const contactItems: ContactItem[] = [
-  { tag: "AUDIT", title: "Free AI Visibility Audit", action: "Start free →", href: "https://audit.voxaris.io", internal: false },
-  { tag: "DEMO", title: "20-min product walkthrough", action: "Book a time →", href: "/book-demo", internal: true },
-  { tag: "WEBSITES", title: "AI-Ready Website Build in 72h", action: "See example →", href: "/products/websites", internal: true },
-];
+import LeadForm from "@/components/forms/LeadForm";
 
 export default function CTASection() {
   return (
@@ -50,39 +37,19 @@ export default function CTASection() {
             </div>
           </div>
 
-          {/* Right — 3 contact methods */}
-          <div className="space-y-px bg-[hsl(var(--border))] rounded-[8px] overflow-hidden">
-            {contactItems.map((item) => (
-              <div
-                key={item.tag}
-                className="bg-card px-6 py-5 flex items-center justify-between gap-4"
-              >
-                <div className="min-w-0">
-                  <span className="eyebrow mb-1 block">{item.tag}</span>
-                  <span className="text-[15px] font-medium text-foreground">{item.title}</span>
-                </div>
-                {item.internal ? (
-                  <Link
-                    to={item.href}
-                    className="text-[13px] text-[hsl(var(--accent))] font-medium hover:opacity-80 transition whitespace-nowrap"
-                  >
-                    {item.action}
-                  </Link>
-                ) : (
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[13px] text-[hsl(var(--accent))] font-medium hover:opacity-80 transition whitespace-nowrap"
-                  >
-                    {item.action}
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
+          {/* Right — Lead capture form (Slack + SMS-consent) */}
+          <LeadForm
+            source="voxaris.io/home"
+            heading="Run your free audit"
+            subheading="Drop your details. We'll audit your AI citation share and email a fix list within 24 hours."
+            showMessage={false}
+          />
         </motion.div>
       </div>
     </section>
   );
 }
+
+// Re-export internals used elsewhere; suppress unused-warnings
+void Link;
+void ArrowRight;

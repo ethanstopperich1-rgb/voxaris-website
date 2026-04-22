@@ -3,11 +3,17 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "trailingSlash": false,
-  "routes": [
-    { "src": "/products/staffing-agent", "status": 308, "headers": { "Location": "/products/staffing" } },
-    { "src": "/pricing", "status": 308, "headers": { "Location": "/book-demo" } },
-    { "src": "/solutions/.*", "status": 308, "headers": { "Location": "/" } },
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+  "functions": {
+    "api/**/*.ts": {
+      "maxDuration": 15
+    }
+  },
+  "redirects": [
+    { "source": "/products/staffing-agent", "destination": "/products/staffing", "permanent": true },
+    { "source": "/pricing", "destination": "/book-demo", "permanent": true },
+    { "source": "/solutions/(.*)", "destination": "/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }

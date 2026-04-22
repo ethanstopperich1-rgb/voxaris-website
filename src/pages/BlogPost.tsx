@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import JsonLd from "@/components/seo/JsonLd";
+import LeadForm from "@/components/forms/LeadForm";
 import { getPostBySlug } from "@/lib/blog";
 
 const fmtDate = (iso: string) =>
@@ -223,24 +224,15 @@ export default function BlogPost() {
           </div>
         </section>
 
-        {/* Footer CTA */}
+        {/* Footer CTA — embedded lead form */}
         <section className="border-t border-[hsl(var(--border))] section-padding pt-16">
           <div className="container-wide">
-            <div className="max-w-[55ch]">
-              <p className="eyebrow mb-4">Next step</p>
-              <h2 className="text-3xl lg:text-4xl font-semibold mb-5 leading-snug">
-                Want to know your real AI citation share?
-              </h2>
-              <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                Run a free Voxaris AI Visibility Audit. We query every major AI engine
-                with your top commercial keywords and send a prioritized fix list within
-                24 hours.
-              </p>
-              <a href="https://audit.voxaris.io" target="_blank" rel="noopener noreferrer">
-                <button className="inline-flex items-center gap-2 bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] px-7 py-3.5 rounded-md font-semibold text-[15px] hover:brightness-110 transition-all">
-                  Run my free audit <ArrowRight className="h-4 w-4" />
-                </button>
-              </a>
+            <div className="max-w-2xl">
+              <LeadForm
+                source={`voxaris.io/blog/${post.slug}`}
+                heading="Want to know your real AI citation share?"
+                subheading="Drop your details and we'll run your business through every major AI engine, then send a prioritized fix list within 24 hours."
+              />
             </div>
           </div>
         </section>
