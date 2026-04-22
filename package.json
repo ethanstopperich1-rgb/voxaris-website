@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:full": "vite build && node scripts/prerender.mjs",
+    "build:full": "vite build && node scripts/prerender.mjs && node scripts/indexnow.mjs",
     "build:nossr": "vite build",
     "build:dev": "vite build --mode development",
     "prerender": "node scripts/prerender.mjs",
+    "indexnow": "FORCE_INDEXNOW=1 node scripts/indexnow.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
