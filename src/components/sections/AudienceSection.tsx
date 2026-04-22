@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 type Product = {
   tag: string;
@@ -100,7 +101,7 @@ export default function AudienceSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="border border-[hsl(var(--border))] rounded-[8px] p-8 hover:border-[hsl(var(--accent))/30] transition-colors duration-200 bg-card flex flex-col"
+              className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-8 transition-colors duration-200 hover:border-white/20 hover:bg-white/[0.05] flex flex-col"
             >
               <span className="eyebrow mb-4 block">{product.tag}</span>
               <h3 className="text-xl font-semibold text-foreground mb-3">{product.title}</h3>
@@ -136,6 +137,13 @@ export default function AudienceSection() {
                   {product.cta} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               )}
+              <BorderBeam
+                size={240}
+                duration={12}
+                delay={index * 1.8}
+                colorFrom="hsl(28 8% 72%)"
+                colorTo="hsl(28 8% 72% / 0)"
+              />
             </motion.div>
           ))}
         </div>
