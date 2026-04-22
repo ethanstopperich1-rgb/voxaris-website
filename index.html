@@ -50,7 +50,7 @@
       "legalName": "Voxaris, LLC",
       "alternateName": ["Voxaris AI", "Voxaris Marketing"],
       "url": "https://voxaris.io",
-      "dateModified": "2026-04-22",
+      "dateModified": "2026-04-22T20:00:00-04:00",
       "datePublished": "2026-01-01",
       "logo": {
         "@type": "ImageObject",
@@ -116,10 +116,9 @@
         "Local SEO"
       ],
       "makesOffer": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AEO Services" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI-Ready Website Builds" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Talking Postcard Campaigns" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Staffing Agent" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Visibility Audit" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Voxaris Retainer" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AEO-Ready Website Rebuild" } }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -130,21 +129,40 @@
             "itemOffered": {
               "@type": "Service",
               "name": "AI Visibility Audit",
-              "description": "Free citation report across ChatGPT, Perplexity, Claude, and Google AI. Delivered in 24 hours.",
+              "description": "19-point AEO audit scored across ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews, and Bing Copilot. Prioritized fix list delivered in 24 hours.",
               "url": "https://audit.voxaris.io"
             },
-            "price": "0",
-            "priceCurrency": "USD"
+            "price": "99",
+            "priceCurrency": "USD",
+            "url": "https://buy.stripe.com/fZu6oG3UR2F52jx1g3Wk0F"
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "AI-Ready Website Build",
-              "description": "AEO-optimized website delivered in 72 hours. Schema-complete, FAQ-structured, Core Web Vitals tuned.",
-              "url": "https://voxaris.io/products/websites"
+              "name": "Voxaris Retainer",
+              "description": "All audit findings fixed (schema, content, llms.txt, GBP, citation tracking). Live AEO visibility dashboard. Monthly AI Visibility Report Card. Optional content tier ($597/mo) and full management tier ($997/mo).",
+              "url": "https://voxaris.io/book-demo"
             },
-            "price": "1997",
+            "price": "297",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "297",
+              "priceCurrency": "USD",
+              "unitCode": "MON",
+              "billingDuration": "P1M"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AEO-Ready Website Rebuild",
+              "description": "Complete redesign and rebuild optimized for AI citation from day one. Schema-complete, FAQ-structured, mobile-first. Score improvement guaranteed.",
+              "url": "https://voxaris.io/book-demo"
+            },
+            "price": "2500",
             "priceCurrency": "USD"
           }
         ]
@@ -183,23 +201,53 @@
         {
           "@type": "Service",
           "position": 1,
-          "name": "AEO Services",
-          "description": "Answer Engine Optimization. We optimize your business to be cited by ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews. Starts with a free AI Visibility Audit delivered in 24 hours.",
+          "name": "AI Visibility Audit",
+          "description": "19-point Answer Engine Optimization audit scored across ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews, and Bing Copilot. Prioritized fix list and competitive citation gap analysis delivered in 24 hours.",
           "provider": { "@id": "https://voxaris.io/#organization" },
-          "url": "https://voxaris.io/products/aeo",
-          "serviceType": "Answer Engine Optimization",
-          "areaServed": { "@type": "State", "name": "Florida" }
+          "url": "https://audit.voxaris.io",
+          "offers": {
+            "@type": "Offer",
+            "price": "99",
+            "priceCurrency": "USD",
+            "url": "https://buy.stripe.com/fZu6oG3UR2F52jx1g3Wk0F",
+            "availability": "https://schema.org/InStock"
+          },
+          "serviceType": "Answer Engine Optimization Audit",
+          "areaServed": { "@type": "Country", "name": "US" }
         },
         {
           "@type": "Service",
           "position": 2,
-          "name": "AI-Ready Website Builds",
-          "description": "AI-optimized websites for local businesses, live in 72 hours. $1,997 flat. Schema-complete, FAQ-structured, and optimized for AI citation before the first visitor arrives.",
+          "name": "Voxaris Retainer",
+          "description": "Monthly AEO retainer. All audit findings fixed (schema, content, llms.txt, Google Business Profile, citation tracking). Live AEO visibility dashboard across ChatGPT, Perplexity, Gemini, Claude, Google AI Overviews, and Bing Copilot. Monthly AI Visibility Report Card. Available at $297/month, $597/month with content, or $997/month full management.",
           "provider": { "@id": "https://voxaris.io/#organization" },
-          "url": "https://voxaris.io/products/websites",
+          "url": "https://voxaris.io/book-demo",
           "offers": {
             "@type": "Offer",
-            "price": "1997",
+            "price": "297",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "297",
+              "priceCurrency": "USD",
+              "unitCode": "MON",
+              "billingDuration": "P1M"
+            },
+            "availability": "https://schema.org/InStock"
+          },
+          "serviceType": "AEO Subscription Service",
+          "areaServed": { "@type": "Country", "name": "US" }
+        },
+        {
+          "@type": "Service",
+          "position": 3,
+          "name": "AEO-Ready Website Rebuild",
+          "description": "Complete website rebuild optimized for AI citation from day one. $2,500 flat plus retainer. Schema-complete, FAQ-structured, mobile-first, fast load. Score improvement guaranteed.",
+          "provider": { "@id": "https://voxaris.io/#organization" },
+          "url": "https://voxaris.io/book-demo",
+          "offers": {
+            "@type": "Offer",
+            "price": "2500",
             "priceCurrency": "USD",
             "availability": "https://schema.org/InStock"
           },
@@ -208,7 +256,7 @@
         },
         {
           "@type": "Service",
-          "position": 3,
+          "position": 4,
           "name": "Talking Postcard",
           "description": "AI-personalized video delivered as a physical postcard. Each piece plays a unique video message addressed to the recipient — name, business, city, specific hook. Campaigns from 500 to 50,000 pieces.",
           "provider": { "@id": "https://voxaris.io/#organization" },
@@ -218,7 +266,7 @@
         },
         {
           "@type": "Service",
-          "position": 4,
+          "position": 5,
           "name": "Staffing Agent",
           "description": "AI video interviews that screen candidates before your team sees a resume. Consistent questions, recorded answers, one-page summaries.",
           "provider": { "@id": "https://voxaris.io/#organization" },
@@ -240,7 +288,7 @@
       "publisher": { "@id": "https://voxaris.io/#organization" },
       "inLanguage": "en-US",
       "datePublished": "2026-01-01",
-      "dateModified": "2026-04-22"
+      "dateModified": "2026-04-22T20:00:00-04:00"
     }
     </script>
 
