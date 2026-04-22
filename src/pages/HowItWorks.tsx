@@ -214,7 +214,7 @@ export default function HowItWorks() {
                   onMouseEnter={(e) => (e.currentTarget.style.filter = "brightness(1.1)")}
                   onMouseLeave={(e) => (e.currentTarget.style.filter = "brightness(1)")}
                 >
-                  Get Free AI Audit <ArrowRight className="h-4 w-4" />
+                  See Your AI Visibility Score <ArrowRight className="h-4 w-4" />
                 </button>
               </a>
               <Link to="/book-demo">

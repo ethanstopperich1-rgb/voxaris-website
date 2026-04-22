@@ -86,7 +86,7 @@ export default function Navigation() {
                   e.currentTarget.style.borderColor = "hsl(28 8% 72% / 0.25)";
                 }}
               >
-                Free AI Audit
+                See Your Score
               </button>
             </a>
             <Link to="/book-demo">

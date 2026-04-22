@@ -14,7 +14,7 @@ const products = [
       "Entity optimization + llms.txt",
       "Monthly citation tracking across 5 platforms",
     ],
-    cta: "Get Free Audit",
+    cta: "See Your AI Visibility Score",
     href: "https://audit.voxaris.io",
     external: true,
   },

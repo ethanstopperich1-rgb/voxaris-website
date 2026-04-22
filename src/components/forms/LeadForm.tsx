@@ -310,7 +310,7 @@ export default function LeadForm({
           </>
         ) : (
           <>
-            Run my free audit <ArrowRight className="h-4 w-4" />
+            See My AI Visibility Score <ArrowRight className="h-4 w-4" />
           </>
         )}
       </button>

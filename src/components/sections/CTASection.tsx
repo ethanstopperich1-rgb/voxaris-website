@@ -26,7 +26,7 @@ export default function CTASection() {
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="https://audit.voxaris.io" target="_blank" rel="noopener noreferrer">
                 <button className="bg-[hsl(var(--accent))] text-[hsl(var(--accent-foreground))] px-6 py-3 text-[15px] font-semibold rounded-[6px] hover:brightness-110 transition-all duration-200 inline-flex items-center gap-2">
-                  Get Free Audit <ArrowRight className="h-4 w-4" />
+                  See Your AI Visibility Score <ArrowRight className="h-4 w-4" />
                 </button>
               </a>
               <Link to="/book-demo">
@@ -40,7 +40,7 @@ export default function CTASection() {
           {/* Right — Lead capture form (Slack + SMS-consent) */}
           <LeadForm
             source="voxaris.io/home"
-            heading="Run your free audit"
+            heading="See your AI Visibility Score"
             subheading="Drop your details. We'll audit your AI citation share and email a fix list within 24 hours."
             showMessage={false}
           />

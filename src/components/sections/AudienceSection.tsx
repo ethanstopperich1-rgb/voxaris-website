@@ -25,7 +25,7 @@ const products: Product[] = [
       "AEO content engine (FAQ + answer format)",
       "Weekly citation monitoring across 4 engines",
     ],
-    cta: "Get Free Audit",
+    cta: "See Your AI Visibility Score",
     href: "https://audit.voxaris.io",
     external: true,
   },

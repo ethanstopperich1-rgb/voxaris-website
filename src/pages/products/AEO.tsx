@@ -39,7 +39,7 @@ export default function AEO() {
       cta={{
         eyebrow: "Start here",
         headline: "Start with a free audit — no commitment, no credit card.",
-        primary: { label: "Get Free AI Audit", href: "https://audit.voxaris.io", external: true },
+        primary: { label: "See Your AI Visibility Score", href: "https://audit.voxaris.io", external: true },
         secondary: { label: "Book a Demo", href: "/book-demo" },
       }}
     />
