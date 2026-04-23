@@ -19,7 +19,7 @@ const faqs: QA[] = [
   },
   {
     q: "How much does AEO cost with Voxaris?",
-    a: "Three tiers. The AI Visibility Audit is $99 one-time and gives you a 19-point report across 6 AI engines in 24 hours. The Voxaris Retainer is $297 per month (with optional content tier at $597/mo and full management at $997/mo) and includes all fixes plus a live citation dashboard. The AEO-Ready Website Rebuild is $2,500 plus retainer for businesses needing a complete AI-citation foundation.",
+    a: "Three tiers. The AI Visibility Audit is free and gives you a 19-point report across 6 AI engines in 24 hours, no credit card required. The Voxaris Retainer is $297 per month (with optional content tier at $597/mo and full management at $997/mo) and includes all fixes plus a live citation dashboard. The AEO-Ready Website Rebuild is $2,500 plus retainer for businesses needing a complete AI-citation foundation.",
   },
   {
     q: "How long does AEO take to show results?",
@@ -39,7 +39,7 @@ const faqs: QA[] = [
   },
   {
     q: "What's the first step to working with Voxaris?",
-    a: "Run the $99 AI Visibility Audit at audit.voxaris.io. You get a 19-point report scored across all 6 AI engines in 24 hours, plus a prioritized fix list and competitive citation gap analysis. From there you can implement fixes yourself or hand the punch list to our retainer team.",
+    a: "Run the free AI Visibility Audit at audit.voxaris.io. You get a 19-point report scored across all 6 AI engines in 24 hours, plus a prioritized fix list and competitive citation gap analysis — no credit card required. From there you can implement fixes yourself or hand the punch list to our retainer team.",
   },
 ];
 

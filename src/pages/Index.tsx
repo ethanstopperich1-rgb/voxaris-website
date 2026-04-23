@@ -11,7 +11,7 @@ const Index = () => {
   usePageMeta({
     title: "Voxaris | Can AI See Your Business?",
     description:
-      "We score your business across ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews, and Bing Copilot. 19-point report in 24 hours. $99 audit, $297/mo retainer.",
+      "We score your business across ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews, and Bing Copilot. Free 19-point AI Visibility Audit delivered in 24 hours.",
     canonical: "https://voxaris.io/",
   });
   return (

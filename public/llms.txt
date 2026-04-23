@@ -57,11 +57,12 @@ Voxaris dashboard.
 
 ## How we work — three tiers
 
-### 1. AI Visibility Audit — $99 one-time
+### 1. AI Visibility Audit — Free
 - 19-point AEO checklist scored across 6 AI engines
 - Prioritized fix list + competitive citation gap analysis
 - Delivered in 24 hours
-- Buy: https://buy.stripe.com/fZu6oG3UR2F52jx1g3Wk0F
+- No credit card required
+- Run yours: https://audit.voxaris.io
 
 ### 2. Voxaris Retainer — $297/month
 - All audit findings fixed (schema, content, llms.txt,
@@ -110,7 +111,7 @@ Gemini, Claude, Google AI Overviews, and Bing Copilot through
 Answer Engine Optimization (AEO).
 
 **What does Voxaris cost?**
-Voxaris offers three tiers: a $99 one-time AI visibility audit,
+Voxaris offers three tiers: a free AI visibility audit,
 a $297/month retainer that includes all fixes and dashboard
 access, and a $2,500 website rebuild for businesses needing a
 complete AI-ready foundation.
@@ -135,8 +136,7 @@ in the Orlando metro area.
 
 ## Resources
 
-- Run my $99 AI Audit: https://buy.stripe.com/fZu6oG3UR2F52jx1g3Wk0F
-- Free teaser audit: https://audit.voxaris.io
+- Run my free AI Audit: https://audit.voxaris.io
 - Book a discovery call: https://voxaris.io/book-demo
 - How It Works: https://voxaris.io/how-it-works
 - Why Voxaris: https://voxaris.io/why-voxaris

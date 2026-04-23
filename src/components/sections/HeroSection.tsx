@@ -75,7 +75,7 @@ export default function HeroSection() {
             competitors are exploiting — delivered in 24 hours.
           </motion.p>
 
-          {/* Single primary CTA — $99 audit */}
+          {/* Single primary CTA — Free audit */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -83,7 +83,7 @@ export default function HeroSection() {
             variants={fadeUp}
             className="flex flex-col sm:flex-row sm:items-center gap-4"
           >
-            <a href="https://buy.stripe.com/fZu6oG3UR2F52jx1g3Wk0F" target="_blank" rel="noopener noreferrer">
+            <a href="https://audit.voxaris.io" target="_blank" rel="noopener noreferrer">
               <button
                 style={{
                   background: "hsl(28 8% 72%)",
@@ -102,11 +102,11 @@ export default function HeroSection() {
                 onMouseEnter={(e) => (e.currentTarget.style.filter = "brightness(1.08)")}
                 onMouseLeave={(e) => (e.currentTarget.style.filter = "brightness(1)")}
               >
-                Run My AI Audit — $99 <ArrowRight className="h-4 w-4" />
+                Run My Free AI Audit <ArrowRight className="h-4 w-4" />
               </button>
             </a>
             <span className="text-sm text-muted-foreground">
-              24-hour delivery · 19-point report · No subscription
+              Free · 24-hour delivery · 19-point report · No credit card
             </span>
           </motion.div>
         </div>
