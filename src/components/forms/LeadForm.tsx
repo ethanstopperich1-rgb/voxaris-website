@@ -64,8 +64,8 @@ type Status = "idle" | "submitting" | "success" | "error";
 
 export default function LeadForm({
   source = "voxaris.io",
-  heading = "Get your free AI Visibility Audit",
-  subheading = "We'll review where you appear (or don't) across ChatGPT, Perplexity, Claude, Gemini, and Google AI Overviews — and send a fix list within 24 hours.",
+  heading = "Get your free AI Presence Report",
+  subheading = "Readiness + Visibility + Trust — scored across ChatGPT, Perplexity, Gemini, Google AI Overviews, Bing, and Claude. Report delivered in 60 seconds.",
   showMessage = true,
   compact = false,
 }: LeadFormProps) {
@@ -156,7 +156,7 @@ export default function LeadForm({
         <CheckCircle2 className="h-10 w-10 text-[hsl(var(--accent))] mx-auto mb-4" />
         <h3 className="text-2xl font-semibold text-foreground mb-2">Got it.</h3>
         <p className="text-muted-foreground max-w-[42ch] mx-auto">
-          We'll be in touch within 24 hours with your AI visibility report. Watch your inbox
+          We'll be in touch with your AI visibility report in 60 seconds. Watch your inbox
           (and your phone, if you opted in to SMS).
         </p>
       </div>
@@ -310,7 +310,7 @@ export default function LeadForm({
           </>
         ) : (
           <>
-            See My AI Visibility Score <ArrowRight className="h-4 w-4" />
+            Run My AI Presence Report <ArrowRight className="h-4 w-4" />
           </>
         )}
       </button>

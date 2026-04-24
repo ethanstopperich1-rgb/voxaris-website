@@ -9,12 +9,12 @@ const products = [
     description:
       "ChatGPT, Perplexity, and Gemini now answer your customers' questions without sending them to Google. We optimize your business to appear in those answers.",
     bullets: [
-      "AI Visibility Audit (free, 48h delivery)",
-      "LocalBusiness + FAQPage schema markup",
-      "Entity optimization + llms.txt",
-      "Monthly citation tracking across 5 platforms",
+      "Free 3-dimension AI Presence Report (60-second delivery)",
+      "Readiness + Visibility + Trust scored on one page",
+      "6 engines: ChatGPT, Perplexity, Gemini, Google AIO, Bing, Claude",
+      "Weekly tracking dashboard with competitor benchmarking",
     ],
-    cta: "See Your AI Visibility Score",
+    cta: "Run my AI Presence Report",
     href: "https://audit.voxaris.io",
     external: true,
   },

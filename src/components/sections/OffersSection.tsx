@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Search, LineChart, Hammer, ArrowRight } from "lucide-react";
+import { Search, Unlock, LineChart, Hammer, ArrowRight } from "lucide-react";
 import * as PricingCard from "@/components/ui/pricing-card";
 import { Button } from "@/components/ui/button";
 import { BorderBeam } from "@/components/ui/border-beam";
@@ -22,31 +22,46 @@ const offers: Offer[] = [
   {
     icon: <Search />,
     name: "Audit",
-    description: "Find out where you stand",
+    description:
+      "Free 3-dimension teaser — Readiness + Visibility + Trust. 1 Perplexity screenshot included.",
     price: "Free",
-    period: "24h delivery",
+    period: "60 seconds",
     cta: "Run my audit",
     ctaHref: "https://audit.voxaris.io",
     ctaExternal: true,
     badge: "Start here",
   },
   {
-    icon: <LineChart />,
-    name: "Retainer",
-    description: "For businesses ready to fix it",
-    price: "$297",
-    period: "/month",
-    cta: "Book a call",
-    ctaHref: "/book-demo",
+    icon: <Unlock />,
+    name: "Visibility",
+    description:
+      "Full Visibility + Trust report · 18 AI Mystery Shop screenshots across 6 engines · competitor benchmark · 30-min strategy call.",
+    price: "$99",
+    period: "one-time",
+    cta: "Get the unlock",
+    ctaHref: "https://audit.voxaris.io/api/checkout/visibility",
+    ctaExternal: true,
     highlight: true,
     badge: "Most popular",
   },
   {
+    icon: <LineChart />,
+    name: "Tracking",
+    description:
+      "Live customer dashboard · weekly score snapshots across all 6 engines · competitor watch · citation health · Google Search Console + Bing connectors.",
+    price: "$299",
+    period: "/month",
+    cta: "Start tracking",
+    ctaHref: "https://audit.voxaris.io/api/checkout/tracking",
+    ctaExternal: true,
+  },
+  {
     icon: <Hammer />,
     name: "Rebuild",
-    description: "Need a full rebuild?",
+    description:
+      "Done-for-you site rebuild, engineered for AI citation from day one. 80+ score in 90 days — or we keep working free.",
     price: "$2,500",
-    period: "+ retainer",
+    period: "+ $300/mo",
     cta: "Book a call",
     ctaHref: "/book-demo",
   },
@@ -71,7 +86,7 @@ export default function OffersSection() {
           </h2>
         </motion.div>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {offers.map((offer, i) => (
             <motion.div
               key={offer.name}

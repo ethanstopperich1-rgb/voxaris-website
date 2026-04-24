@@ -39,7 +39,7 @@ const footerLinks: FooterSection[] = [
 	{
 		label: 'Platform',
 		links: [
-			{ title: 'See Your AI Visibility Score', href: 'https://audit.voxaris.io' },
+			{ title: 'Run My AI Presence Report', href: 'https://audit.voxaris.io' },
 			{ title: 'Customer App', href: 'https://app.voxaris.io' },
 			{ title: 'Privacy', href: '/privacy' },
 			{ title: 'Terms', href: '/terms' },
@@ -74,7 +74,7 @@ export function Footer() {
 						rel="noopener noreferrer"
 						className="inline-flex items-center gap-2 text-[13px] font-medium text-[hsl(var(--accent))] hover:opacity-80 transition"
 					>
-						See Your AI Visibility Score <ArrowRight className="h-3.5 w-3.5" />
+						Run My AI Presence Report <ArrowRight className="h-3.5 w-3.5" />
 					</a>
 					<p className="text-muted-foreground mt-8 text-sm md:mt-0">
 						© {new Date().getFullYear()} Voxaris, LLC. All rights reserved. · Last updated{' '}

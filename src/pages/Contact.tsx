@@ -4,9 +4,9 @@ import LeadForm from "@/components/forms/LeadForm";
 
 export default function Contact() {
   usePageMeta({
-    title: "Contact Voxaris AI | Get Your Free AI Visibility Audit",
+    title: "Contact Voxaris AI | Free AI Presence Report",
     description:
-      "Talk to Voxaris. Get a free AI Visibility Audit, ask about AEO, websites, or Talking Postcard campaigns. 24-hour response.",
+      "Talk to Voxaris. Run a free 3-dimension AI Presence Report, ask about the $299/mo Tracking dashboard, website rebuilds, or Talking Postcard campaigns. 24-hour response.",
     canonical: "https://voxaris.io/contact",
   });
 

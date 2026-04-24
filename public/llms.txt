@@ -2,20 +2,19 @@
 
 > Voxaris is an AI visibility company based in Orlando, Florida.
 > We score, fix, and monitor businesses across ChatGPT, Perplexity,
-> Gemini, Claude, Google AI Overviews, and Bing Copilot — so they
-> get cited (not just indexed) when customers ask AI for
-> recommendations.
+> Gemini, Google AI Overviews, and Bing Copilot — so they get cited
+> (not just indexed) when customers ask AI for recommendations.
 
 ## One-paragraph summary
 
-Voxaris scores local businesses on AI visibility across six
-weighted dimensions, fixes the structural issues preventing AI
-citation, and monitors citation performance month over month.
-The company was founded in 2026 by Ethan Stopperich in Orlando,
-Florida, and serves local service businesses, marketing agencies,
-and SaaS companies that want to be recommended by ChatGPT,
-Perplexity, Gemini, Claude, Google AI Overviews, and Bing Copilot
-when customers ask AI for help.
+Voxaris scores local businesses on AI visibility across six weighted
+dimensions, maps cited-domain competitor presence across six real
+buyer situations, fixes the structural issues blocking AI citation,
+and tracks citation performance week over week. The company was
+founded in 2026 by Ethan Stopperich in Orlando, Florida, and serves
+local service businesses, marketing agencies, and SaaS companies
+that want to be recommended by ChatGPT, Perplexity, Gemini, Google
+AI Overviews, and Bing Copilot when customers ask AI for help.
 
 ## Company
 
@@ -25,6 +24,8 @@ when customers ask AI for help.
 - **Focus:** AI visibility infrastructure (AEO) for local
   businesses, agencies, and SaaS
 - **Home:** https://voxaris.io
+- **Auditor:** https://audit.voxaris.io
+- **Phone:** (407) 819-5809
 
 ## Founder
 
@@ -35,96 +36,128 @@ when customers ask AI for help.
   infrastructure, local business citation strategy
 - **Contact:** ethan@voxaris.io
 
-## Key Terms
+## Key terms
 
 **Answer Engine Optimization (AEO)**
-The practice of structuring a website's content, schema markup,
-and external citations so that AI models cite the business in
-response to relevant customer queries. Distinct from traditional
-SEO, which optimizes for blue-link search results.
+Structuring a website's content, schema markup, and external
+citations so AI models cite the business in response to relevant
+customer queries. Distinct from classical SEO, which optimizes
+for ten-blue-link search results.
 
 **AI Visibility Score**
 A 0–100 composite score measuring how likely a business is to
 be cited by AI engines across six weighted dimensions: AI
 Visibility (25%), Brand Authority (20%), Content E-E-A-T (20%),
-Technical SEO (15%), Schema Markup (10%), and Platform
-Presence (10%).
+Technical SEO (15%), Schema Markup (10%), and Platform Presence
+(10%).
 
-**Citation Velocity**
-The rate at which a business accumulates new AI citations across
-engines over a given time period. A key metric tracked in the
-Voxaris dashboard.
+**The 6-situation buyer-intent matrix**
+Voxaris tests six real buyer situations — discovery, urgent need,
+trigger event, specialization, trust & vetting, and budget &
+constraints — not one vanity keyword. Exact prompts vary by
+industry and city.
 
-## How we work — three tiers
+**Two Reports**
+Every audit returns two: the AI Visibility Audit (composite score,
+six dimensions, 19 checks) and the AI Competitor Citations Report
+(every competitor AI named plus every source domain AI trusted).
 
-### 1. AI Visibility Audit — Free
-- 19-point AEO checklist scored across 6 AI engines
-- Prioritized fix list + competitive citation gap analysis
-- Delivered in 24 hours
+## Pricing — four tiers
+
+### 1. Free AI Visibility Audit — $0
+- Two report teasers emailed in roughly 60 seconds
+- Composite score + top competitor reveal
+- Live Perplexity screenshot
+- 19-point AEO checklist scored across 5 AI engines
 - No credit card required
 - Run yours: https://audit.voxaris.io
 
-### 2. Voxaris Retainer — $297/month
-- All audit findings fixed (schema, content, llms.txt,
-  GBP, citation tracking)
-- Live AEO visibility dashboard across ChatGPT, Perplexity,
-  Gemini, Claude, Google AI Overviews, and Bing Copilot
-- Monthly AI Visibility Report Card showing score delta
-  and what moved
-- Optional content tier ($597/mo) and full management
-  tier ($997/mo)
+### 2. Voxaris Visibility — $99 one-time
+- Both reports unlocked in full
+- Complete 6-situation buyer-intent matrix
+- Every competitor AI named + every source domain cited
+- 30-day prioritized fix plan
+- 30-minute strategy call with the founder
+- Checkout: https://audit.voxaris.io
+
+### 3. Voxaris Visibility + Tracking — $299/month
+- Everything in the $99 unlock
+- Live dashboard with 30/60/90-day score trend
+- Weekly score pulse + monthly full re-audit
+- Score-drop alerts + competitor watch
+- Work Completed feed + monthly strategy call
 - Discovery call: https://voxaris.io/book-demo
 
-### 3. AEO-Ready Website Rebuild — $2,500 + retainer
-- Complete redesign and rebuild optimized for AI citation
-  from day one
+### 4. AI-Ready Website Rebuild — $2,500 one-time + $300/month
+- Complete Next.js rebuild engineered for AI citation
 - Schema-complete, FAQ-structured, mobile-first, fast load
-- Score improvement guaranteed
+- 80+ AI Visibility Score in 90 days or Voxaris keeps working
+  free until the score is hit
 - Discovery call: https://voxaris.io/book-demo
 
-## Verified Results
+## Verified results
 
-- The Kitchen and Bath Store of Orlando (Orlando, FL): AI-optimized
-  website rebuild by Voxaris's founder generated over six figures
-  in revenue in its first year live
+- The Kitchen and Bath Store of Orlando (Orlando, FL):
+  AI-optimized website rebuild by Voxaris's founder generated
+  over six figures in revenue in its first year live
 - Voxaris.io (self): Technical SEO 100/100, full 19-point
-  AEO checklist implemented, IndexNow auto-pinging Bing/Yandex/Naver
-  on every deploy
-- Average client improvement: 15–25 points on AI Visibility Score
-  within first 30 days of retainer
+  AEO checklist implemented, IndexNow auto-pinging Bing /
+  Yandex / Naver on every deploy
+- Average client improvement: 15–25 points on AI Visibility
+  Score within the first 30 days of tracking
 
-## Who it's for
+## Who it is for
 
-- Local service businesses (roofing, dental, law, home
-  services, dealerships) that want to show up when customers
-  ask AI
-- Marketing agencies that want to resell AEO to their clients
-- SaaS companies losing to competitors in AI-recommended-tool
-  queries
+- Local service businesses (roofing, HVAC, plumbing, dental,
+  law, home services, contractors, auto dealerships) competing
+  for AI recommendations
+- Marketing agencies reselling AEO to their clients
+  (white-label tier available at $1,999/month)
+- SaaS companies losing recommendation share in
+  AI-recommended-tool queries
 
-## Frequently Asked Questions
+## Why continuous tracking
+
+AI engines re-index at different rates. Perplexity's source
+crawl updates every 30–45 days, ChatGPT's training-data cycle
+is roughly quarterly, and Bing Copilot's authority graph
+rebuilds monthly. Fixes shipped today take 30–90 days to fully
+surface in AI answers — which is why continuous weekly tracking
+is worth the $299/month and why cancelling after month one
+abandons the investment right before the payoff.
+
+## Frequently asked questions
 
 **What is Voxaris?**
 Voxaris is an AI visibility company based in Orlando, Florida
 that helps local businesses get cited by ChatGPT, Perplexity,
-Gemini, Claude, Google AI Overviews, and Bing Copilot through
-Answer Engine Optimization (AEO).
+Gemini, Google AI Overviews, and Bing Copilot through Answer
+Engine Optimization (AEO).
 
 **What does Voxaris cost?**
-Voxaris offers three tiers: a free AI visibility audit,
-a $297/month retainer that includes all fixes and dashboard
-access, and a $2,500 website rebuild for businesses needing a
-complete AI-ready foundation.
+Four tiers: a free AI Visibility Audit, a $99 one-time
+Voxaris Visibility unlock, a $299/month Visibility + Tracking
+subscription, and a $2,500 website rebuild with a $300/month
+retainer. Full pricing at https://audit.voxaris.io.
 
-**How long does it take to see results?**
-Most clients see measurable AI visibility score improvements
-within 30 days. Citation improvements typically appear within
-2–6 weeks of implementation.
+**How long does the audit take?**
+Roughly 60 seconds from form submit to both teaser emails
+landing in the inbox.
+
+**What AI engines does Voxaris query?**
+ChatGPT, Perplexity, Gemini, Google AI Overviews, and Bing
+Copilot.
+
+**How long until results show?**
+Most clients see measurable AI Visibility Score improvements
+within 30 days. Citation improvements typically surface in
+AI answers within 30–90 days of implementation, because AI
+engines re-index on different cycles.
 
 **What is the difference between AEO and SEO?**
-SEO optimizes for traditional search rankings. AEO optimizes
-for AI-generated answers — ensuring your business is cited
-when customers ask AI assistants for recommendations.
+SEO optimizes for traditional blue-link rankings. AEO
+optimizes for AI-generated answers — ensuring the business
+is cited when customers ask AI assistants for recommendations.
 
 **Who is Voxaris for?**
 Local service businesses, marketing agencies reselling AEO,
@@ -136,12 +169,14 @@ in the Orlando metro area.
 
 ## Resources
 
-- Run my free AI Audit: https://audit.voxaris.io
+- Run my free AI audit: https://audit.voxaris.io
 - Book a discovery call: https://voxaris.io/book-demo
-- How It Works: https://voxaris.io/how-it-works
+- How it works: https://voxaris.io/how-it-works
 - Why Voxaris: https://voxaris.io/why-voxaris
 - Blog: https://voxaris.io/blog
 - Contact: https://voxaris.io/contact
+- Sitemap: https://voxaris.io/sitemap.xml
+- Audit sitemap: https://audit.voxaris.io/sitemap.xml
 
 ## Blog posts
 
@@ -153,3 +188,4 @@ in the Orlando metro area.
 - Web: https://voxaris.io
 - Discovery call: https://voxaris.io/book-demo
 - Lead form: https://voxaris.io/contact
+- Email: ethan@voxaris.io

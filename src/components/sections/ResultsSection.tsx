@@ -18,9 +18,9 @@ const stats: Stat[] = [
   },
   {
     icon: <Clock />,
-    number: "24h",
+    number: "60s",
     label: "audit turnaround",
-    caption: "19-point report delivered same day",
+    caption: "Full dual report delivered in about a minute",
   },
   {
     icon: <Target />,

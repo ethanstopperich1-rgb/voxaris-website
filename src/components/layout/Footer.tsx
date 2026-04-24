@@ -39,7 +39,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[13px] font-medium text-[hsl(var(--accent))] hover:opacity-80 transition"
             >
-              Free AI Visibility Audit <ArrowRight className="h-3.5 w-3.5" />
+              Free AI Presence Report <ArrowRight className="h-3.5 w-3.5" />
             </a>
           </div>
 

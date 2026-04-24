@@ -10,28 +10,28 @@ interface QA {
 
 const faqs: QA[] = [
   {
-    q: "What is Answer Engine Optimization (AEO)?",
-    a: "Answer Engine Optimization (AEO) is the practice of structuring your website and external citations so AI search engines — ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews, and Bing Copilot — cite your business directly inside their answers. Unlike traditional SEO which optimizes for ranked links, AEO optimizes for being the cited source.",
+    q: "What is the AI Presence Report?",
+    a: "The AI Presence Report is Voxaris's three-dimension scorecard for how AI search sees your business. AI Readiness scores whether the crawlers (GPTBot, PerplexityBot, Claude-SearchBot, Googlebot, Bingbot) can actually read your site — robots.txt, llms.txt, FAQPage schema, viewport meta, Open Graph, mobile indexability. AI Visibility scores how often your business surfaces inside real AI answers across ChatGPT, Perplexity, Gemini, Google AI Overviews, Bing, and Claude. AI Trust scores the entity signals AI engines pull in — Google Business Profile rating and review count, Foursquare aggregator presence, and operational flags. All three dimensions are delivered in one unified report.",
   },
   {
-    q: "How is AEO different from SEO?",
-    a: "SEO optimizes for Google's ranked list of blue links. AEO optimizes for being cited inside AI-generated answers where users often never see a link list at all. SEO rewards keyword density and backlinks; AEO rewards structured data (JSON-LD), question-phrased content, entity authority, and explicit llms.txt and schema signals that AI engines extract.",
+    q: "How is this different from SEO?",
+    a: "SEO optimizes for Google's ranked list of blue links. AI Presence optimizes for being extracted by AI. SEO rewards backlinks and keyword density. AI Presence rewards structured data, llms.txt + robots posture, entity consistency across GBP and Foursquare, and real-world citations inside AI answers — not link positions on a search results page.",
   },
   {
-    q: "How much does AEO cost with Voxaris?",
-    a: "Three tiers. The AI Visibility Audit is free and gives you a 19-point report across 6 AI engines in 24 hours, no credit card required. The Voxaris Retainer is $297 per month (with optional content tier at $597/mo and full management at $997/mo) and includes all fixes plus a live citation dashboard. The AEO-Ready Website Rebuild is $2,500 plus retainer for businesses needing a complete AI-citation foundation.",
+    q: "How much does Voxaris cost?",
+    a: "Four tiers. Free AI Presence teaser in 60 seconds — one Perplexity screenshot, all three score previews. Voxaris Visibility is a $99 one-time unlock of the full Visibility + Trust report with 18 AI Mystery Shop screenshots across 6 engines, competitor benchmarking, and a 30-minute strategy call with Ethan. Voxaris Tracking is $299 per month for the live customer dashboard, weekly score snapshots, competitor watch, citation health, and Google Search Console and Bing Webmaster connectors. The AEO-Ready Website Rebuild is $2,500 one-time plus $300/mo retainer — 80+ AI Readiness score in 90 days or we keep working free.",
   },
   {
-    q: "How long does AEO take to show results?",
-    a: "Technical foundation (schema, robots.txt, sitemap, meta layer, llms.txt) is complete in week 1. First citations in AI engines typically appear between weeks 3 and 6. Consistent presence across 4 or more engines for your core service queries builds by month 3. Voxaris guarantees an 80+ AI Visibility Score in 30 days or full refund.",
+    q: "How long does it take to show results?",
+    a: "Readiness fixes ship week one — schema, llms.txt, robots posture, viewport, Open Graph, mobile indexability. First AI citations typically appear weeks three to six. Consistent Visibility across four-plus engines for core buyer-intent queries builds by month three. Trust signals (Google Business Profile, Foursquare, directory citations) build continuously and are re-scored weekly in the dashboard.",
   },
   {
-    q: "Which AI engines does Voxaris optimize for?",
-    a: "We optimize for ChatGPT (OpenAI), Perplexity, Claude (Anthropic), Gemini (Google), Google AI Overviews, and Bing Copilot. We track citation signals across all six engines weekly and report month-over-month score changes in your dashboard.",
+    q: "Which AI engines does Voxaris cover?",
+    a: "Six engines — ChatGPT (OpenAI), Perplexity, Gemini (Google), Google AI Overviews, Bing, and Claude (Anthropic). We track visibility and citation signals across all six every week inside the $299/mo Tracking dashboard, and we capture up to 18 screenshots — three per engine — in the $99 one-time Visibility unlock as evidence of what the AI actually says about you today.",
   },
   {
     q: "Do you guarantee results?",
-    a: "Yes. The Voxaris Retainer comes with a 30-day score guarantee — if your AI Visibility Score does not climb to 80+ within 30 days of starting, we refund the first month in full. The AEO-Ready Website Rebuild also guarantees a 25-point score lift or we rebuild again at no charge.",
+    a: "Yes — and it's a work-until-hit guarantee, not a refund (AI engines re-index at 30-90 days, so promising instant results is dishonest). Voxaris Tracking guarantees your AI Visibility score climbs 20+ points within 90 days, or we keep working at no extra charge until it does. The AEO-Ready Website Rebuild guarantees 80+ AI Readiness in 90 days on the same terms.",
   },
   {
     q: "Where is Voxaris based and who do you serve?",
@@ -39,7 +39,7 @@ const faqs: QA[] = [
   },
   {
     q: "What's the first step to working with Voxaris?",
-    a: "Run the free AI Visibility Audit at audit.voxaris.io. You get a 19-point report scored across all 6 AI engines in 24 hours, plus a prioritized fix list and competitive citation gap analysis — no credit card required. From there you can implement fixes yourself or hand the punch list to our retainer team.",
+    a: "Run the free AI Presence Report at audit.voxaris.io. You get all three dimensions — Readiness, Visibility, Trust — scored across six AI engines in 60 seconds, plus a prioritized fix list and a competitor benchmark. No credit card required. From there you can implement fixes yourself, unlock the full 18-screenshot report for $99, or start the $299/mo Tracking dashboard.",
   },
 ];
 

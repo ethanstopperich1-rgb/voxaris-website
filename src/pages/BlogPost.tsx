@@ -233,7 +233,7 @@ export default function BlogPost() {
               <LeadForm
                 source={`voxaris.io/blog/${post.slug}`}
                 heading="Want to know your real AI citation share?"
-                subheading="Drop your details and we'll run your business through every major AI engine, then send a prioritized fix list within 24 hours."
+                subheading="Drop your details and we'll run your business through every major AI engine, then send the report in 60 seconds."
               />
             </div>
           </div>

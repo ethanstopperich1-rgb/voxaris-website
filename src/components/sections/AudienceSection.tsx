@@ -15,17 +15,17 @@ type Product = {
 
 const products: Product[] = [
   {
-    tag: "AEO",
-    title: "AEO Services",
+    tag: "AI PRESENCE",
+    title: "AI Presence Report",
     description:
-      "Answer Engine Optimization — we make your business visible in ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews. Starts with a free audit.",
+      "The three-dimension scorecard AI search actually uses — Readiness, Visibility, Trust — across ChatGPT, Perplexity, Gemini, Google AI Overviews, Bing, and Claude. Starts free in 60 seconds.",
     features: [
-      "AI Visibility Audit (free, 24h delivery)",
-      "Schema + robots.txt + sitemap optimization",
-      "AEO content engine (FAQ + answer format)",
-      "Weekly citation monitoring across 4 engines",
+      "Free 3-score teaser (Readiness + Visibility + Trust)",
+      "18-screenshot AI Mystery Shop across 6 engines ($99 unlock)",
+      "Competitor benchmarking + citation health",
+      "Live tracking dashboard with weekly snapshots ($299/mo)",
     ],
-    cta: "See Your AI Visibility Score",
+    cta: "Run my AI Presence Report",
     href: "https://audit.voxaris.io",
     external: true,
   },

@@ -10,6 +10,16 @@ const fadeUp = {
   }),
 };
 
+// The three dimensions AI search judges every business on.
+// Shipped as a unified report on /proof/[slug] in audit.voxaris.io.
+const DIMENSIONS: { label: string; sub: string }[] = [
+  { label: "Readiness", sub: "Can AI crawl you?" },
+  { label: "Visibility", sub: "Does AI name you?" },
+  { label: "Trust", sub: "Does AI trust you?" },
+];
+
+const ENGINES = ["ChatGPT", "Perplexity", "Gemini", "Google AIO", "Bing", "Claude"];
+
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden">
@@ -23,8 +33,29 @@ export default function HeroSection() {
 
       <div className="container-wide relative">
         <div className="pt-12 pb-20 lg:pt-20 lg:pb-28 max-w-3xl">
-          {/* Eyebrow */}
+          {/* Release strip — calls out the three-dimension upgrade for repeat visitors */}
           <motion.div initial="hidden" animate="visible" custom={0} variants={fadeUp} className="mb-7">
+            <a
+              href="https://audit.voxaris.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-[12px] text-muted-foreground hover:bg-white/[0.06] hover:border-white/20 transition-colors"
+            >
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full bg-[hsl(28_8%_72%)]/12 text-[hsl(28_8%_72%)] px-2 py-0.5 text-[10px] font-semibold tracking-[0.12em] uppercase"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-[hsl(28_8%_72%)]" />
+                New
+              </span>
+              <span className="text-foreground/90">
+                3-dimension AI Presence Report — Readiness + Visibility + Trust, 6 engines
+              </span>
+              <ArrowRight className="h-3.5 w-3.5 opacity-70" />
+            </a>
+          </motion.div>
+
+          {/* Eyebrow */}
+          <motion.div initial="hidden" animate="visible" custom={0.05} variants={fadeUp} className="mb-7">
             <span
               style={{
                 fontFamily: "'JetBrains Mono', 'Space Mono', monospace",
@@ -46,7 +77,7 @@ export default function HeroSection() {
                   display: "inline-block",
                 }}
               />
-              AI Visibility · Orlando, Florida
+              AI Presence · Orlando, Florida
             </span>
           </motion.div>
 
@@ -58,8 +89,9 @@ export default function HeroSection() {
             variants={fadeUp}
             className="text-[2.75rem] sm:text-5xl lg:text-6xl xl:text-[4.25rem] font-semibold tracking-[-0.03em] text-foreground mb-7 leading-[1.05]"
           >
-            Can AI see<br />
-            <span className="text-muted-foreground">your business?</span>
+            AI search judges your<br />
+            business on three<br />
+            <span className="text-muted-foreground">dimensions. Here's all three.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -68,14 +100,38 @@ export default function HeroSection() {
             animate="visible"
             custom={0.2}
             variants={fadeUp}
-            className="text-lg lg:text-xl text-muted-foreground max-w-[52ch] mb-10 leading-relaxed font-normal"
+            className="text-lg lg:text-xl text-muted-foreground max-w-[56ch] mb-8 leading-relaxed font-normal"
           >
-            We score your business across ChatGPT, Perplexity, Claude, Gemini, and Google AI
-            Overviews. You get a 19-point report, prioritized fixes, and the exact gaps your
-            competitors are exploiting — delivered in 24 hours.
+            Readiness — can the crawlers actually read your site. Visibility —
+            how often ChatGPT, Perplexity, Gemini, Google AI Overviews, Bing, and
+            Claude name you in real answers. Trust — what Google Business,
+            Foursquare, and the citation web say about you.
+            One free audit. One unified report. Scored across all six engines.
           </motion.p>
 
-          {/* Single primary CTA — Free audit */}
+          {/* Three-dimension score pill row (mirrors the hero on /proof/[slug]) */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            custom={0.25}
+            variants={fadeUp}
+            className="mb-10 flex flex-wrap gap-3"
+            aria-label="The three dimensions of the AI Presence Report"
+          >
+            {DIMENSIONS.map((d) => (
+              <div
+                key={d.label}
+                className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2.5"
+              >
+                <span className="font-mono-display text-[11px] tracking-[0.12em] uppercase text-[hsl(28_8%_72%)]">
+                  {d.label}
+                </span>
+                <span className="text-[13px] text-muted-foreground">{d.sub}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Primary CTA */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -102,12 +158,33 @@ export default function HeroSection() {
                 onMouseEnter={(e) => (e.currentTarget.style.filter = "brightness(1.08)")}
                 onMouseLeave={(e) => (e.currentTarget.style.filter = "brightness(1)")}
               >
-                Run My Free AI Audit <ArrowRight className="h-4 w-4" />
+                Run My Free AI Presence Report <ArrowRight className="h-4 w-4" />
               </button>
             </a>
             <span className="text-sm text-muted-foreground">
-              Free · 24-hour delivery · 19-point report · No credit card
+              Free · 60-second teaser · 6 engines · No credit card
             </span>
+          </motion.div>
+
+          {/* Engine coverage strip */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            custom={0.4}
+            variants={fadeUp}
+            className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2"
+          >
+            <span className="font-mono-display text-[10px] tracking-[0.16em] uppercase text-muted-foreground">
+              Scored across
+            </span>
+            {ENGINES.map((e) => (
+              <span
+                key={e}
+                className="text-[12px] text-foreground/80 border-b border-white/10 pb-0.5"
+              >
+                {e}
+              </span>
+            ))}
           </motion.div>
         </div>
       </div>

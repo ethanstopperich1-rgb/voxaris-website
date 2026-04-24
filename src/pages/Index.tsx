@@ -9,9 +9,9 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 
 const Index = () => {
   usePageMeta({
-    title: "Voxaris | Can AI See Your Business?",
+    title: "Voxaris | The 3-Dimension AI Presence Report",
     description:
-      "We score your business across ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews, and Bing Copilot. Free 19-point AI Visibility Audit delivered in 24 hours.",
+      "AI search judges your business on three dimensions: Readiness, Visibility, and Trust. Voxaris scores all three across ChatGPT, Perplexity, Gemini, Google AI Overviews, Bing, and Claude. Free report in 60 seconds.",
     canonical: "https://voxaris.io/",
   });
   return (
