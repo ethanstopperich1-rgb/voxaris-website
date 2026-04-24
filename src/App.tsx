@@ -20,6 +20,12 @@ import Terms from "./pages/Terms";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
+import AuditReceived from "./pages/AuditReceived";
+import AIVisibilityAudit from "./pages/landing/AIVisibilityAudit";
+import WhatIsAnAIVisibilityAudit from "./pages/landing/WhatIsAnAIVisibilityAudit";
+import LocalBusinessAIVisibility from "./pages/landing/LocalBusinessAIVisibility";
+import AEOGEOAIO from "./pages/landing/AEOGEOAIO";
+import ChatGPTVisibilityAudit from "./pages/landing/ChatGPTVisibilityAudit";
 import { GlassFilter } from "./components/ui/liquid-glass";
 
 const queryClient = new QueryClient();
@@ -50,6 +56,13 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/audit-received" element={<AuditReceived />} />
+          {/* AEO landing pages */}
+          <Route path="/ai-visibility-audit" element={<AIVisibilityAudit />} />
+          <Route path="/what-is-an-ai-visibility-audit" element={<WhatIsAnAIVisibilityAudit />} />
+          <Route path="/local-business-ai-visibility" element={<LocalBusinessAIVisibility />} />
+          <Route path="/aeo-geo-aio" element={<AEOGEOAIO />} />
+          <Route path="/chatgpt-visibility-audit" element={<ChatGPTVisibilityAudit /> } />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

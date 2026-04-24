@@ -17,34 +17,34 @@ const steps = [
   {
     number: "01",
     icon: Search,
-    heading: "AI Visibility Audit",
-    title: "We audit your AI visibility first.",
-    body: "Before we touch a single thing, we run your business through every major AI engine. ChatGPT, Perplexity, Claude, and Google AI. We document exactly what they say about you — or don't. You get a full report showing your current AI citation score, where competitors are winning, and the exact gaps we'll fix.",
-    tag: "Free — delivered in 24 hours",
+    heading: "AI Presence Report — all three dimensions",
+    title: "We score you on Readiness, Visibility, and Trust.",
+    body: "Before we touch a single thing, we run your business through the same six engines your buyers use — ChatGPT, Perplexity, Gemini, Google AI Overviews, Bing, and Claude — and score you on the three dimensions AI search actually judges on. Readiness is crawler access, llms.txt, FAQPage schema, viewport meta, Open Graph, mobile indexability. Visibility is how often you appear in real AI answers. Trust is what Google Business Profile, Foursquare, and the citation web say about you.",
+    tag: "Free 3-score teaser · 60 seconds · 1 Perplexity screenshot",
   },
   {
     number: "02",
     icon: Code,
-    heading: "Schema & Technical Foundation",
+    heading: "Readiness fixes — week one",
     title: "We fix how AI reads your site.",
-    body: "AI engines don't rank pages — they extract structured facts. We implement JSON-LD schema markup (Organization, LocalBusiness, Service, FAQPage), fix your meta layer, build a clean sitemap, and configure your robots.txt to explicitly invite Claude-SearchBot, GPTBot, and PerplexityBot to index your content. Most businesses have zero schema. This alone moves the needle.",
-    tag: "Completed in week 1",
+    body: "AI engines don't rank pages. They extract structured facts. We implement JSON-LD schema (Organization, LocalBusiness, Service, FAQPage), ship a correct llms.txt + robots.txt split for AI search bots vs AI training bots, fix viewport meta for mobile-first indexability, and lock down Open Graph and canonical tags. Most businesses have zero schema and a robots.txt that silently blocks GPTBot. This alone moves the Readiness score fast.",
+    tag: "Week 1 — fastest-moving dimension",
   },
   {
     number: "03",
     icon: FileText,
-    heading: "AEO Content Engine",
-    title: "We create content AI wants to cite.",
-    body: "AI engines pull answers from pages that are written to be extracted — not just indexed. We build FAQ sections, answer-format blog posts, and structured comparison content targeting the exact questions your customers are asking AI right now. Every piece is written in the inverted pyramid format that AI citation systems prefer.",
-    tag: "Ongoing — weekly content",
+    heading: "Visibility + Trust building",
+    title: "We earn citations across 6 engines — and entity signals across the web.",
+    body: "Visibility work is answer-format content, question-phrased headings, and the 12-query buyer-intent matrix AI engines actually resolve against (shopping, emergency, storm/insurance, service-specific, trust/vetting, financing). Trust work is Google Business Profile optimization, Foursquare + Big 8 directory consistency, and entity-graph hygiene (Wikidata, Knowledge Graph). Both dimensions compound — Visibility lifts faster, Trust lifts longer.",
+    tag: "Ongoing — month-over-month compounding",
   },
   {
     number: "04",
     icon: BarChart2,
-    heading: "Citation Building & Monitoring",
-    title: "We track every citation, every week.",
-    body: "We run weekly AI citation checks across all four major engines and send you a report showing exactly where your business is being mentioned, in what context, and how your score is trending. As citations grow, we identify new citation opportunities and expand your content footprint. You always know where you stand.",
-    tag: "Weekly reporting",
+    heading: "Tracking dashboard",
+    title: "Weekly snapshots across all 6 engines, in your dashboard.",
+    body: "Once Readiness is fixed and Visibility starts climbing, you need to watch it. Your dashboard at audit.voxaris.io/dashboard shows weekly score snapshots on all three dimensions, per-engine visibility breakdown (ChatGPT / Perplexity / Gemini / Google AIO / Bing / Claude), competitor benchmarking, citation health, and Google Search Console + Bing Webmaster connectors feeding live traffic data. Score-drop alerts the moment an engine re-indexes you down.",
+    tag: "Weekly pulse · live dashboard · competitor watch",
   },
 ];
 
@@ -96,7 +96,7 @@ export default function HowItWorks() {
               variants={fadeUp}
               className="text-lg lg:text-xl text-muted-foreground max-w-[54ch] leading-relaxed"
             >
-              Voxaris runs a four-part system that gets your business found, recognized, and recommended by AI search engines across ChatGPT, Perplexity, Claude, and Google AI Overviews.
+              Voxaris runs a four-part system scored on three dimensions — Readiness, Visibility, Trust — across ChatGPT, Perplexity, Gemini, Google AI Overviews, Bing, and Claude. Free 3-score teaser first. Paid unlock, tracking dashboard, and full rebuild if you want them.
             </motion.p>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function HowItWorks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
-                className="grid lg:grid-cols-[200px_1fr] gap-8 lg:gap-16 items-start"
+                className="grid lg:grid-cols-[200px_1fr] gap-8 lg:gap-16 items-start rounded-2xl border border-[hsl(var(--border))] bg-white/[0.02] p-6 lg:p-10 hover:border-white/20 transition-colors"
               >
                 <div className="flex lg:flex-col items-center lg:items-start gap-5">
                   <span className="font-mono-display text-[hsl(var(--accent))] text-[13px] tracking-[0.12em]">
@@ -158,7 +158,7 @@ export default function HowItWorks() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[hsl(var(--border))] rounded-[6px] overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {timeline.map((item, index) => (
               <motion.div
                 key={item.range}
@@ -166,7 +166,7 @@ export default function HowItWorks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="bg-[hsl(var(--card))] px-8 py-10"
+                className="rounded-2xl border border-[hsl(var(--border))] bg-white/[0.02] px-8 py-10 hover:border-white/20 transition-colors"
               >
                 <div className="stat-number text-2xl font-medium mb-3">{item.range}</div>
                 <div className="text-[17px] font-semibold text-foreground mb-2">{item.title}</div>
@@ -192,7 +192,7 @@ export default function HowItWorks() {
               Start with a free audit.
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              We'll show you exactly where you stand before you spend a dollar. Free AI visibility report, delivered in 24 hours.
+              We'll show you exactly where you stand on all three dimensions before you spend a dollar. Free AI Presence Report, delivered in 60 seconds.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="https://audit.voxaris.io" target="_blank" rel="noopener noreferrer">
@@ -214,7 +214,7 @@ export default function HowItWorks() {
                   onMouseEnter={(e) => (e.currentTarget.style.filter = "brightness(1.1)")}
                   onMouseLeave={(e) => (e.currentTarget.style.filter = "brightness(1)")}
                 >
-                  See Your AI Visibility Score <ArrowRight className="h-4 w-4" />
+                  See Your AI Presence Report <ArrowRight className="h-4 w-4" />
                 </button>
               </a>
               <Link to="/book-demo">

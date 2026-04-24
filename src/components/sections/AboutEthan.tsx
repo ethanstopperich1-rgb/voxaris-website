@@ -106,7 +106,7 @@ export default function AboutEthan() {
               <Cred label="Past win" value="6-figure AI website rebuild" />
               <Cred label="Years in AI marketing" value="2+ years hands-on" />
               <Cred label="Coverage" value="6 AI engines tracked weekly" />
-              <Cred label="Guarantee" value="80+ score in 30 days" />
+              <Cred label="Focus" value="Built to improve the signals AI cites" />
             </div>
           </div>
         </motion.div>

@@ -1,0 +1,24 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Voxaris Favicon</title>
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#101827"/>
+      <stop offset="0.52" stop-color="#05070D"/>
+      <stop offset="1" stop-color="#000000"/>
+    </radialGradient>
+    <linearGradient id="silver" x1="72" y1="78" x2="440" y2="438" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.18" stop-color="#B7B8B4"/>
+      <stop offset="0.43" stop-color="#F4F4EF"/>
+      <stop offset="0.67" stop-color="#8F908B"/>
+      <stop offset="1" stop-color="#E9E9E1"/>
+    </linearGradient>
+    <filter id="vGlow" x="-35%" y="-35%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#7FB5FF" flood-opacity="0.25"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bgGlow)"/>
+  <rect x="24.75" y="24.75" width="462.5" height="462.5" rx="103.25" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.5"/>
+  <path d="M76 88H168L256 346L344 88H436L298 424H214L76 88Z" fill="url(#silver)" filter="url(#vGlow)"/>
+</svg>

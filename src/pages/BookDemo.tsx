@@ -89,9 +89,9 @@ export default function BookDemo() {
                 {[
                   "Your current AI visibility across ChatGPT, Perplexity, Claude",
                   "A Talking Postcard or AEO campaign walkthrough",
-                  "AI-ready website builds — scope, pricing, timeline",
+                  "AI-ready website builds — scope + timeline",
                   "AI video interviews for hiring pipelines",
-                  "Custom pricing + implementation timeline for your setup",
+                  "Custom proposal + implementation timeline for your setup",
                 ].map((item, i) => (
                   <div
                     key={item}

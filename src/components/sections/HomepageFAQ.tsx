@@ -19,19 +19,19 @@ const faqs: QA[] = [
   },
   {
     q: "How much does AEO cost with Voxaris?",
-    a: "Three tiers. The AI Visibility Audit is free and gives you a 19-point report across 6 AI engines in 24 hours, no credit card required. The Voxaris Retainer is $297 per month (with optional content tier at $597/mo and full management at $997/mo) and includes all fixes plus a live citation dashboard. The AEO-Ready Website Rebuild is $2,500 plus retainer for businesses needing a complete AI-citation foundation.",
+    a: "The free preview runs in about 90 seconds — Readiness / Visibility / Trust score across 6 engines, top fix surfaced, no credit card. Full Report is $99 one-time (with proof screenshots, competitor citation gap, and full fix list). Monthly Tracking is $299/month. AI-Ready Rebuild is $2,500 plus $300/month tracking. Book a walkthrough and we'll scope the right tier.",
   },
   {
     q: "How long does AEO take to show results?",
-    a: "Technical foundation (schema, robots.txt, sitemap, meta layer, llms.txt) is complete in week 1. First citations in AI engines typically appear between weeks 3 and 6. Consistent presence across 4 or more engines for your core service queries builds by month 3. Voxaris guarantees an 80+ AI Visibility Score in 30 days or full refund.",
+    a: "Technical foundation (schema, robots.txt, sitemap, meta layer, llms.txt) is complete in week 1. First citations in AI engines typically appear between weeks 3 and 6. Consistent presence across 4 or more engines for your core service queries builds by month 3. We don't promise guaranteed citations — AI engines pick their own sources — but we build the signals that help AI cite you, and we track the score so you can see it move.",
   },
   {
     q: "Which AI engines does Voxaris optimize for?",
     a: "We optimize for ChatGPT (OpenAI), Perplexity, Claude (Anthropic), Gemini (Google), Google AI Overviews, and Bing Copilot. We track citation signals across all six engines weekly and report month-over-month score changes in your dashboard.",
   },
   {
-    q: "Do you guarantee results?",
-    a: "Yes. The Voxaris Retainer comes with a 30-day score guarantee — if your AI Visibility Score does not climb to 80+ within 30 days of starting, we refund the first month in full. The AEO-Ready Website Rebuild also guarantees a 25-point score lift or we rebuild again at no charge.",
+    q: "Do you guarantee AI will cite my business?",
+    a: "No, and nobody honestly can — AI engines pick their own sources. What we guarantee is that we'll track your visibility across all 6 engines and build the signals (schema, content, GBP, directories, entity data) that help AI cite you. You see the score move month-over-month in your dashboard. If the infrastructure we ship isn't live and correct, that's on us and we fix it.",
   },
   {
     q: "Where is Voxaris based and who do you serve?",
@@ -39,7 +39,7 @@ const faqs: QA[] = [
   },
   {
     q: "What's the first step to working with Voxaris?",
-    a: "Run the free AI Visibility Audit at audit.voxaris.io. You get a 19-point report scored across all 6 AI engines in 24 hours, plus a prioritized fix list and competitive citation gap analysis — no credit card required. From there you can implement fixes yourself or hand the punch list to our retainer team.",
+    a: "Run the free AI Visibility Audit at audit.voxaris.io. You'll see a free preview across all 6 AI engines in about 90 seconds — Readiness / Visibility / Trust scores plus your top fix. The Full Report ($99) unlocks proof screenshots, the 19-signal breakdown, and the competitive citation gap. From there you can implement fixes yourself or hand the punch list to our team.",
   },
 ];
 

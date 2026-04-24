@@ -21,7 +21,7 @@ export default function CTASection() {
               Start with a free AI Visibility Audit
             </h2>
             <p className="text-lg text-muted-foreground max-w-[55ch] mb-8 leading-relaxed">
-              Find out exactly where your business stands across ChatGPT, Perplexity, Gemini, Claude, and Google AI. Free report, delivered in 48 hours. Or book a demo to see all three products live.
+              Find out exactly where your business stands across ChatGPT, Perplexity, Gemini, Claude, Google AI Overviews, and Bing Copilot. Free preview in about 90 seconds — full report unlocks proof screenshots and the fix plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="https://audit.voxaris.io" target="_blank" rel="noopener noreferrer">
@@ -41,7 +41,7 @@ export default function CTASection() {
           <LeadForm
             source="voxaris.io/home"
             heading="See your AI Visibility Score"
-            subheading="Drop your details. We'll audit your AI citation share and email a fix list within 24 hours."
+            subheading="Drop your details. We'll run the audit and email the preview + fix list. Full report unlocks proof screenshots."
             showMessage={false}
           />
         </motion.div>

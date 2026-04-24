@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Voxaris V Transparent Favicon</title>
+  <defs>
+    <linearGradient id="silver" x1="72" y1="78" x2="440" y2="438" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.18" stop-color="#B7B8B4"/>
+      <stop offset="0.43" stop-color="#F4F4EF"/>
+      <stop offset="0.67" stop-color="#8F908B"/>
+      <stop offset="1" stop-color="#E9E9E1"/>
+    </linearGradient>
+  </defs>
+  <path d="M76 88H168L256 346L344 88H436L298 424H214L76 88Z" fill="url(#silver)"/>
+</svg>
