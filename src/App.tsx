@@ -21,6 +21,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import AuditReceived from "./pages/AuditReceived";
+import Methodology from "./pages/Methodology";
 import AIVisibilityAudit from "./pages/landing/AIVisibilityAudit";
 import WhatIsAnAIVisibilityAudit from "./pages/landing/WhatIsAnAIVisibilityAudit";
 import LocalBusinessAIVisibility from "./pages/landing/LocalBusinessAIVisibility";
@@ -57,6 +58,7 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/audit-received" element={<AuditReceived />} />
+          <Route path="/methodology" element={<Methodology />} />
           {/* AEO landing pages */}
           <Route path="/ai-visibility-audit" element={<AIVisibilityAudit />} />
           <Route path="/what-is-an-ai-visibility-audit" element={<WhatIsAnAIVisibilityAudit />} />
