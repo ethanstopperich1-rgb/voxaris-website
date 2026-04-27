@@ -435,16 +435,18 @@ export default function AEO() {
                 key={p.tier}
                 className={`relative bg-[hsl(var(--card))] border rounded-[8px] px-7 py-8 ${
                   p.highlight
-                    ? "border-[hsl(var(--accent))] ring-1 ring-[hsl(var(--accent))/40]"
+                    ? "border-[hsl(var(--accent))/60] shadow-[0_0_0_1px_hsl(var(--accent)/0.15)]"
                     : "border-[hsl(var(--border))]"
                 }`}
               >
-                {p.highlight && (
-                  <span className="absolute -top-3 left-7 bg-[hsl(var(--accent))] text-[#0E0C0B] text-[10px] font-mono-display tracking-[0.16em] px-3 py-1 rounded">
-                    MOST POPULAR
-                  </span>
-                )}
-                <h3 className="text-lg font-semibold text-foreground mb-1">{p.tier}</h3>
+                <div className="flex items-baseline justify-between gap-3 mb-1">
+                  <h3 className="text-lg font-semibold text-foreground">{p.tier}</h3>
+                  {p.highlight && (
+                    <span className="font-mono-display text-[hsl(var(--accent))] text-[10px] tracking-[0.16em] uppercase whitespace-nowrap">
+                      Most popular
+                    </span>
+                  )}
+                </div>
                 <p className="text-xs text-muted-foreground mb-5">{p.tagline}</p>
                 <div className="mb-5">
                   <div className="flex items-baseline gap-1">
