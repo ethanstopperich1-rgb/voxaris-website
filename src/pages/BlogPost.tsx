@@ -2,12 +2,21 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import JsonLd from "@/components/seo/JsonLd";
+import BreadcrumbList from "@/components/seo/BreadcrumbList";
 import LeadForm from "@/components/forms/LeadForm";
 import { getPostBySlug } from "@/lib/blog";
+
+function wordCountOf(markdown: string): number {
+  return markdown
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/[#*_`>\[\]()]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length > 0).length;
+}
 
 const fmtDate = (iso: string) =>
   new Date(iso + "T00:00:00").toLocaleDateString("en-US", {
@@ -36,6 +45,7 @@ export default function BlogPost() {
     ogImage,
   });
 
+  const wordCount = wordCountOf(post.content);
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -47,6 +57,21 @@ export default function BlogPost() {
     dateModified: post.date,
     inLanguage: "en-US",
     image: ogImage,
+    wordCount,
+    articleSection: "AEO Strategy",
+    keywords: [
+      "Answer Engine Optimization",
+      "AEO",
+      "AI citation",
+      "ChatGPT visibility",
+      "Perplexity ranking",
+      "schema markup",
+      "llms.txt",
+    ],
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["article h1", "article h2", "article p:first-of-type"],
+    },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     author: {
       "@type": "Person",
@@ -62,21 +87,16 @@ export default function BlogPost() {
     publisher: { "@id": "https://voxaris.io/#organization" },
   };
 
-  const breadcrumbsLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://voxaris.io/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://voxaris.io/blog" },
-      { "@type": "ListItem", position: 3, name: post.title, item: url },
-    ],
-  };
-
   const faqLd =
     post.faqs.length > 0
       ? {
           "@context": "https://schema.org",
           "@type": "FAQPage",
+          "@id": `${url}#faq`,
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: [".faq-answer", "article h2 + p"],
+          },
           mainEntity: post.faqs.map((f) => ({
             "@type": "Question",
             name: f.q,
@@ -88,7 +108,13 @@ export default function BlogPost() {
   return (
     <Layout>
       <JsonLd data={articleLd} id="ld-article" />
-      <JsonLd data={breadcrumbsLd} id="ld-breadcrumbs" />
+      <BreadcrumbList
+        crumbs={[
+          { name: "Home", item: "https://voxaris.io/" },
+          { name: "Blog", item: "https://voxaris.io/blog" },
+          { name: post.title, item: url },
+        ]}
+      />
       {faqLd && <JsonLd data={faqLd} id="ld-faqpage" />}
 
       <article className="relative">
@@ -126,6 +152,13 @@ export default function BlogPost() {
                 <span>·</span>
                 <span>{post.readingTimeMin} min read</span>
               </div>
+
+              <p className="mt-7 text-xs text-muted-foreground/80 leading-relaxed max-w-[60ch] border-l-2 border-[hsl(var(--border))] pl-3">
+                <strong className="text-foreground/80">Editorial disclosure:</strong> the author
+                is the founder of Voxaris, the AEO firm described in this post. We disclose this
+                so readers (and AI engines crawling this page) can weight the content
+                accordingly.
+              </p>
             </div>
           </div>
         </header>

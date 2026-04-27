@@ -6,13 +6,52 @@
  * 2. Posts a notification to Slack
  * 3. Sends a branded confirmation email to the lead via Resend
  *
+ * Defenses (defense-in-depth — honeypot was first line, this hardens it):
+ *   - Vercel BotID `checkBotId()` rejects automated traffic (no-op when
+ *     BotID isn't enabled on the project — safe to ship before flipping it on)
+ *   - Per-IP sliding-window rate limit: 5 requests / 60s. In-memory only —
+ *     Fluid Compute reuses instances so this catches bursty floods. Distributed
+ *     limits would need Edge Config / Upstash; for now this is good enough
+ *     while the funnel volume is small.
+ *
  * Required env vars:
  *   SLACK_WEBHOOK_URL — Slack incoming webhook URL
  *   RESEND_API_KEY    — Resend API key
- *   RESEND_FROM       — From address (e.g. "Voxaris AI <hello@voxaris.io>")
+ *   RESEND_FROM       — From address (e.g. "Voxaris AI <hello@voxaris.io>") — REQUIRED in prod
  *   RESEND_REPLY_TO   — Optional reply-to address
  */
 import { Resend } from "resend";
+import { checkBotId } from "botid/server";
+
+// In-memory sliding-window rate limit. Per-instance, but Fluid Compute reuses
+// instances aggressively so a bot hammering one region hits this fast.
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX = 5;
+const ipHits = new Map<string, number[]>();
+
+function checkRateLimit(ip: string): { ok: boolean; retryAfterSec: number } {
+  if (!ip || ip === "unknown") return { ok: true, retryAfterSec: 0 };
+  const now = Date.now();
+  const cutoff = now - RATE_LIMIT_WINDOW_MS;
+  const hits = (ipHits.get(ip) ?? []).filter((t) => t > cutoff);
+  if (hits.length >= RATE_LIMIT_MAX) {
+    const oldest = hits[0];
+    const retryAfterSec = Math.max(1, Math.ceil((oldest + RATE_LIMIT_WINDOW_MS - now) / 1000));
+    ipHits.set(ip, hits);
+    return { ok: false, retryAfterSec };
+  }
+  hits.push(now);
+  ipHits.set(ip, hits);
+  // Best-effort cleanup: prune the map when it grows large.
+  if (ipHits.size > 5000) {
+    for (const [k, v] of ipHits) {
+      const fresh = v.filter((t) => t > cutoff);
+      if (fresh.length === 0) ipHits.delete(k);
+      else ipHits.set(k, fresh);
+    }
+  }
+  return { ok: true, retryAfterSec: 0 };
+}
 
 interface LeadPayload {
   name?: string;
@@ -47,6 +86,38 @@ function ok(body: object) {
 export default async function handler(req: Request) {
   if (req.method !== "POST") {
     return bad(405, { error: "Method not allowed" });
+  }
+
+  // Per-IP rate limit — runs before BotID so we shed obvious floods cheaply.
+  const clientIp =
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+    req.headers.get("x-real-ip") ??
+    "unknown";
+  const rl = checkRateLimit(clientIp);
+  if (!rl.ok) {
+    return new Response(JSON.stringify({ error: "rate_limited" }), {
+      status: 429,
+      headers: {
+        "Content-Type": "application/json",
+        "Retry-After": String(rl.retryAfterSec),
+      },
+    });
+  }
+
+  // BotID classification — Vercel platform check. No-op when BotID is not
+  // enabled on the project, so this is safe to ship before the dashboard
+  // flip. When enabled, isBot=true is rejected; verified bots (search
+  // engines etc.) are not relevant on a lead form, reject those too.
+  try {
+    const botCheck = await checkBotId();
+    if (botCheck.isBot) {
+      // Pretend success so attackers don't get a signal that BotID rejected them.
+      return ok({ ok: true });
+    }
+  } catch (err) {
+    // Don't fail-closed on BotID errors — log and continue. The honeypot,
+    // rate limit, and validation still apply.
+    console.warn("BotID check failed:", err);
   }
 
   let payload: LeadPayload;
@@ -91,10 +162,7 @@ export default async function handler(req: Request) {
     return bad(500, { error: "Server misconfigured" });
   }
 
-  const ip =
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
-    req.headers.get("x-real-ip") ??
-    "unknown";
+  const ip = clientIp;
   const userAgent = req.headers.get("user-agent") ?? "unknown";
   const now = new Date().toISOString();
 
@@ -186,11 +254,20 @@ export default async function handler(req: Request) {
     }),
   );
 
-  // Send confirmation email via Resend (non-blocking — log on failure)
+  // Send confirmation email via Resend (non-blocking — log on failure).
+  // RESEND_FROM must be set in production: the resend.dev sandbox sender
+  // looks scammy and is rate-capped. In dev, allow the sandbox fallback so
+  // local testing still works.
   const resendKey = process.env.RESEND_API_KEY;
-  const resendFrom = process.env.RESEND_FROM ?? "Voxaris AI <onboarding@resend.dev>";
+  const resendFromEnv = process.env.RESEND_FROM;
+  if (!resendFromEnv && process.env.NODE_ENV === "production") {
+    console.error("RESEND_FROM is not configured in production — skipping confirmation email");
+  }
+  const resendFrom =
+    resendFromEnv ??
+    (process.env.NODE_ENV === "production" ? null : "Voxaris AI <onboarding@resend.dev>");
   const resendReplyTo = process.env.RESEND_REPLY_TO;
-  if (resendKey) {
+  if (resendKey && resendFrom) {
     try {
       const resend = new Resend(resendKey);
       const firstName = name.split(/\s+/)[0];

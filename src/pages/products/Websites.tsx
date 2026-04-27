@@ -3,42 +3,43 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function Websites() {
   usePageMeta({
-    title: "AI-Ready Website Builds | Voxaris",
+    title: "Site Rebuild Add-On | Voxaris",
     description:
-      "AEO-ready websites from Voxaris. Schema-complete, FAQ-structured, Core Web Vitals tuned. Live in 72 hours. $1,997 flat.",
+      "Optional Site Rebuild add-on for any Voxaris AEO retainer. Pure web design — new visual treatment, same brand. +$1,497 one-time. Optional +$100/mo if Voxaris hosts ongoing.",
     canonical: "https://voxaris.io/products/websites",
   });
   return (
     <ProductPage
-      eyebrow="AI Website Builds"
+      eyebrow="Site Rebuild Add-On"
       headline={
         <>
-          A website built to be<br />
-          <span className="text-muted-foreground">found by AI — not just Google.</span>
+          Like your website? Keep it.<br />
+          <span className="text-muted-foreground">Hate your website? We&rsquo;ll rebuild it.</span>
         </>
       }
-      subheadline="We design and build fast, AEO-optimized websites that are structured from day one to be cited by ChatGPT, Perplexity, and Google AI. Delivered in 72 hours."
+      subheadline="Optional add-on for any AEO retainer tier. We rebuild your site visually using modern components — same logo, same voice, just better looking. It has nothing to do with the AEO work; we charge the same retainer setup whether we apply AEO to your old site or to a new one we build for you."
+      featuresTitle="What's in the Site Rebuild"
       features={[
         {
-          title: "AEO-ready from day one",
-          body: "Schema markup, FAQ content, and structured data built in before launch. Most agencies add this as an afterthought — we build it into the foundation.",
+          title: "+$1,497 one-time",
+          body: "Pure web-design service. New Next.js scaffold, fresh visual treatment, same brand identity (logo and voice stay). 12 pages migrated from your existing site, 301 redirects in place.",
         },
         {
-          title: "Fast & modern design",
-          body: "Built on React or Next.js, deployed on Vercel, and optimized for Core Web Vitals. Loads fast. Looks sharp.",
+          title: "Modern component system",
+          body: "We build using 21st.dev component blocks accelerated by Claude — typically deployed in under 2 weeks for sites with fewer than 20 pages.",
         },
         {
-          title: "72-hour delivery",
-          body: "No 6-week agency timelines. Most builds are live within 3 days of receiving your content and brand assets.",
+          title: "AEO work is separate (and required)",
+          body: "The Site Rebuild does NOT include schemas, FAQ blocks, llms.txt, blog posts, or any AEO deliverables. Those come from the AEO retainer (Visibility, Citation, or Authority) and apply equally to old or rebuilt sites.",
         },
         {
-          title: "AEO-optimized copy",
-          body: "Every page is written using answer-format structure so AI engines can extract and cite your services, location, and expertise.",
+          title: "Optional hosting (+$100/mo)",
+          body: "Want Voxaris to host and manage the new site ongoing? +$100/month on top of your retainer. Otherwise, you take full ownership and host wherever you like.",
         },
       ]}
       cta={{
-        eyebrow: "Next step",
-        headline: "Get a quote on your build.",
+        eyebrow: "Need a custom quote?",
+        headline: "Sites with 20+ pages, e-commerce, or complex CMS integrations: book a call for a custom quote.",
         primary: { label: "Book a Demo", href: "/book-demo" },
       }}
     />

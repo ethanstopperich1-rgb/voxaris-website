@@ -19,11 +19,11 @@ const faqs: QA[] = [
   },
   {
     q: "How much does AEO cost with Voxaris?",
-    a: "Three tiers. The AI Visibility Audit is free and gives you a 19-point report across 6 AI engines in 24 hours, no credit card required. The Voxaris Retainer is $297 per month (with optional content tier at $597/mo and full management at $997/mo) and includes all fixes plus a live citation dashboard. The AEO-Ready Website Rebuild is $2,500 plus retainer for businesses needing a complete AI-citation foundation.",
+    a: "Three retainer tiers, each a one-time setup plus monthly retainer. Visibility is $997 setup + $297/month for tracking, alerts, and hallucination detection. Citation is $1,997 setup + $997/month and adds monthly content production (blog, FAQ pages, Perplexity Pages, video, outreach). Authority is $2,997 setup + $1,997/month and runs the full funnel (advanced experimentation, agent-readiness, original research). The free 24-hour AI Visibility Audit is the lead-in and stays free with no commitment. Optional Site Rebuild add-on: +$1,497 one-time, web design only, no AEO work bundled.",
   },
   {
     q: "How long does AEO take to show results?",
-    a: "Technical foundation (schema, robots.txt, sitemap, meta layer, llms.txt) is complete in week 1. First citations in AI engines typically appear between weeks 3 and 6. Consistent presence across 4 or more engines for your core service queries builds by month 3. Voxaris guarantees an 80+ AI Visibility Score in 30 days or full refund.",
+    a: "Technical foundation (schema, robots.txt, sitemap, meta layer, llms.txt) is complete in week 1. First citations in AI engines typically appear between weeks 3 and 6. Consistent presence across 4 or more engines for your core service queries builds by month 3. Average client sees +15–25 AI Visibility Score points within the first 30 days of retainer.",
   },
   {
     q: "Which AI engines does Voxaris optimize for?",
@@ -31,7 +31,7 @@ const faqs: QA[] = [
   },
   {
     q: "Do you guarantee results?",
-    a: "Yes. The Voxaris Retainer comes with a 30-day score guarantee — if your AI Visibility Score does not climb to 80+ within 30 days of starting, we refund the first month in full. The AEO-Ready Website Rebuild also guarantees a 25-point score lift or we rebuild again at no charge.",
+    a: "Citation share is a function of competitive signals Voxaris doesn't fully control, so we don't guarantee specific citation outcomes on the retainer alone. What we do guarantee: every audit finding gets fixed and tracked, and our average client improves their AI Visibility Score by 15–25 points within the first 30 days of retainer. The Site Rebuild add-on (where we control the entire build) is the only path with an explicit score-improvement guarantee.",
   },
   {
     q: "Where is Voxaris based and who do you serve?",

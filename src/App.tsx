@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import HowItWorks from "./pages/HowItWorks";
 import WhyVoxaris from "./pages/WhyVoxaris";
+import Methodology from "./pages/Methodology";
+import KitchenAndBathStoreCaseStudy from "./pages/KitchenAndBathStoreCaseStudy";
 import Demo from "./pages/Demo";
 import BookDemo from "./pages/BookDemo";
 import VoiceAgent from "./pages/products/VoiceAgent";
@@ -35,6 +37,11 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/why-voxaris" element={<WhyVoxaris />} />
+          <Route path="/methodology" element={<Methodology />} />
+          <Route
+            path="/case-studies/kitchen-and-bath-store-orlando"
+            element={<KitchenAndBathStoreCaseStudy />}
+          />
           <Route path="/demo" element={<Demo />} />
           <Route path="/book-demo" element={<BookDemo />} />
           {/* /pricing → /book-demo (per repositioning spec) */}

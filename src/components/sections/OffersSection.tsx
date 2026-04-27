@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Search, LineChart, Hammer, ArrowRight } from "lucide-react";
+import { Eye, FileText, Crown, ArrowRight } from "lucide-react";
 import * as PricingCard from "@/components/ui/pricing-card";
 import { Button } from "@/components/ui/button";
 import { BorderBeam } from "@/components/ui/border-beam";
@@ -11,6 +11,7 @@ interface Offer {
   description: string;
   price: string;
   period?: string;
+  setupNote?: string;
   badge?: string;
   cta: string;
   ctaHref: string;
@@ -20,33 +21,35 @@ interface Offer {
 
 const offers: Offer[] = [
   {
-    icon: <Search />,
-    name: "Audit",
-    description: "Find out where you stand",
-    price: "Free",
-    period: "24h delivery",
-    cta: "Run my audit",
-    ctaHref: "https://audit.voxaris.io",
-    ctaExternal: true,
-    badge: "Start here",
-  },
-  {
-    icon: <LineChart />,
-    name: "Retainer",
-    description: "For businesses ready to fix it",
+    icon: <Eye />,
+    name: "Visibility",
+    description: "We watch; you fix.",
     price: "$297",
     period: "/month",
+    setupNote: "+ $997 setup",
+    cta: "Book a call",
+    ctaHref: "/book-demo",
+    badge: "Tracking",
+  },
+  {
+    icon: <FileText />,
+    name: "Citation",
+    description: "We produce the content that gets you cited.",
+    price: "$997",
+    period: "/month",
+    setupNote: "+ $1,997 setup",
     cta: "Book a call",
     ctaHref: "/book-demo",
     highlight: true,
     badge: "Most popular",
   },
   {
-    icon: <Hammer />,
-    name: "Rebuild",
-    description: "Need a full rebuild?",
-    price: "$2,500",
-    period: "+ retainer",
+    icon: <Crown />,
+    name: "Authority",
+    description: "We run your entire AI visibility funnel.",
+    price: "$1,997",
+    period: "/month",
+    setupNote: "+ $2,997 setup",
     cta: "Book a call",
     ctaHref: "/book-demo",
   },
@@ -105,6 +108,9 @@ export default function OffersSection() {
                     </PricingCard.MainPrice>
                     {offer.period && <PricingCard.Period>{offer.period}</PricingCard.Period>}
                   </PricingCard.Price>
+                  {offer.setupNote && (
+                    <p className="text-xs text-muted-foreground/80 mt-1">{offer.setupNote}</p>
+                  )}
 
                   {offer.ctaExternal ? (
                     <a href={offer.ctaHref} target="_blank" rel="noopener noreferrer">
@@ -153,6 +159,29 @@ export default function OffersSection() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-10 text-center text-sm text-muted-foreground"
+        >
+          Not sure where you stand?{" "}
+          <a
+            href="https://audit.voxaris.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground underline underline-offset-4 hover:text-[hsl(var(--accent))]"
+          >
+            Run the free 24-hour AI Visibility Audit
+          </a>{" "}
+          first &mdash; no card, no commitment.{" "}
+          <span className="block sm:inline mt-1 sm:mt-0">
+            Optional <strong className="text-foreground">Site Rebuild</strong> add-on: +$1,497 one-time
+            (web design only, no AEO work bundled).
+          </span>
+        </motion.div>
       </div>
     </section>
   );

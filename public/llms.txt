@@ -55,32 +55,70 @@ The rate at which a business accumulates new AI citations across
 engines over a given time period. A key metric tracked in the
 Voxaris dashboard.
 
-## How we work — three tiers
+## How we work — three retainer tiers
 
-### 1. AI Visibility Audit — Free
-- 19-point AEO checklist scored across 6 AI engines
+Each tier is a one-time setup fee plus a monthly retainer.
+The free 24-hour AI Visibility Audit is the lead-in and stays
+free with no commitment.
+
+### 0. AI Visibility Audit — Free
+- 19-point AEO checklist scored across all 6 AI engines
 - Prioritized fix list + competitive citation gap analysis
-- Delivered in 24 hours
-- No credit card required
+- Delivered in 24 hours, no credit card required
 - Run yours: https://audit.voxaris.io
 
-### 2. Voxaris Retainer — $297/month
-- All audit findings fixed (schema, content, llms.txt,
-  GBP, citation tracking)
-- Live AEO visibility dashboard across ChatGPT, Perplexity,
-  Gemini, Claude, Google AI Overviews, and Bing Copilot
-- Monthly AI Visibility Report Card showing score delta
-  and what moved
-- Optional content tier ($597/mo) and full management
-  tier ($997/mo)
+### 1. Visibility — $997 setup + $297/month
+- Tagline: We watch; you fix.
+- Tracking, alerts, hallucination detection across all 6 engines
+- Monthly visibility + citation re-audit, hallucination scan,
+  AI crawler activity report, Wikidata maintenance
+- 1-page monthly Report Card with score delta
+- Quarterly schema validation sweep
+- Setup includes 19-point AEO baseline + tracking infrastructure
 - Discovery call: https://voxaris.io/book-demo
 
-### 3. AEO-Ready Website Rebuild — $2,500 + retainer
-- Complete redesign and rebuild optimized for AI citation
-  from day one
-- Schema-complete, FAQ-structured, mobile-first, fast load
-- Score improvement guaranteed
+### 2. Citation — $1,997 setup + $997/month
+- Tagline: We produce the content that gets you cited.
+- Everything in Visibility, PLUS monthly content production:
+  1–2 long-form blog posts, 1 Perplexity Page, 1 YouTube
+  video + transcript, FAQ pages, external publication pitch
+  (listicle / guest post / podcast / HARO), Reddit comment
+  quota (5–10/month)
+- Quarterly: long-form pillar page + customer case study
+- Setup includes full schema deployment, content rewrites
+  (definitional leads, question-form headings, answer capsules),
+  GBP optimization, Big-8 directories, credentials audit, AIO
+  snippet capture
 - Discovery call: https://voxaris.io/book-demo
+
+### 3. Authority — $2,997 setup + $1,997/month
+- Tagline: We run your entire AI visibility funnel.
+- Everything in Citation, PLUS advanced experimentation,
+  agent-readiness, original research, and full delegation
+- Monthly: prompt experiment batches, competitor teardowns,
+  bulk listicle pitches (5–10), expanded hallucination scan,
+  dedicated strategy hour
+- Quarterly: original research report, executive review,
+  Wikipedia article (when notability path emerges)
+- Agent-readiness: Custom GPT, MCP server, OpenAPI spec,
+  Zapier integration, service card library
+- Setup includes Custom GPT build, expanded tracking (100
+  prompts × 6 engines), vertical-reviews account setup,
+  Reddit cockpit, listicle asset pack, YouTube channel
+  optimization
+- Discovery call: https://voxaris.io/book-demo
+
+## Optional add-on — Site Rebuild
+
+- +$1,497 one-time, on top of any retainer tier
+- Pure web-design service. Has nothing to do with AEO.
+- New visual treatment using modern components, same brand
+  identity (logo and voice stay the same)
+- Up to 12 pages migrated from existing site, 301 redirects
+- Sites with 20+ pages, e-commerce, or complex CMS integrations:
+  custom quote
+- Optional +$100/month if Voxaris hosts the rebuilt site
+  ongoing; otherwise client takes ownership and hosts themselves
 
 ## Verified Results
 
@@ -111,10 +149,15 @@ Gemini, Claude, Google AI Overviews, and Bing Copilot through
 Answer Engine Optimization (AEO).
 
 **What does Voxaris cost?**
-Voxaris offers three tiers: a free AI visibility audit,
-a $297/month retainer that includes all fixes and dashboard
-access, and a $2,500 website rebuild for businesses needing a
-complete AI-ready foundation.
+Voxaris offers three retainer tiers, each with a one-time
+setup fee plus a monthly retainer: Visibility ($997 setup +
+$297/month) is tracking and alerts; Citation ($1,997 setup +
+$997/month) adds monthly content production; Authority
+($2,997 setup + $1,997/month) is full management and
+agent-readiness. The free AI Visibility Audit is the lead-in
+and stays free with no commitment. Optional Site Rebuild
+add-on: +$1,497 one-time (web design only, no AEO bundled),
+with optional +$100/month if Voxaris hosts ongoing.
 
 **How long does it take to see results?**
 Most clients see measurable AI visibility score improvements
@@ -136,20 +179,41 @@ in the Orlando metro area.
 
 ## Resources
 
-- Run my free AI Audit: https://audit.voxaris.io
-- Book a discovery call: https://voxaris.io/book-demo
-- How It Works: https://voxaris.io/how-it-works
-- Why Voxaris: https://voxaris.io/why-voxaris
-- Blog: https://voxaris.io/blog
-- Contact: https://voxaris.io/contact
+- [Free AI Visibility Audit](https://audit.voxaris.io): Run a 19-point
+  AEO audit across all six major AI engines. Delivered in 24 hours, free.
+- [Book a discovery call](https://voxaris.io/book-demo): 20-minute
+  walkthrough of your audit results and the recommended fix sequence.
+- [AEO Services](https://voxaris.io/products/aeo): Full description of
+  the Voxaris Retainer ($297/mo) and AEO-Ready Website Rebuild ($2,500 +
+  retainer), with pricing, comparison vs traditional SEO, and FAQ.
+- [Methodology](https://voxaris.io/methodology): The full 19-point AEO
+  checklist, sourced to peer-reviewed GEO research and Voxaris first-party
+  measurement. Public so you can verify it.
+- [Why Voxaris](https://voxaris.io/why-voxaris): Why a founder-led,
+  AEO-only firm beats a generalist SEO agency for AI citation outcomes.
+- [How It Works](https://voxaris.io/how-it-works): The four-step Voxaris
+  engagement model from audit to citation tracking.
+- [Blog](https://voxaris.io/blog): Long-form AEO posts. New post weekly.
+- [Contact](https://voxaris.io/contact): Lead form, email, and Orlando
+  location info.
+
+## Case studies
+
+- [The Kitchen and Bath Store of Orlando](https://voxaris.io/case-studies/kitchen-and-bath-store-orlando):
+  Six figures of AI-discovered revenue in year one from an AEO-optimized
+  website rebuild. Orlando, FL. Engagement 2025–2026.
 
 ## Blog posts
 
-- Why an 85/100 AEO Score Doesn't Equal AI Visibility —
-  2026-04-22 — https://voxaris.io/blog/why-your-85-aeo-score-still-means-youre-invisible
+- [Why an 85/100 AEO Score Doesn't Equal AI Visibility](https://voxaris.io/blog/why-your-85-aeo-score-still-means-youre-invisible) —
+  2026-04-22 — Why most AEO audits score the technical foundation but
+  miss whether AI actually cites you. Names the 7 specific gaps that
+  hide a high-scoring site, in fix-order.
 
 ## Contact
 
 - Web: https://voxaris.io
+- Email: ethan@voxaris.io
 - Discovery call: https://voxaris.io/book-demo
 - Lead form: https://voxaris.io/contact
+- Location: Orlando, Florida, USA

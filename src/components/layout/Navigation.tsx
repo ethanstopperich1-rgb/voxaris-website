@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import voxarisLogo from "@/assets/logo.png";
 import NavHeader from "@/components/blocks/nav-header";
 import { GooeyFilter } from "@/components/ui/gooey-filter";
@@ -14,27 +14,8 @@ const mobileQuickNav = [
   { label: "Book Demo", href: "/book-demo", external: false },
 ];
 
-type NavChild = { name: string; href: string; desc?: string };
-type NavLink = { name: string; href?: string; children?: NavChild[] };
-
-const navLinks: NavLink[] = [
-  { name: "How It Works", href: "/how-it-works" },
-  {
-    name: "Products",
-    children: [
-      { name: "AEO Services", href: "/products/aeo", desc: "Get cited by ChatGPT, Perplexity & Claude" },
-      { name: "Talking Postcard", href: "/products/talking-postcard", desc: "AI video outreach at scale" },
-      { name: "AI Website Builds", href: "/products/websites", desc: "AEO-ready sites built in 72 hours" },
-      { name: "Staffing Agent", href: "/products/staffing", desc: "AI video screening before your team gets involved" },
-    ],
-  },
-  { name: "Book a Demo", href: "/book-demo" },
-];
-
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [openMenu, setOpenMenu] = useState<string | null>(null);
-  const location = useLocation();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">

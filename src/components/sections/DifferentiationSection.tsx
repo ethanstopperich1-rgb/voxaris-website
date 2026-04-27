@@ -20,16 +20,16 @@ const products = [
   },
   {
     tag: "WEBSITES",
-    title: "AI-Ready Website Builds",
+    title: "Optional Site Rebuild",
     description:
-      "A website built from day one to score 85+ on an AEO audit — schema-complete, FAQ-structured, and optimized for AI citation before the first visitor arrives.",
+      "If your site is the bottleneck, we'll redesign and rebuild it visually — same brand, fresh look, deployed on a fast Next.js stack. It's a separate add-on; the AEO work happens regardless.",
     bullets: [
-      "Live in 72 hours, $1,997 flat",
-      "Full JSON-LD schema architecture",
-      "Question-phrased content for AI direct answers",
-      "GBP optimization included",
+      "+$1,497 one-time, on top of any retainer",
+      "New visual treatment, same brand identity",
+      "Modern components via 21st.dev + Claude",
+      "Optional +$100/mo if Voxaris hosts ongoing",
     ],
-    cta: "See an Example",
+    cta: "Book a Demo",
     href: "/book-demo",
     external: false,
   },

@@ -62,7 +62,7 @@ export function Footer() {
 			<div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
 				<AnimatedContainer className="space-y-4">
 					<a href="/" aria-label="Voxaris home" className="inline-flex items-center">
-						<img src={voxarisLogo} alt="Voxaris" className="h-20 md:h-24 w-auto object-contain" />
+						<img src={voxarisLogo} alt="Voxaris AI — Personalizing Your Outreach" className="h-20 md:h-24 w-auto object-contain" />
 					</a>
 					<p className="text-muted-foreground text-[15px] leading-relaxed max-w-[42ch]">
 						AI voice, video, staffing, and AEO infrastructure that handles leads, books
